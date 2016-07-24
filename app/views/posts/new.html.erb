@@ -1,0 +1,27 @@
+<%= form_for @post, html: { multipart: true } do |f| %>
+  <div class="form-group">
+    <%= f.label "Title:" %>
+    <%= f.text_field :title, placeholder: "Enter Title" %>
+  </div>
+  <div class="form-group">
+    <%= f.label :pictures %>
+    <%= file_field_tag "images[]", type: :file, multiple: true %>
+  </div>
+  <!-- <div class="form-group">
+    <%= f.label :pictures %>
+    <%= file_field_tag "image" %>
+  </div> -->
+  <div class="form-group">
+    <%= f.label "Content:" %>
+    <%= f.text_field :description, placeholder: "Write your post" %>
+  </div>
+  <div class="form-group">
+    <%= f.label "Date:" %>
+    <%= f.date_field :date %>
+  </div>
+  <div class="form-group">
+    <%= f.label "Zine PDF:" %>
+    <%= f.file_field :document %>
+  </div>
+    <%= f.submit "Create Post" %>
+<% end %>
