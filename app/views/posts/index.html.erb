@@ -1,0 +1,21 @@
+<div class="container">
+  <div id="calendar">
+    <h2 id="month">
+      <%= link_to "<", :month => (@date.beginning_of_month-1).strftime("%Y-%m") %>
+      <%=h @date.strftime("%B %Y") %>
+      <%= link_to ">", :month => (@date.end_of_month+1).strftime("%Y-%m") %>
+    </h2>
+    <%= calendar_for @posts, :year => @date.year, :month => @date.month do |t| %>
+      <%= t.head('Sunday', "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday") %>
+      <%= t.day(:day_method => :date) do |day, posts| %>
+        <%= day.day %>
+        <% posts.each do |post| %>
+          <%= h(link_to "#{post.title}", post, :class=>"list-group-item") %>
+        <% end %>
+      <% end %>
+    <% end %>
+  </div>
+</div>
+<div class="new-post">
+  <%= link_to "New Post", new_post_path %>
+</div>
