@@ -1,6 +1,7 @@
 class PostsController < ApplicationController
   def index
     @posts = Post.all.reverse
+    @upcomingposts = Post.where(date > Date.now)
     @date = params[:month] ? Date.parse(params[:month].gsub('-', '/')) : Date.today
   end
 

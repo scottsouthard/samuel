@@ -1,4 +1,12 @@
 <div class="container">
+  <div class="list-group post-index">
+  <% @upcomingposts.each do |post| %>
+      <!-- <li class="list-group-item"> -->
+        <%= link_to "#{post.title}  -  #{post.date.strftime("%m/%d/%Y")}", post, :class=>"list-group-item"%>
+      <!-- </li> -->
+  <% end %>
+  </div>
+
   <div id="calendar">
     <h2 id="month">
       <%= link_to "<", :month => (@date.beginning_of_month-1).strftime("%Y-%m") %>
