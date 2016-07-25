@@ -1,8 +1,9 @@
 
 <div class="container">
+
   <div class="jumbotron">
     <h2> <%= @post.title %> </h2>
-    <p class="date"> <%= @post.created_at.strftime("Posted on %m/%d/%Y") %>
+    <p class="date"> <%= @post.date.strftime("Posted on %m/%d/%Y") %>
     <p> <%= @post.description %> </p>
     <div class="container">
       <div class="row">
@@ -47,6 +48,9 @@
         <br><br><br><br>
 
         <p>
-          <%= link_to @post.document.original_filename, @post.document.url %>
+          <% if @post.document_file_name %>
+            <i class="fa fa-file" aria-hidden="true"></i>
+            <%= link_to @post.document.original_filename, @post.document.url %>
+          <% end %>
         </p>
 </div>

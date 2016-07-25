@@ -26,7 +26,8 @@ gem "paperclip", "~> 5.0.0"
 gem 'aws-sdk', '>= 2.0.34'
 gem 'bootstrap-sass', '~> 3.2.0'
 gem 'bcrypt'
-gem "nested_form"
+gem "bootstrap_form"
+gem "watu_table_builder", :require => "table_builder"
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 

@@ -1,6 +1,7 @@
 class PostsController < ApplicationController
   def index
     @posts = Post.all.reverse
+    @date = params[:month] ? Date.parse(params[:month].gsub('-', '/')) : Date.today
   end
 
   def show
