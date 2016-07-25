@@ -454,3 +454,344 @@ Processing by PostsController#index as HTML
 Completed 200 OK in 39ms (Views: 34.0ms | ActiveRecord: 0.7ms)
 
 
+Started GET "/" for ::1 at 2016-07-25 15:45:34 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (6.3ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.6ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+Completed 500 Internal Server Error in 74ms (ActiveRecord: 4.9ms)
+
+
+  
+NameError (undefined local variable or method `date' for #<PostsController:0x007f85fabf36f0>):
+  
+app/controllers/posts_controller.rb:4:in `index'
+  Rendering /Users/scottsouthard/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/scottsouthard/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/scottsouthard/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (4.1ms)
+  Rendering /Users/scottsouthard/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/scottsouthard/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.9ms)
+  Rendering /Users/scottsouthard/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/scottsouthard/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (10.2ms)
+  Rendered /Users/scottsouthard/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (121.3ms)
+  [1m[36mPost Load (0.6ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."title" = $1[0m  [["title", "fartboy"]]
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."date" = $1[0m  [["date", Mon, 25 Jul 2016 15:48:13 -0500]]
+Started GET "/" for ::1 at 2016-07-25 15:48:22 -0500
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+Completed 500 Internal Server Error in 42ms (ActiveRecord: 0.3ms)
+
+
+  
+NameError (undefined local variable or method `date' for #<PostsController:0x007f85fa1a2200>):
+  
+app/controllers/posts_controller.rb:4:in `index'
+  Rendering /Users/scottsouthard/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/scottsouthard/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/scottsouthard/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (4.8ms)
+  Rendering /Users/scottsouthard/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/scottsouthard/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.3ms)
+  Rendering /Users/scottsouthard/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/scottsouthard/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.9ms)
+  Rendered /Users/scottsouthard/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (120.9ms)
+Started GET "/" for ::1 at 2016-07-25 15:48:25 -0500
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+Completed 500 Internal Server Error in 35ms (ActiveRecord: 0.3ms)
+
+
+  
+NameError (undefined local variable or method `date' for #<PostsController:0x007f85fea8bcc8>):
+  
+app/controllers/posts_controller.rb:4:in `index'
+  Rendering /Users/scottsouthard/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/scottsouthard/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/scottsouthard/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (4.2ms)
+  Rendering /Users/scottsouthard/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/scottsouthard/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.0ms)
+  Rendering /Users/scottsouthard/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/scottsouthard/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /Users/scottsouthard/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (98.2ms)
+Started GET "/" for ::1 at 2016-07-25 15:48:56 -0500
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+Completed 500 Internal Server Error in 48ms (ActiveRecord: 2.8ms)
+
+
+  
+NameError (undefined local variable or method `date' for #<PostsController:0x007f85fe83a2d0>):
+  
+app/controllers/posts_controller.rb:4:in `index'
+  Rendering /Users/scottsouthard/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/scottsouthard/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/scottsouthard/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (4.0ms)
+  Rendering /Users/scottsouthard/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/scottsouthard/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.2ms)
+  Rendering /Users/scottsouthard/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/scottsouthard/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /Users/scottsouthard/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (96.7ms)
+Started GET "/" for ::1 at 2016-07-25 15:49:51 -0500
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."date" = $1[0m  [["date", Mon, 25 Jul 2016 15:49:51 -0500]]
+  Rendered posts/index.html.erb within layouts/application (8.1ms)
+Completed 200 OK in 309ms (Views: 292.3ms | ActiveRecord: 2.7ms)
+
+
+Started GET "/posts/new" for ::1 at 2016-07-25 15:49:56 -0500
+Processing by PostsController#new as HTML
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/new.html.erb within layouts/application (49.1ms)
+Completed 200 OK in 76ms (Views: 75.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/posts" for ::1 at 2016-07-25 15:50:11 -0500
+Processing by PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"DOvO+ZNNTAlNntL5y6LxE+Qw0yNs6Z1VxYdhZgFblvuMWn5cNvIw95xTprC1bW+n7/DqsHEQNsAC0y6dJBoWsg==", "post"=>{"title"=>"fartboy", "description"=>"adf", "date"=>"2016-07-29"}, "images"=>[#<ActionDispatch::Http::UploadedFile:0x007f86010faf80 @tempfile=#<Tempfile:/var/folders/6z/kzsbjfl178v4xr56zp5_zh440000gn/T/RackMultipart20160725-12626-1hroxr6.JPG>, @original_filename="image1.JPG", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"images[]\"; filename=\"image1.JPG\"\r\nContent-Type: image/jpeg\r\n">], "commit"=>"Create Post"}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (6.8ms)[0m  [1m[32mINSERT INTO "posts" ("title", "description", "date", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "fartboy"], ["description", "adf"], ["date", Fri, 29 Jul 2016], ["created_at", 2016-07-25 20:50:11 UTC], ["updated_at", 2016-07-25 20:50:11 UTC]]
+  [1m[35m (11.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+Command :: PATH=/usr/local/bin/:$PATH; file -b --mime '/var/folders/6z/kzsbjfl178v4xr56zp5_zh440000gn/T/b5e7d988cfdb78bc3be1a9c221a8f74420160725-12626-1gu8lmd.JPG'
+Command :: PATH=/usr/local/bin/:$PATH; identify -format '%wx%h,%[exif:orientation]' '/var/folders/6z/kzsbjfl178v4xr56zp5_zh440000gn/T/b5e7d988cfdb78bc3be1a9c221a8f74420160725-12626-1my8ers.JPG[0]' 2>/dev/null
+Command :: PATH=/usr/local/bin/:$PATH; identify -format %m '/var/folders/6z/kzsbjfl178v4xr56zp5_zh440000gn/T/b5e7d988cfdb78bc3be1a9c221a8f74420160725-12626-1my8ers.JPG[0]'
+Command :: PATH=/usr/local/bin/:$PATH; convert '/var/folders/6z/kzsbjfl178v4xr56zp5_zh440000gn/T/b5e7d988cfdb78bc3be1a9c221a8f74420160725-12626-1my8ers.JPG[0]' -auto-orient -resize "900x900>" '/var/folders/6z/kzsbjfl178v4xr56zp5_zh440000gn/T/2e0f41bc64fcac157a305502129a802620160725-12626-aeoc6'
+Command :: PATH=/usr/local/bin/:$PATH; identify -format '%wx%h,%[exif:orientation]' '/var/folders/6z/kzsbjfl178v4xr56zp5_zh440000gn/T/b5e7d988cfdb78bc3be1a9c221a8f74420160725-12626-1my8ers.JPG[0]' 2>/dev/null
+Command :: PATH=/usr/local/bin/:$PATH; identify -format %m '/var/folders/6z/kzsbjfl178v4xr56zp5_zh440000gn/T/b5e7d988cfdb78bc3be1a9c221a8f74420160725-12626-1my8ers.JPG[0]'
+Command :: PATH=/usr/local/bin/:$PATH; convert '/var/folders/6z/kzsbjfl178v4xr56zp5_zh440000gn/T/b5e7d988cfdb78bc3be1a9c221a8f74420160725-12626-1my8ers.JPG[0]' -auto-orient -resize "300x300>" '/var/folders/6z/kzsbjfl178v4xr56zp5_zh440000gn/T/2e0f41bc64fcac157a305502129a802620160725-12626-1vcw3rp'
+Command :: PATH=/usr/local/bin/:$PATH; file -b --mime '/var/folders/6z/kzsbjfl178v4xr56zp5_zh440000gn/T/b5e7d988cfdb78bc3be1a9c221a8f74420160725-12626-1m39yys.JPG'
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "pictures" ("post_id", "created_at", "updated_at", "image_file_name", "image_content_type", "image_file_size", "image_updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["post_id", 5], ["created_at", 2016-07-25 20:50:13 UTC], ["updated_at", 2016-07-25 20:50:13 UTC], ["image_file_name", "image1.JPG"], ["image_content_type", "image/jpeg"], ["image_file_size", 1113892], ["image_updated_at", 2016-07-25 20:50:11 UTC]]
+  [1m[35m (6.7ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 1534ms (ActiveRecord: 29.5ms)
+
+
+Started GET "/" for ::1 at 2016-07-25 15:50:13 -0500
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.6ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."date" = $1[0m  [["date", Mon, 25 Jul 2016 15:50:13 -0500]]
+  Rendered posts/index.html.erb within layouts/application (9.1ms)
+Completed 200 OK in 54ms (Views: 48.1ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/" for ::1 at 2016-07-25 15:50:21 -0500
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.9ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.5ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."date" = $1[0m  [["date", Mon, 25 Jul 2016 15:50:21 -0500]]
+  Rendered posts/index.html.erb within layouts/application (15.5ms)
+Completed 200 OK in 82ms (Views: 76.4ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/posts/new" for ::1 at 2016-07-25 15:50:40 -0500
+Processing by PostsController#new as HTML
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/new.html.erb within layouts/application (9.4ms)
+Completed 200 OK in 48ms (Views: 47.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/posts" for ::1 at 2016-07-25 15:50:53 -0500
+Processing by PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"BlB0nX9tRTKhxhEUoLwWK8nmAN1EUg118A0hx3D2e2OG4cQ42tI5zHALZV3ec4ifwiY5TlmrpuA3WW48Vbf7Kg==", "post"=>{"title"=>"asdfsdf", "description"=>"asdf", "date"=>"2016-07-25"}, "images"=>[#<ActionDispatch::Http::UploadedFile:0x007f85fc271008 @tempfile=#<Tempfile:/var/folders/6z/kzsbjfl178v4xr56zp5_zh440000gn/T/RackMultipart20160725-12626-ckz97j.jpg>, @original_filename="NOflier.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"images[]\"; filename=\"NOflier.jpg\"\r\nContent-Type: image/jpeg\r\n">], "commit"=>"Create Post"}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "posts" ("title", "description", "date", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "asdfsdf"], ["description", "asdf"], ["date", Mon, 25 Jul 2016], ["created_at", 2016-07-25 20:50:53 UTC], ["updated_at", 2016-07-25 20:50:53 UTC]]
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+Command :: PATH=/usr/local/bin/:$PATH; file -b --mime '/var/folders/6z/kzsbjfl178v4xr56zp5_zh440000gn/T/e03dd45ee6b1b23bcad6a7f7aeed4cc220160725-12626-1iqtf6i.jpg'
+Command :: PATH=/usr/local/bin/:$PATH; identify -format '%wx%h,%[exif:orientation]' '/var/folders/6z/kzsbjfl178v4xr56zp5_zh440000gn/T/e03dd45ee6b1b23bcad6a7f7aeed4cc220160725-12626-18guw62.jpg[0]' 2>/dev/null
+Command :: PATH=/usr/local/bin/:$PATH; identify -format %m '/var/folders/6z/kzsbjfl178v4xr56zp5_zh440000gn/T/e03dd45ee6b1b23bcad6a7f7aeed4cc220160725-12626-18guw62.jpg[0]'
+Command :: PATH=/usr/local/bin/:$PATH; convert '/var/folders/6z/kzsbjfl178v4xr56zp5_zh440000gn/T/e03dd45ee6b1b23bcad6a7f7aeed4cc220160725-12626-18guw62.jpg[0]' -auto-orient -resize "900x900>" '/var/folders/6z/kzsbjfl178v4xr56zp5_zh440000gn/T/179f00f230e1268ae663c11d33c55afb20160725-12626-1uv3bd1'
+Command :: PATH=/usr/local/bin/:$PATH; identify -format '%wx%h,%[exif:orientation]' '/var/folders/6z/kzsbjfl178v4xr56zp5_zh440000gn/T/e03dd45ee6b1b23bcad6a7f7aeed4cc220160725-12626-18guw62.jpg[0]' 2>/dev/null
+Command :: PATH=/usr/local/bin/:$PATH; identify -format %m '/var/folders/6z/kzsbjfl178v4xr56zp5_zh440000gn/T/e03dd45ee6b1b23bcad6a7f7aeed4cc220160725-12626-18guw62.jpg[0]'
+Command :: PATH=/usr/local/bin/:$PATH; convert '/var/folders/6z/kzsbjfl178v4xr56zp5_zh440000gn/T/e03dd45ee6b1b23bcad6a7f7aeed4cc220160725-12626-18guw62.jpg[0]' -auto-orient -resize "300x300>" '/var/folders/6z/kzsbjfl178v4xr56zp5_zh440000gn/T/179f00f230e1268ae663c11d33c55afb20160725-12626-1ql0bdq'
+Command :: PATH=/usr/local/bin/:$PATH; file -b --mime '/var/folders/6z/kzsbjfl178v4xr56zp5_zh440000gn/T/e03dd45ee6b1b23bcad6a7f7aeed4cc220160725-12626-7rjomh.jpg'
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "pictures" ("post_id", "created_at", "updated_at", "image_file_name", "image_content_type", "image_file_size", "image_updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["post_id", 6], ["created_at", 2016-07-25 20:50:53 UTC], ["updated_at", 2016-07-25 20:50:53 UTC], ["image_file_name", "NOflier.jpg"], ["image_content_type", "image/jpeg"], ["image_file_size", 853761], ["image_updated_at", 2016-07-25 20:50:53 UTC]]
+  [1m[35m (5.4ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 382ms (ActiveRecord: 7.6ms)
+
+
+Started GET "/" for ::1 at 2016-07-25 15:50:53 -0500
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."date" = $1[0m  [["date", Mon, 25 Jul 2016 15:50:53 -0500]]
+  Rendered posts/index.html.erb within layouts/application (14.4ms)
+Completed 200 OK in 42ms (Views: 38.3ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/" for ::1 at 2016-07-25 15:52:31 -0500
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+Completed 500 Internal Server Error in 14ms (ActiveRecord: 0.3ms)
+
+
+  
+ArgumentError (comparison of String with DateTime failed):
+  
+app/controllers/posts_controller.rb:4:in `>'
+app/controllers/posts_controller.rb:4:in `index'
+  Rendering /Users/scottsouthard/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/scottsouthard/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/scottsouthard/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (4.0ms)
+  Rendering /Users/scottsouthard/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/scottsouthard/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.2ms)
+  Rendering /Users/scottsouthard/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/scottsouthard/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /Users/scottsouthard/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (67.5ms)
+Started GET "/" for ::1 at 2016-07-25 15:52:42 -0500
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+Completed 500 Internal Server Error in 49ms (ActiveRecord: 0.3ms)
+
+
+  
+NameError (undefined local variable or method `date' for #<PostsController:0x007f85fee537c0>):
+  
+app/controllers/posts_controller.rb:4:in `index'
+  Rendering /Users/scottsouthard/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/scottsouthard/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/scottsouthard/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (4.6ms)
+  Rendering /Users/scottsouthard/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/scottsouthard/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.9ms)
+  Rendering /Users/scottsouthard/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/scottsouthard/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /Users/scottsouthard/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (117.9ms)
+Started GET "/" for ::1 at 2016-07-25 15:52:48 -0500
+  
+SyntaxError (/Users/scottsouthard/Documents/Dev/samuelgallery/app/controllers/posts_controller.rb:4: syntax error, unexpected '>'
+    @upcomingposts = Post.having(date: > DateTime.now)
+                                        ^
+/Users/scottsouthard/Documents/Dev/samuelgallery/app/controllers/posts_controller.rb:4: syntax error, unexpected ')', expecting keyword_end):
+  
+app/controllers/posts_controller.rb:4: syntax error, unexpected '>'
+app/controllers/posts_controller.rb:4: syntax error, unexpected ')', expecting keyword_end
+  Rendering /Users/scottsouthard/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/scottsouthard/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/scottsouthard/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (4.6ms)
+  Rendering /Users/scottsouthard/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/scottsouthard/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.8ms)
+  Rendering /Users/scottsouthard/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/scottsouthard/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Users/scottsouthard/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (69.9ms)
+Started GET "/" for ::1 at 2016-07-25 15:53:13 -0500
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (2.5ms)[0m  [1m[34mSELECT "posts".* FROM "posts" HAVING (date > DateTime.now)[0m
+  Rendered posts/index.html.erb within layouts/application (5.2ms)
+Completed 500 Internal Server Error in 22ms (ActiveRecord: 2.9ms)
+
+
+  
+ActionView::Template::Error (PG::UndefinedTable: ERROR:  missing FROM-clause entry for table "datetime"
+LINE 1: SELECT "posts".* FROM "posts" HAVING (date > DateTime.now)
+                                                     ^
+: SELECT "posts".* FROM "posts" HAVING (date > DateTime.now)):
+    1: <div class="container">
+    2:   <div class="list-group post-index">
+    3:   <% @upcomingposts.each do |post| %>
+    4:       <!-- <li class="list-group-item"> -->
+    5:         <%= link_to "#{post.title}  -  #{post.date.strftime("%m/%d/%Y")}", post, :class=>"list-group-item"%>
+    6:       <!-- </li> -->
+  
+app/views/posts/index.html.erb:3:in `_app_views_posts_index_html_erb__3658132647299974726_70106719382140'
+  Rendering /Users/scottsouthard/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/scottsouthard/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/scottsouthard/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (5.9ms)
+  Rendering /Users/scottsouthard/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/scottsouthard/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.1ms)
+  Rendering /Users/scottsouthard/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/scottsouthard/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Users/scottsouthard/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (73.6ms)
+  [1m[36mPost Load (3.4ms)[0m  [1m[34mSELECT "posts".* FROM "posts" HAVING (date > DateTime.now)[0m
+Started GET "/" for ::1 at 2016-07-25 15:55:07 -0500
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.7ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE (date > DateTime.now)[0m
+  Rendered posts/index.html.erb within layouts/application (3.4ms)
+Completed 500 Internal Server Error in 22ms (ActiveRecord: 1.1ms)
+
+
+  
+ActionView::Template::Error (PG::UndefinedTable: ERROR:  missing FROM-clause entry for table "datetime"
+LINE 1: SELECT "posts".* FROM "posts" WHERE (date > DateTime.now)
+                                                    ^
+: SELECT "posts".* FROM "posts" WHERE (date > DateTime.now)):
+    1: <div class="container">
+    2:   <div class="list-group post-index">
+    3:   <% @upcomingposts.each do |post| %>
+    4:       <!-- <li class="list-group-item"> -->
+    5:         <%= link_to "#{post.title}  -  #{post.date.strftime("%m/%d/%Y")}", post, :class=>"list-group-item"%>
+    6:       <!-- </li> -->
+  
+app/views/posts/index.html.erb:3:in `_app_views_posts_index_html_erb__3658132647299974726_70106718628120'
+  Rendering /Users/scottsouthard/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/scottsouthard/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/scottsouthard/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (7.0ms)
+  Rendering /Users/scottsouthard/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/scottsouthard/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.6ms)
+  Rendering /Users/scottsouthard/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/scottsouthard/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /Users/scottsouthard/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (75.2ms)
+  [1m[36mPost Load (2.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE (date > DateTime.now)[0m
+Started GET "/" for ::1 at 2016-07-25 15:56:08 -0500
+  
+SyntaxError (/Users/scottsouthard/Documents/Dev/samuelgallery/app/controllers/posts_controller.rb:4: syntax error, unexpected tCONSTANT, expecting ')'
+    @upcomingposts = Post.where("date >" DateTime.now)
+                                                 ^
+/Users/scottsouthard/Documents/Dev/samuelgallery/app/controllers/posts_controller.rb:4: syntax error, unexpected ')', expecting keyword_end):
+  
+app/controllers/posts_controller.rb:4: syntax error, unexpected tCONSTANT, expecting ')'
+app/controllers/posts_controller.rb:4: syntax error, unexpected ')', expecting keyword_end
+  Rendering /Users/scottsouthard/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/scottsouthard/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/scottsouthard/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (4.9ms)
+  Rendering /Users/scottsouthard/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/scottsouthard/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.2ms)
+  Rendering /Users/scottsouthard/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/scottsouthard/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /Users/scottsouthard/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (69.1ms)
+Started GET "/" for ::1 at 2016-07-25 15:58:12 -0500
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (6.4ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE (date > Date.today)[0m
+  Rendered posts/index.html.erb within layouts/application (9.9ms)
+Completed 500 Internal Server Error in 30ms (ActiveRecord: 6.7ms)
+
+
+  
+ActionView::Template::Error (PG::UndefinedTable: ERROR:  missing FROM-clause entry for table "date"
+LINE 1: SELECT "posts".* FROM "posts" WHERE (date > Date.today)
+                                                    ^
+: SELECT "posts".* FROM "posts" WHERE (date > Date.today)):
+    1: <div class="container">
+    2:   <div class="list-group post-index">
+    3:   <% @upcomingposts.each do |post| %>
+    4:       <!-- <li class="list-group-item"> -->
+    5:         <%= link_to "#{post.title}  -  #{post.date.strftime("%m/%d/%Y")}", post, :class=>"list-group-item"%>
+    6:       <!-- </li> -->
+  
+app/views/posts/index.html.erb:3:in `_app_views_posts_index_html_erb__3658132647299974726_70106772369480'
+  Rendering /Users/scottsouthard/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/scottsouthard/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/scottsouthard/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (7.0ms)
+  Rendering /Users/scottsouthard/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/scottsouthard/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.7ms)
+  Rendering /Users/scottsouthard/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/scottsouthard/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /Users/scottsouthard/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (72.5ms)
+  [1m[36mPost Load (1.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE (date > Date.today)[0m
+  [1m[36mPost Load (1.4ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."date" = $1[0m  [["date", Mon, 25 Jul 2016]]
+Started GET "/" for ::1 at 2016-07-25 16:05:21 -0500
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE (date > '2016-07-25')[0m
+  Rendered posts/index.html.erb within layouts/application (4.4ms)
+Completed 200 OK in 42ms (Views: 28.3ms | ActiveRecord: 0.6ms)
+
+
