@@ -1,4 +1,5 @@
 body {
+
 }
 .navbar {
     text-transform: uppercase;
@@ -25,6 +26,7 @@ h2 {
 }
 a {
   color: black !important;
+
   // -o-transition:.3s;
   // -ms-transition:.3s;
   // -moz-transition:.3s;
@@ -67,6 +69,7 @@ a:hover{
     width: 80%;
     max-width: 700px;
 }
+
 #show-next-image{
   margin-left: 290px;
   text-align: right;
@@ -127,6 +130,7 @@ form {
   margin-left: auto;
   margin-right: auto;
 }
+
 p .date {
   font-size: .1em;
 }
@@ -198,7 +202,6 @@ p .date {
 #calendar #month a, #calendar #month a:hover {
   text-decoration: none;
   padding: 0 10px;
-
 }
 
 #calendar ul {

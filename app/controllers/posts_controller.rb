@@ -17,7 +17,6 @@ class PostsController < ApplicationController
     @post = Post.find(params[:id])
   end
 
-
   def new
     @post = Post.new
     render :"posts/new"
@@ -65,7 +64,7 @@ class PostsController < ApplicationController
     @post.destroy
     redirect_to :root
   end
-
+  
   private
 
   def post_params

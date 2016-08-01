@@ -1,5 +1,4 @@
 var ready = function(){
-    
     loadGallery(true, 'a.thumbnail');
 
     //This function disables buttons when needed

@@ -10,6 +10,4 @@ Rails.application.routes.draw do
   get 'sessions/new' => "sessions#new"
   post 'sessions/create' => "sessions#create"
   get 'sessions/logout' => "sessions#logout"
-
-
 end

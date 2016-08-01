@@ -2,15 +2,19 @@
   <div class="show-links">
     <%= link_to "Past Shows", posts_past_path %>
   </div>
+
   <div class="show-links upcoming">
     <%= link_to "Upcoming Shows", posts_upcoming_path %>
   </div>
+
   <br><br>
+
   <% if logged_in? %>
     <div class="col-md-6">
       <%= link_to "New Post", new_post_path %>
     </div>
   <% end %>
+
   <div id="calendar">
     <h2 id="month">
       <div class="arrows">
@@ -25,16 +29,15 @@
       <%= t.head('S', "M", "T", "W", "T", "F", "S") %>
       <%= t.day(:day_method => :date) do |day, posts| %>
         <div class="full-cell">
-        <% posts.each do |post| %>
-          <div class="date-post">
-            <%= h(link_to "#{post.title.upcase}", post) %>
+          <% posts.each do |post| %>
+            <div class="date-post">
+              <%= h(link_to "#{post.title.upcase}", post) %>
+            </div>
+          <% end %>
+          <div class="date-day">
+            <%= day.day %>
           </div>
-        <% end %>
-        <div class="date-day">
-          <%= day.day %>
         </div>
-        </div>
-
       <% end %>
     <% end %>
   </div>
