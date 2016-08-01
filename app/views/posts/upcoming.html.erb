@@ -1,0 +1,9 @@
+<h2 class="list-head"> Upcoming Shows </h2>
+
+<div class="list-group post-index post-list">
+  <% @posts.each do |post| %>
+      <!-- <li class="list-group-item"> -->
+        <%= link_to "#{post.title}  -  #{post.date.strftime("%m/%d/%Y")}", post, :class=>""%>
+      <!-- </li> -->
+  <% end %>
+</div>
