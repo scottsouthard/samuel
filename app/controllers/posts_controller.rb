@@ -1,4 +1,6 @@
 class PostsController < ApplicationController
+  before_action :authenticate_user!, only: [:new, :create, :edit, :update, :destroy]
+
   def index
     @posts = Post.all.reverse
     @upcomingposts = Post.where("date >= ?", Date.today)
@@ -33,6 +35,7 @@ class PostsController < ApplicationController
       end
       redirect_to :root
     else
+      @errors = @post.errors.full_messages
       render :"posts/new"
     end
   end
@@ -64,8 +67,15 @@ class PostsController < ApplicationController
     @post.destroy
     redirect_to :root
   end
-  
+
   private
+  def logged_in?
+    session[:user_id] != nil
+  end
+
+  def authenticate_user!
+    redirect_to root_path unless logged_in?
+  end
 
   def post_params
     params.require(:post).permit(:title, :description, :date)
