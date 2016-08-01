@@ -11,26 +11,30 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
 </head>
 <body>
+  <div id="wrapper">
       <div class="container">
         <div class="row">
           <div>
             <nav id="mainNav" class="navbar navbar-default navbar-fixed-top">
-              <div class="">
-                <%= link_to image_tag("samuel.png", :class =>"img-responsive nav-pic"), root_path %>
+              <div class="topstuff">
+                <!-- <%= link_to image_tag("samuel.png", :class =>"img-responsive nav-pic"), root_path %> -->
+                <h1>
+                  <%= link_to "2016", root_path %> <div id="sam-click"><%= link_to "About", welcome_about_path %> <div id="sam">SAMUEL</div></div>
+                </h1>
               </div>
             </nav>
           </div>
         </div>
       </div>
-    <div class="content">
-      <%= yield %>
+      <div class="content">
+        <%= yield %>
+      </div>
     </div>
-    <footer>
-        <div class="row">
-            <div class="col-lg-12">
-                <p>Copyright &copy; Samuel</p>
-            </div>
-        </div>
-    </footer>
+  <footer>
+    <br>
+    <div class="row">
+      <p><%= link_to "Copyright", sessions_new_path %> &copy; Samuel also some email stuff</p>
+    </div>
+  </footer>
   </body>
 </html>
