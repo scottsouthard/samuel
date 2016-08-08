@@ -2,7 +2,7 @@ class Post < ApplicationRecord
 
   has_many :pictures, :dependent => :destroy
 
-  validates :date, presence: true
+  validates :date, presence: true, uniqueness: true
   validates :title, presence: true
   validates :description, presence: true
 

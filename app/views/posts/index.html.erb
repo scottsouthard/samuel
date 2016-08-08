@@ -1,11 +1,5 @@
 <div class="container">
-  <div class="show-links">
-    <%= link_to "Past", posts_past_path %>
-  </div>
 
-  <div class="show-links upcoming">
-    <%= link_to "Future", posts_upcoming_path %>
-  </div>
 
   <br><br>
 
@@ -18,11 +12,19 @@
   <div id="calendar">
     <h2 id="month">
       <div class="arrows">
+        <div class="show-links past">
+          <%= link_to "Past", posts_past_path %>
+        </div>
+
         <%= link_to "<", :month => (@date.beginning_of_month-1).strftime("%Y-%m") %>
 
-      <%=h @date.strftime("%B %Y") %>
+        <%=h @date.strftime("%B %Y") %>
 
         <%= link_to ">", :month => (@date.end_of_month+1).strftime("%Y-%m") %>
+
+        <div class="show-links future">
+          <%= link_to "Future", posts_upcoming_path %>
+        </div>
       </div>
     </h2>
     <%= calendar_for @posts, :year => @date.year, :month => @date.month do |t| %>
@@ -30,7 +32,7 @@
       <%= t.day(:day_method => :date) do |day, posts| %>
         <div class="full-cell">
           <% posts.each do |post| %>
-            <div class="date-post">
+            <div class="date-post jtextfill">
               <%= h(link_to "#{post.title.upcase}", post) %>
             </div>
           <% end %>
