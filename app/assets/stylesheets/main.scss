@@ -141,7 +141,7 @@ p .date {
 #calendar table {
   border-collapse: collapse;
   width: 100%;
-  border: 1px solid #999
+  // border: 1px solid #999
 }
 #calendar a {
   display: table;
@@ -155,8 +155,9 @@ p .date {
 }
 #calendar td,
 #calendar th {
-  font-family: "Lucida Grande",arial,helvetica,sans-serif;
-  font-size: 2em;
+  font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+  // font-weight: 700;
+  font-size: 3em;
   padding: 6px;
 }
 

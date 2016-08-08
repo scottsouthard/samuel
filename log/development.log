@@ -14331,3 +14331,312 @@ Processing by PostsController#show as HTML
 Completed 200 OK in 77ms (Views: 69.5ms | ActiveRecord: 4.8ms)
 
 
+Started GET "/" for ::1 at 2016-08-05 16:27:56 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (25.4ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (18.9ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendering posts/index.html.erb within layouts/application
+  Rendered posts/index.html.erb within layouts/application (21.2ms)
+Completed 200 OK in 388ms (Views: 325.6ms | ActiveRecord: 27.5ms)
+
+
+Started GET "/posts/upcoming" for ::1 at 2016-08-05 16:27:59 -0500
+Processing by PostsController#upcoming as HTML
+  [1m[36mPost Load (1.7ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE (date >= '2016-08-05')[0m
+  Rendering posts/upcoming.html.erb within layouts/application
+  Rendered posts/upcoming.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 56ms (Views: 50.4ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/" for ::1 at 2016-08-05 16:28:15 -0500
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.5ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendering posts/index.html.erb within layouts/application
+  Rendered posts/index.html.erb within layouts/application (6.6ms)
+Completed 200 OK in 48ms (Views: 44.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for ::1 at 2016-08-05 16:36:39 -0500
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.5ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendering posts/index.html.erb within layouts/application
+  Rendered posts/index.html.erb within layouts/application (8.2ms)
+Completed 200 OK in 299ms (Views: 295.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for ::1 at 2016-08-05 16:37:34 -0500
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendering posts/index.html.erb within layouts/application
+  Rendered posts/index.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 117ms (Views: 114.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for ::1 at 2016-08-05 16:37:36 -0500
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.5ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendering posts/index.html.erb within layouts/application
+  Rendered posts/index.html.erb within layouts/application (7.4ms)
+Completed 200 OK in 39ms (Views: 35.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for ::1 at 2016-08-05 16:37:41 -0500
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendering posts/index.html.erb within layouts/application
+  Rendered posts/index.html.erb within layouts/application (4.6ms)
+Completed 200 OK in 108ms (Views: 106.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/posts/2" for ::1 at 2016-08-05 16:37:51 -0500
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mPost Load (1.7ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering posts/show.html.erb within layouts/application
+  [1m[36mPicture Load (7.3ms)[0m  [1m[34mSELECT "pictures".* FROM "pictures" WHERE "pictures"."post_id" = $1[0m  [["post_id", 2]]
+  Rendered posts/show.html.erb within layouts/application (58.0ms)
+Completed 200 OK in 96ms (Views: 73.2ms | ActiveRecord: 15.6ms)
+
+
+Started GET "/posts/2" for ::1 at 2016-08-05 16:38:09 -0500
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering posts/show.html.erb within layouts/application
+  [1m[36mPicture Load (0.3ms)[0m  [1m[34mSELECT "pictures".* FROM "pictures" WHERE "pictures"."post_id" = $1[0m  [["post_id", 2]]
+  Rendered posts/show.html.erb within layouts/application (5.3ms)
+Completed 200 OK in 117ms (Views: 113.8ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for ::1 at 2016-08-05 16:38:10 -0500
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendering posts/index.html.erb within layouts/application
+  Rendered posts/index.html.erb within layouts/application (6.1ms)
+Completed 200 OK in 45ms (Views: 42.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/posts/new" for ::1 at 2016-08-05 16:39:08 -0500
+Processing by PostsController#new as HTML
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/new.html.erb within layouts/application (25.6ms)
+Completed 200 OK in 61ms (Views: 60.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/posts" for ::1 at 2016-08-05 16:39:22 -0500
+Processing by PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"t9+xiB0cLML3j+oiXCKIYd+IM1CgW257BS9VB4CrnDzXuar8eoBEwY22iH7moN3bYbfaDhQtKovUm6QGQP1f1Q==", "post"=>{"title"=>"Steven's big long show that is really long", "description"=>"dsag", "date"=>"2016-08-06"}, "commit"=>"Create Post"}
+  [1m[35m (6.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (21.5ms)[0m  [1m[32mINSERT INTO "posts" ("title", "description", "date", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Steven's big long show that is really long"], ["description", "dsag"], ["date", Sat, 06 Aug 2016], ["created_at", 2016-08-05 21:39:22 UTC], ["updated_at", 2016-08-05 21:39:22 UTC]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 36ms (ActiveRecord: 28.4ms)
+
+
+Started GET "/" for ::1 at 2016-08-05 16:39:22 -0500
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendering posts/index.html.erb within layouts/application
+  Rendered posts/index.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 28ms (Views: 25.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/posts/3" for ::1 at 2016-08-05 16:40:07 -0500
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering posts/show.html.erb within layouts/application
+  [1m[36mPicture Load (0.3ms)[0m  [1m[34mSELECT "pictures".* FROM "pictures" WHERE "pictures"."post_id" = $1[0m  [["post_id", 3]]
+  Rendered posts/show.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 31ms (Views: 26.2ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/posts/3/edit" for ::1 at 2016-08-05 16:40:09 -0500
+Processing by PostsController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering posts/edit.html.erb within layouts/application
+  Rendered posts/edit.html.erb within layouts/application (6.2ms)
+Completed 200 OK in 32ms (Views: 28.3ms | ActiveRecord: 0.3ms)
+
+
+Started PATCH "/posts/3" for ::1 at 2016-08-05 16:41:12 -0500
+Processing by PostsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"WXdPVXqPfxRA4jBcP8CFHK8uBt81F2FbDXifsnVzFRs5EVQhHRMXFzrbUgCFQtCmERHvgYFhJavczG6ztSXW8g==", "post"=>{"title"=>"Steven's big long show that is really long", "description"=>" My contract is for 20 hours a week and I come in Wednesday Thursday and Friday (I usually end up working around 25 hours). My time is divided between medici and cultural media related tasks. I do free lance stuff and i'm working on a game so this works out nicely for me. I think it would be good if you could come in during at least two of those days. So, If you can get back to me with your preferred hours I'll pass that along and we should be in good shape for you to start next week.\r\n\r\nHere is a link to an older presentation that has a user journey in it. link \r\nmost of this info pertains to the mobile app strategy we put together with a class from general assembly early this summer. This was before we decided to go the web service route (Also the mock ups in here are really out of date.) But it should give you some idea of what we're trying to accomplish.\r\n\r\nI'll need to get back to you with a timeline because I wasn't sure if/when we would be able to get someone in here to help with the project and some of Maggie's expectations are pretty nebulous. I think the September deadline is pretty generous but I wanted to give us some time to experiment and make something really polished. Also I definitely want to get your input on how quickly you think we can build this out. ", "date"=>"2016-08-06", "document"=>#<ActionDispatch::Http::UploadedFile:0x007f93a5c17560 @tempfile=#<Tempfile:/var/folders/6z/kzsbjfl178v4xr56zp5_zh440000gn/T/RackMultipart20160805-18974-1kd552d.pdf>, @original_filename="ScottSouthardResume.pdf", @content_type="application/pdf", @headers="Content-Disposition: form-data; name=\"post[document]\"; filename=\"ScottSouthardResume.pdf\"\r\nContent-Type: application/pdf\r\n">}, "images"=>[#<ActionDispatch::Http::UploadedFile:0x007f93a5c172e0 @tempfile=#<Tempfile:/var/folders/6z/kzsbjfl178v4xr56zp5_zh440000gn/T/RackMultipart20160805-18974-bco9vp.jpg>, @original_filename="443816.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"images[]\"; filename=\"443816.jpg\"\r\nContent-Type: image/jpeg\r\n">, #<ActionDispatch::Http::UploadedFile:0x007f93a5c17240 @tempfile=#<Tempfile:/var/folders/6z/kzsbjfl178v4xr56zp5_zh440000gn/T/RackMultipart20160805-18974-1qv3gnm.jpg>, @original_filename="lying-cat-leg-fix.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"images[]\"; filename=\"lying-cat-leg-fix.jpg\"\r\nContent-Type: image/jpeg\r\n">, #<ActionDispatch::Http::UploadedFile:0x007f93a5c17218 @tempfile=#<Tempfile:/var/folders/6z/kzsbjfl178v4xr56zp5_zh440000gn/T/RackMultipart20160805-18974-1jo2oza.jpg>, @original_filename="maxresdefault-3.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"images[]\"; filename=\"maxresdefault-3.jpg\"\r\nContent-Type: image/jpeg\r\n">, #<ActionDispatch::Http::UploadedFile:0x007f93a5c17178 @tempfile=#<Tempfile:/var/folders/6z/kzsbjfl178v4xr56zp5_zh440000gn/T/RackMultipart20160805-18974-z7zgo8.jpg>, @original_filename="8cCLLYx.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"images[]\"; filename=\"8cCLLYx.jpg\"\r\nContent-Type: image/jpeg\r\n">], "commit"=>"Edit Post", "id"=>"3"}
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+Command :: PATH=/usr/local/bin/:$PATH; file -b --mime '/var/folders/6z/kzsbjfl178v4xr56zp5_zh440000gn/T/d8ac3309be72e23ff40e7409fdc342f720160805-18974-1lbq9kl.pdf'
+Unpermitted parameter: document
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+Command :: PATH=/usr/local/bin/:$PATH; file -b --mime '/var/folders/6z/kzsbjfl178v4xr56zp5_zh440000gn/T/d8ac3309be72e23ff40e7409fdc342f720160805-18974-9rbr78.pdf'
+  [1m[35mSQL (11.6ms)[0m  [1m[33mUPDATE "posts" SET "document_file_name" = $1, "document_content_type" = $2, "document_file_size" = $3, "document_updated_at" = $4, "description" = $5, "updated_at" = $6 WHERE "posts"."id" = $7[0m  [["document_file_name", "ScottSouthardResume.pdf"], ["document_content_type", "application/pdf"], ["document_file_size", 175375], ["document_updated_at", 2016-08-05 21:41:12 UTC], ["description", " My contract is for 20 hours a week and I come in Wednesday Thursday and Friday (I usually end up working around 25 hours). My time is divided between medici and cultural media related tasks. I do free lance stuff and i'm working on a game so this works out nicely for me. I think it would be good if you could come in during at least two of those days. So, If you can get back to me with your preferred hours I'll pass that along and we should be in good shape for you to start next week.\r\n\r\nHere is a link to an older presentation that has a user journey in it. link \r\nmost of this info pertains to the mobile app strategy we put together with a class from general assembly early this summer. This was before we decided to go the web service route (Also the mock ups in here are really out of date.) But it should give you some idea of what we're trying to accomplish.\r\n\r\nI'll need to get back to you with a timeline because I wasn't sure if/when we would be able to get someone in here to help with the project and some of Maggie's expectations are pretty nebulous. I think the September deadline is pretty generous but I wanted to give us some time to experiment and make something really polished. Also I definitely want to get your input on how quickly you think we can build this out. "], ["updated_at", 2016-08-05 21:41:12 UTC], ["id", 3]]
+  [1m[35m (6.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mPicture Load (0.3ms)[0m  [1m[34mSELECT "pictures".* FROM "pictures" WHERE "pictures"."post_id" = $1[0m  [["post_id", 3]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+Command :: PATH=/usr/local/bin/:$PATH; file -b --mime '/var/folders/6z/kzsbjfl178v4xr56zp5_zh440000gn/T/7648ae85b92f8fc4f6f4f3e771d9a23d20160805-18974-114naaa.jpg'
+Command :: PATH=/usr/local/bin/:$PATH; identify -format '%wx%h,%[exif:orientation]' '/var/folders/6z/kzsbjfl178v4xr56zp5_zh440000gn/T/7648ae85b92f8fc4f6f4f3e771d9a23d20160805-18974-1gj02q.jpg[0]' 2>/dev/null
+Command :: PATH=/usr/local/bin/:$PATH; identify -format %m '/var/folders/6z/kzsbjfl178v4xr56zp5_zh440000gn/T/7648ae85b92f8fc4f6f4f3e771d9a23d20160805-18974-1gj02q.jpg[0]'
+Command :: PATH=/usr/local/bin/:$PATH; convert '/var/folders/6z/kzsbjfl178v4xr56zp5_zh440000gn/T/7648ae85b92f8fc4f6f4f3e771d9a23d20160805-18974-1gj02q.jpg[0]' -auto-orient -resize "900x900>" '/var/folders/6z/kzsbjfl178v4xr56zp5_zh440000gn/T/4281dcc7e366c4b39a6cc2bc040b484f20160805-18974-1uvdgiv'
+Command :: PATH=/usr/local/bin/:$PATH; identify -format '%wx%h,%[exif:orientation]' '/var/folders/6z/kzsbjfl178v4xr56zp5_zh440000gn/T/7648ae85b92f8fc4f6f4f3e771d9a23d20160805-18974-1gj02q.jpg[0]' 2>/dev/null
+Command :: PATH=/usr/local/bin/:$PATH; identify -format %m '/var/folders/6z/kzsbjfl178v4xr56zp5_zh440000gn/T/7648ae85b92f8fc4f6f4f3e771d9a23d20160805-18974-1gj02q.jpg[0]'
+Command :: PATH=/usr/local/bin/:$PATH; convert '/var/folders/6z/kzsbjfl178v4xr56zp5_zh440000gn/T/7648ae85b92f8fc4f6f4f3e771d9a23d20160805-18974-1gj02q.jpg[0]' -auto-orient -resize "300x300>" '/var/folders/6z/kzsbjfl178v4xr56zp5_zh440000gn/T/4281dcc7e366c4b39a6cc2bc040b484f20160805-18974-14mh6a5'
+Command :: PATH=/usr/local/bin/:$PATH; identify -format '%wx%h,%[exif:orientation]' '/var/folders/6z/kzsbjfl178v4xr56zp5_zh440000gn/T/7648ae85b92f8fc4f6f4f3e771d9a23d20160805-18974-1gj02q.jpg[0]' 2>/dev/null
+Command :: PATH=/usr/local/bin/:$PATH; identify -format %m '/var/folders/6z/kzsbjfl178v4xr56zp5_zh440000gn/T/7648ae85b92f8fc4f6f4f3e771d9a23d20160805-18974-1gj02q.jpg[0]'
+Command :: PATH=/usr/local/bin/:$PATH; convert '/var/folders/6z/kzsbjfl178v4xr56zp5_zh440000gn/T/7648ae85b92f8fc4f6f4f3e771d9a23d20160805-18974-1gj02q.jpg[0]' -auto-orient -resize "200x200>" '/var/folders/6z/kzsbjfl178v4xr56zp5_zh440000gn/T/4281dcc7e366c4b39a6cc2bc040b484f20160805-18974-yma34e'
+Command :: PATH=/usr/local/bin/:$PATH; identify -format '%wx%h,%[exif:orientation]' '/var/folders/6z/kzsbjfl178v4xr56zp5_zh440000gn/T/7648ae85b92f8fc4f6f4f3e771d9a23d20160805-18974-1gj02q.jpg[0]' 2>/dev/null
+Command :: PATH=/usr/local/bin/:$PATH; identify -format %m '/var/folders/6z/kzsbjfl178v4xr56zp5_zh440000gn/T/7648ae85b92f8fc4f6f4f3e771d9a23d20160805-18974-1gj02q.jpg[0]'
+Command :: PATH=/usr/local/bin/:$PATH; convert '/var/folders/6z/kzsbjfl178v4xr56zp5_zh440000gn/T/7648ae85b92f8fc4f6f4f3e771d9a23d20160805-18974-1gj02q.jpg[0]' -auto-orient -resize "100x100>" '/var/folders/6z/kzsbjfl178v4xr56zp5_zh440000gn/T/4281dcc7e366c4b39a6cc2bc040b484f20160805-18974-nr7l6c'
+Command :: PATH=/usr/local/bin/:$PATH; file -b --mime '/var/folders/6z/kzsbjfl178v4xr56zp5_zh440000gn/T/7648ae85b92f8fc4f6f4f3e771d9a23d20160805-18974-1yrjaox.jpg'
+  [1m[35mSQL (11.7ms)[0m  [1m[32mINSERT INTO "pictures" ("post_id", "created_at", "updated_at", "image_file_name", "image_content_type", "image_file_size", "image_updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["post_id", 3], ["created_at", 2016-08-05 21:41:13 UTC], ["updated_at", 2016-08-05 21:41:13 UTC], ["image_file_name", "443816.jpg"], ["image_content_type", "image/jpeg"], ["image_file_size", 265654], ["image_updated_at", 2016-08-05 21:41:12 UTC]]
+  [1m[35m (6.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+Command :: PATH=/usr/local/bin/:$PATH; file -b --mime '/var/folders/6z/kzsbjfl178v4xr56zp5_zh440000gn/T/04c10995cbfa368953426c7d517ebecd20160805-18974-z8asu3.jpg'
+Command :: PATH=/usr/local/bin/:$PATH; identify -format '%wx%h,%[exif:orientation]' '/var/folders/6z/kzsbjfl178v4xr56zp5_zh440000gn/T/04c10995cbfa368953426c7d517ebecd20160805-18974-1yrtdb0.jpg[0]' 2>/dev/null
+Command :: PATH=/usr/local/bin/:$PATH; identify -format %m '/var/folders/6z/kzsbjfl178v4xr56zp5_zh440000gn/T/04c10995cbfa368953426c7d517ebecd20160805-18974-1yrtdb0.jpg[0]'
+Command :: PATH=/usr/local/bin/:$PATH; convert '/var/folders/6z/kzsbjfl178v4xr56zp5_zh440000gn/T/04c10995cbfa368953426c7d517ebecd20160805-18974-1yrtdb0.jpg[0]' -auto-orient -resize "900x900>" '/var/folders/6z/kzsbjfl178v4xr56zp5_zh440000gn/T/88ee02623aa20977a47ea178cf4c63d620160805-18974-oe9pjy'
+Command :: PATH=/usr/local/bin/:$PATH; identify -format '%wx%h,%[exif:orientation]' '/var/folders/6z/kzsbjfl178v4xr56zp5_zh440000gn/T/04c10995cbfa368953426c7d517ebecd20160805-18974-1yrtdb0.jpg[0]' 2>/dev/null
+Command :: PATH=/usr/local/bin/:$PATH; identify -format %m '/var/folders/6z/kzsbjfl178v4xr56zp5_zh440000gn/T/04c10995cbfa368953426c7d517ebecd20160805-18974-1yrtdb0.jpg[0]'
+Command :: PATH=/usr/local/bin/:$PATH; convert '/var/folders/6z/kzsbjfl178v4xr56zp5_zh440000gn/T/04c10995cbfa368953426c7d517ebecd20160805-18974-1yrtdb0.jpg[0]' -auto-orient -resize "300x300>" '/var/folders/6z/kzsbjfl178v4xr56zp5_zh440000gn/T/88ee02623aa20977a47ea178cf4c63d620160805-18974-1j4ifhx'
+Command :: PATH=/usr/local/bin/:$PATH; identify -format '%wx%h,%[exif:orientation]' '/var/folders/6z/kzsbjfl178v4xr56zp5_zh440000gn/T/04c10995cbfa368953426c7d517ebecd20160805-18974-1yrtdb0.jpg[0]' 2>/dev/null
+Command :: PATH=/usr/local/bin/:$PATH; identify -format %m '/var/folders/6z/kzsbjfl178v4xr56zp5_zh440000gn/T/04c10995cbfa368953426c7d517ebecd20160805-18974-1yrtdb0.jpg[0]'
+Command :: PATH=/usr/local/bin/:$PATH; convert '/var/folders/6z/kzsbjfl178v4xr56zp5_zh440000gn/T/04c10995cbfa368953426c7d517ebecd20160805-18974-1yrtdb0.jpg[0]' -auto-orient -resize "200x200>" '/var/folders/6z/kzsbjfl178v4xr56zp5_zh440000gn/T/88ee02623aa20977a47ea178cf4c63d620160805-18974-1nd6ifz'
+Command :: PATH=/usr/local/bin/:$PATH; identify -format '%wx%h,%[exif:orientation]' '/var/folders/6z/kzsbjfl178v4xr56zp5_zh440000gn/T/04c10995cbfa368953426c7d517ebecd20160805-18974-1yrtdb0.jpg[0]' 2>/dev/null
+Command :: PATH=/usr/local/bin/:$PATH; identify -format %m '/var/folders/6z/kzsbjfl178v4xr56zp5_zh440000gn/T/04c10995cbfa368953426c7d517ebecd20160805-18974-1yrtdb0.jpg[0]'
+Command :: PATH=/usr/local/bin/:$PATH; convert '/var/folders/6z/kzsbjfl178v4xr56zp5_zh440000gn/T/04c10995cbfa368953426c7d517ebecd20160805-18974-1yrtdb0.jpg[0]' -auto-orient -resize "100x100>" '/var/folders/6z/kzsbjfl178v4xr56zp5_zh440000gn/T/88ee02623aa20977a47ea178cf4c63d620160805-18974-jyeei1'
+Command :: PATH=/usr/local/bin/:$PATH; file -b --mime '/var/folders/6z/kzsbjfl178v4xr56zp5_zh440000gn/T/04c10995cbfa368953426c7d517ebecd20160805-18974-g7zt5g.jpg'
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "pictures" ("post_id", "created_at", "updated_at", "image_file_name", "image_content_type", "image_file_size", "image_updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["post_id", 3], ["created_at", 2016-08-05 21:41:14 UTC], ["updated_at", 2016-08-05 21:41:14 UTC], ["image_file_name", "lying-cat-leg-fix.jpg"], ["image_content_type", "image/jpeg"], ["image_file_size", 204614], ["image_updated_at", 2016-08-05 21:41:13 UTC]]
+  [1m[35m (6.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+Command :: PATH=/usr/local/bin/:$PATH; file -b --mime '/var/folders/6z/kzsbjfl178v4xr56zp5_zh440000gn/T/48fc0dd5c80b74d111c132b04a89e33920160805-18974-1kivfud.jpg'
+Command :: PATH=/usr/local/bin/:$PATH; identify -format '%wx%h,%[exif:orientation]' '/var/folders/6z/kzsbjfl178v4xr56zp5_zh440000gn/T/48fc0dd5c80b74d111c132b04a89e33920160805-18974-1g6dpp5.jpg[0]' 2>/dev/null
+Command :: PATH=/usr/local/bin/:$PATH; identify -format %m '/var/folders/6z/kzsbjfl178v4xr56zp5_zh440000gn/T/48fc0dd5c80b74d111c132b04a89e33920160805-18974-1g6dpp5.jpg[0]'
+Command :: PATH=/usr/local/bin/:$PATH; convert '/var/folders/6z/kzsbjfl178v4xr56zp5_zh440000gn/T/48fc0dd5c80b74d111c132b04a89e33920160805-18974-1g6dpp5.jpg[0]' -auto-orient -resize "900x900>" '/var/folders/6z/kzsbjfl178v4xr56zp5_zh440000gn/T/8826579b745e74ac4cdf9896ae5b77df20160805-18974-b6zyz4'
+Command :: PATH=/usr/local/bin/:$PATH; identify -format '%wx%h,%[exif:orientation]' '/var/folders/6z/kzsbjfl178v4xr56zp5_zh440000gn/T/48fc0dd5c80b74d111c132b04a89e33920160805-18974-1g6dpp5.jpg[0]' 2>/dev/null
+Command :: PATH=/usr/local/bin/:$PATH; identify -format %m '/var/folders/6z/kzsbjfl178v4xr56zp5_zh440000gn/T/48fc0dd5c80b74d111c132b04a89e33920160805-18974-1g6dpp5.jpg[0]'
+Command :: PATH=/usr/local/bin/:$PATH; convert '/var/folders/6z/kzsbjfl178v4xr56zp5_zh440000gn/T/48fc0dd5c80b74d111c132b04a89e33920160805-18974-1g6dpp5.jpg[0]' -auto-orient -resize "300x300>" '/var/folders/6z/kzsbjfl178v4xr56zp5_zh440000gn/T/8826579b745e74ac4cdf9896ae5b77df20160805-18974-1av8hmi'
+Command :: PATH=/usr/local/bin/:$PATH; identify -format '%wx%h,%[exif:orientation]' '/var/folders/6z/kzsbjfl178v4xr56zp5_zh440000gn/T/48fc0dd5c80b74d111c132b04a89e33920160805-18974-1g6dpp5.jpg[0]' 2>/dev/null
+Command :: PATH=/usr/local/bin/:$PATH; identify -format %m '/var/folders/6z/kzsbjfl178v4xr56zp5_zh440000gn/T/48fc0dd5c80b74d111c132b04a89e33920160805-18974-1g6dpp5.jpg[0]'
+Command :: PATH=/usr/local/bin/:$PATH; convert '/var/folders/6z/kzsbjfl178v4xr56zp5_zh440000gn/T/48fc0dd5c80b74d111c132b04a89e33920160805-18974-1g6dpp5.jpg[0]' -auto-orient -resize "200x200>" '/var/folders/6z/kzsbjfl178v4xr56zp5_zh440000gn/T/8826579b745e74ac4cdf9896ae5b77df20160805-18974-tb6jft'
+Command :: PATH=/usr/local/bin/:$PATH; identify -format '%wx%h,%[exif:orientation]' '/var/folders/6z/kzsbjfl178v4xr56zp5_zh440000gn/T/48fc0dd5c80b74d111c132b04a89e33920160805-18974-1g6dpp5.jpg[0]' 2>/dev/null
+Command :: PATH=/usr/local/bin/:$PATH; identify -format %m '/var/folders/6z/kzsbjfl178v4xr56zp5_zh440000gn/T/48fc0dd5c80b74d111c132b04a89e33920160805-18974-1g6dpp5.jpg[0]'
+Command :: PATH=/usr/local/bin/:$PATH; convert '/var/folders/6z/kzsbjfl178v4xr56zp5_zh440000gn/T/48fc0dd5c80b74d111c132b04a89e33920160805-18974-1g6dpp5.jpg[0]' -auto-orient -resize "100x100>" '/var/folders/6z/kzsbjfl178v4xr56zp5_zh440000gn/T/8826579b745e74ac4cdf9896ae5b77df20160805-18974-1k2izcv'
+Command :: PATH=/usr/local/bin/:$PATH; file -b --mime '/var/folders/6z/kzsbjfl178v4xr56zp5_zh440000gn/T/48fc0dd5c80b74d111c132b04a89e33920160805-18974-24el9d.jpg'
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "pictures" ("post_id", "created_at", "updated_at", "image_file_name", "image_content_type", "image_file_size", "image_updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["post_id", 3], ["created_at", 2016-08-05 21:41:15 UTC], ["updated_at", 2016-08-05 21:41:15 UTC], ["image_file_name", "maxresdefault-3.jpg"], ["image_content_type", "image/jpeg"], ["image_file_size", 141312], ["image_updated_at", 2016-08-05 21:41:14 UTC]]
+  [1m[35m (6.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+Command :: PATH=/usr/local/bin/:$PATH; file -b --mime '/var/folders/6z/kzsbjfl178v4xr56zp5_zh440000gn/T/20ee938d1337b51da6f128d05b3e233020160805-18974-pmbxf8.jpg'
+Command :: PATH=/usr/local/bin/:$PATH; identify -format '%wx%h,%[exif:orientation]' '/var/folders/6z/kzsbjfl178v4xr56zp5_zh440000gn/T/20ee938d1337b51da6f128d05b3e233020160805-18974-13xybie.jpg[0]' 2>/dev/null
+Command :: PATH=/usr/local/bin/:$PATH; identify -format %m '/var/folders/6z/kzsbjfl178v4xr56zp5_zh440000gn/T/20ee938d1337b51da6f128d05b3e233020160805-18974-13xybie.jpg[0]'
+Command :: PATH=/usr/local/bin/:$PATH; convert '/var/folders/6z/kzsbjfl178v4xr56zp5_zh440000gn/T/20ee938d1337b51da6f128d05b3e233020160805-18974-13xybie.jpg[0]' -auto-orient -resize "900x900>" '/var/folders/6z/kzsbjfl178v4xr56zp5_zh440000gn/T/8ce846b3f995e053eabbf189f21b5af020160805-18974-1rocvou'
+Command :: PATH=/usr/local/bin/:$PATH; identify -format '%wx%h,%[exif:orientation]' '/var/folders/6z/kzsbjfl178v4xr56zp5_zh440000gn/T/20ee938d1337b51da6f128d05b3e233020160805-18974-13xybie.jpg[0]' 2>/dev/null
+Command :: PATH=/usr/local/bin/:$PATH; identify -format %m '/var/folders/6z/kzsbjfl178v4xr56zp5_zh440000gn/T/20ee938d1337b51da6f128d05b3e233020160805-18974-13xybie.jpg[0]'
+Command :: PATH=/usr/local/bin/:$PATH; convert '/var/folders/6z/kzsbjfl178v4xr56zp5_zh440000gn/T/20ee938d1337b51da6f128d05b3e233020160805-18974-13xybie.jpg[0]' -auto-orient -resize "300x300>" '/var/folders/6z/kzsbjfl178v4xr56zp5_zh440000gn/T/8ce846b3f995e053eabbf189f21b5af020160805-18974-edkicw'
+Command :: PATH=/usr/local/bin/:$PATH; identify -format '%wx%h,%[exif:orientation]' '/var/folders/6z/kzsbjfl178v4xr56zp5_zh440000gn/T/20ee938d1337b51da6f128d05b3e233020160805-18974-13xybie.jpg[0]' 2>/dev/null
+Command :: PATH=/usr/local/bin/:$PATH; identify -format %m '/var/folders/6z/kzsbjfl178v4xr56zp5_zh440000gn/T/20ee938d1337b51da6f128d05b3e233020160805-18974-13xybie.jpg[0]'
+Command :: PATH=/usr/local/bin/:$PATH; convert '/var/folders/6z/kzsbjfl178v4xr56zp5_zh440000gn/T/20ee938d1337b51da6f128d05b3e233020160805-18974-13xybie.jpg[0]' -auto-orient -resize "200x200>" '/var/folders/6z/kzsbjfl178v4xr56zp5_zh440000gn/T/8ce846b3f995e053eabbf189f21b5af020160805-18974-1fafvp4'
+Command :: PATH=/usr/local/bin/:$PATH; identify -format '%wx%h,%[exif:orientation]' '/var/folders/6z/kzsbjfl178v4xr56zp5_zh440000gn/T/20ee938d1337b51da6f128d05b3e233020160805-18974-13xybie.jpg[0]' 2>/dev/null
+Command :: PATH=/usr/local/bin/:$PATH; identify -format %m '/var/folders/6z/kzsbjfl178v4xr56zp5_zh440000gn/T/20ee938d1337b51da6f128d05b3e233020160805-18974-13xybie.jpg[0]'
+Command :: PATH=/usr/local/bin/:$PATH; convert '/var/folders/6z/kzsbjfl178v4xr56zp5_zh440000gn/T/20ee938d1337b51da6f128d05b3e233020160805-18974-13xybie.jpg[0]' -auto-orient -resize "100x100>" '/var/folders/6z/kzsbjfl178v4xr56zp5_zh440000gn/T/8ce846b3f995e053eabbf189f21b5af020160805-18974-1oh6f6h'
+Command :: PATH=/usr/local/bin/:$PATH; file -b --mime '/var/folders/6z/kzsbjfl178v4xr56zp5_zh440000gn/T/20ee938d1337b51da6f128d05b3e233020160805-18974-1sunht9.jpg'
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "pictures" ("post_id", "created_at", "updated_at", "image_file_name", "image_content_type", "image_file_size", "image_updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["post_id", 3], ["created_at", 2016-08-05 21:41:17 UTC], ["updated_at", 2016-08-05 21:41:17 UTC], ["image_file_name", "8cCLLYx.jpg"], ["image_content_type", "image/jpeg"], ["image_file_size", 330574], ["image_updated_at", 2016-08-05 21:41:15 UTC]]
+  [1m[35m (6.4ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 5246ms (ActiveRecord: 57.1ms)
+
+
+Started GET "/" for ::1 at 2016-08-05 16:41:17 -0500
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendering posts/index.html.erb within layouts/application
+  Rendered posts/index.html.erb within layouts/application (4.2ms)
+Completed 200 OK in 48ms (Views: 45.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/posts/3" for ::1 at 2016-08-05 16:41:19 -0500
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering posts/show.html.erb within layouts/application
+  [1m[36mPicture Load (0.2ms)[0m  [1m[34mSELECT "pictures".* FROM "pictures" WHERE "pictures"."post_id" = $1[0m  [["post_id", 3]]
+  Rendered posts/show.html.erb within layouts/application (7.7ms)
+Completed 200 OK in 35ms (Views: 32.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for ::1 at 2016-08-05 16:46:37 -0500
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendering posts/index.html.erb within layouts/application
+  Rendered posts/index.html.erb within layouts/application (4.6ms)
+Completed 200 OK in 34ms (Views: 31.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/posts/new" for ::1 at 2016-08-05 16:48:18 -0500
+Processing by PostsController#new as HTML
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/new.html.erb within layouts/application (4.6ms)
+Completed 200 OK in 37ms (Views: 36.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-08-05 16:48:39 -0500
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendering posts/index.html.erb within layouts/application
+  Rendered posts/index.html.erb within layouts/application (3.8ms)
+Completed 200 OK in 37ms (Views: 34.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/welcome/about" for ::1 at 2016-08-05 16:49:43 -0500
+Processing by WelcomeController#about as HTML
+  Rendering welcome/about.html.erb within layouts/application
+  Rendered welcome/about.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 35ms (Views: 33.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-08-07 11:13:11 -0500
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (28.0ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendering posts/index.html.erb within layouts/application
+  Rendered posts/index.html.erb within layouts/application (25.1ms)
+Completed 200 OK in 162ms (Views: 108.4ms | ActiveRecord: 28.0ms)
+
+
+Started GET "/posts/3" for ::1 at 2016-08-07 11:13:19 -0500
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mPost Load (0.6ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering posts/show.html.erb within layouts/application
+  [1m[36mPicture Load (0.5ms)[0m  [1m[34mSELECT "pictures".* FROM "pictures" WHERE "pictures"."post_id" = $1[0m  [["post_id", 3]]
+  Rendered posts/show.html.erb within layouts/application (14.0ms)
+Completed 200 OK in 118ms (Views: 113.8ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/" for ::1 at 2016-08-07 11:13:37 -0500
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.6ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendering posts/index.html.erb within layouts/application
+  Rendered posts/index.html.erb within layouts/application (6.5ms)
+Completed 200 OK in 50ms (Views: 46.6ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/welcome/about" for ::1 at 2016-08-07 11:13:55 -0500
+Processing by WelcomeController#about as HTML
+  Rendering welcome/about.html.erb within layouts/application
+  Rendered welcome/about.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 39ms (Views: 36.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-08-07 11:13:57 -0500
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (2.4ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendering posts/index.html.erb within layouts/application
+  Rendered posts/index.html.erb within layouts/application (5.1ms)
+Completed 200 OK in 65ms (Views: 60.2ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/" for ::1 at 2016-08-08 11:59:40 -0500
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (1.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendering posts/index.html.erb within layouts/application
+  Rendered posts/index.html.erb within layouts/application (17.5ms)
+Completed 200 OK in 146ms (Views: 126.3ms | ActiveRecord: 1.3ms)
+
+
