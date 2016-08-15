@@ -461,9 +461,9 @@ Processing by PostsController#index as HTML
 Completed 500 Internal Server Error in 74ms (ActiveRecord: 4.9ms)
 
 
-  
+
 NameError (undefined local variable or method `date' for #<PostsController:0x007f85fabf36f0>):
-  
+
 app/controllers/posts_controller.rb:4:in `index'
   Rendering /Users/scottsouthard/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
   Rendering /Users/scottsouthard/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
@@ -481,9 +481,9 @@ Processing by PostsController#index as HTML
 Completed 500 Internal Server Error in 42ms (ActiveRecord: 0.3ms)
 
 
-  
+
 NameError (undefined local variable or method `date' for #<PostsController:0x007f85fa1a2200>):
-  
+
 app/controllers/posts_controller.rb:4:in `index'
   Rendering /Users/scottsouthard/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
   Rendering /Users/scottsouthard/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
@@ -499,9 +499,9 @@ Processing by PostsController#index as HTML
 Completed 500 Internal Server Error in 35ms (ActiveRecord: 0.3ms)
 
 
-  
+
 NameError (undefined local variable or method `date' for #<PostsController:0x007f85fea8bcc8>):
-  
+
 app/controllers/posts_controller.rb:4:in `index'
   Rendering /Users/scottsouthard/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
   Rendering /Users/scottsouthard/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
@@ -517,9 +517,9 @@ Processing by PostsController#index as HTML
 Completed 500 Internal Server Error in 48ms (ActiveRecord: 2.8ms)
 
 
-  
+
 NameError (undefined local variable or method `date' for #<PostsController:0x007f85fe83a2d0>):
-  
+
 app/controllers/posts_controller.rb:4:in `index'
   Rendering /Users/scottsouthard/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
   Rendering /Users/scottsouthard/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
@@ -627,9 +627,9 @@ Processing by PostsController#index as HTML
 Completed 500 Internal Server Error in 14ms (ActiveRecord: 0.3ms)
 
 
-  
+
 ArgumentError (comparison of String with DateTime failed):
-  
+
 app/controllers/posts_controller.rb:4:in `>'
 app/controllers/posts_controller.rb:4:in `index'
   Rendering /Users/scottsouthard/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
@@ -646,9 +646,9 @@ Processing by PostsController#index as HTML
 Completed 500 Internal Server Error in 49ms (ActiveRecord: 0.3ms)
 
 
-  
+
 NameError (undefined local variable or method `date' for #<PostsController:0x007f85fee537c0>):
-  
+
 app/controllers/posts_controller.rb:4:in `index'
   Rendering /Users/scottsouthard/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
   Rendering /Users/scottsouthard/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
@@ -659,12 +659,12 @@ app/controllers/posts_controller.rb:4:in `index'
   Rendered /Users/scottsouthard/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
   Rendered /Users/scottsouthard/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (117.9ms)
 Started GET "/" for ::1 at 2016-07-25 15:52:48 -0500
-  
+
 SyntaxError (/Users/scottsouthard/Documents/Dev/samuelgallery/app/controllers/posts_controller.rb:4: syntax error, unexpected '>'
     @upcomingposts = Post.having(date: > DateTime.now)
                                         ^
 /Users/scottsouthard/Documents/Dev/samuelgallery/app/controllers/posts_controller.rb:4: syntax error, unexpected ')', expecting keyword_end):
-  
+
 app/controllers/posts_controller.rb:4: syntax error, unexpected '>'
 app/controllers/posts_controller.rb:4: syntax error, unexpected ')', expecting keyword_end
   Rendering /Users/scottsouthard/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
@@ -684,7 +684,7 @@ Processing by PostsController#index as HTML
 Completed 500 Internal Server Error in 22ms (ActiveRecord: 2.9ms)
 
 
-  
+
 ActionView::Template::Error (PG::UndefinedTable: ERROR:  missing FROM-clause entry for table "datetime"
 LINE 1: SELECT "posts".* FROM "posts" HAVING (date > DateTime.now)
                                                      ^
@@ -695,7 +695,7 @@ LINE 1: SELECT "posts".* FROM "posts" HAVING (date > DateTime.now)
     4:       <!-- <li class="list-group-item"> -->
     5:         <%= link_to "#{post.title}  -  #{post.date.strftime("%m/%d/%Y")}", post, :class=>"list-group-item"%>
     6:       <!-- </li> -->
-  
+
 app/views/posts/index.html.erb:3:in `_app_views_posts_index_html_erb__3658132647299974726_70106719382140'
   Rendering /Users/scottsouthard/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
   Rendering /Users/scottsouthard/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
@@ -715,7 +715,7 @@ Processing by PostsController#index as HTML
 Completed 500 Internal Server Error in 22ms (ActiveRecord: 1.1ms)
 
 
-  
+
 ActionView::Template::Error (PG::UndefinedTable: ERROR:  missing FROM-clause entry for table "datetime"
 LINE 1: SELECT "posts".* FROM "posts" WHERE (date > DateTime.now)
                                                     ^
@@ -726,7 +726,7 @@ LINE 1: SELECT "posts".* FROM "posts" WHERE (date > DateTime.now)
     4:       <!-- <li class="list-group-item"> -->
     5:         <%= link_to "#{post.title}  -  #{post.date.strftime("%m/%d/%Y")}", post, :class=>"list-group-item"%>
     6:       <!-- </li> -->
-  
+
 app/views/posts/index.html.erb:3:in `_app_views_posts_index_html_erb__3658132647299974726_70106718628120'
   Rendering /Users/scottsouthard/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
   Rendering /Users/scottsouthard/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
@@ -738,12 +738,12 @@ app/views/posts/index.html.erb:3:in `_app_views_posts_index_html_erb__3658132647
   Rendered /Users/scottsouthard/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (75.2ms)
   [1m[36mPost Load (2.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE (date > DateTime.now)[0m
 Started GET "/" for ::1 at 2016-07-25 15:56:08 -0500
-  
+
 SyntaxError (/Users/scottsouthard/Documents/Dev/samuelgallery/app/controllers/posts_controller.rb:4: syntax error, unexpected tCONSTANT, expecting ')'
     @upcomingposts = Post.where("date >" DateTime.now)
                                                  ^
 /Users/scottsouthard/Documents/Dev/samuelgallery/app/controllers/posts_controller.rb:4: syntax error, unexpected ')', expecting keyword_end):
-  
+
 app/controllers/posts_controller.rb:4: syntax error, unexpected tCONSTANT, expecting ')'
 app/controllers/posts_controller.rb:4: syntax error, unexpected ')', expecting keyword_end
   Rendering /Users/scottsouthard/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
@@ -763,7 +763,7 @@ Processing by PostsController#index as HTML
 Completed 500 Internal Server Error in 30ms (ActiveRecord: 6.7ms)
 
 
-  
+
 ActionView::Template::Error (PG::UndefinedTable: ERROR:  missing FROM-clause entry for table "date"
 LINE 1: SELECT "posts".* FROM "posts" WHERE (date > Date.today)
                                                     ^
@@ -774,7 +774,7 @@ LINE 1: SELECT "posts".* FROM "posts" WHERE (date > Date.today)
     4:       <!-- <li class="list-group-item"> -->
     5:         <%= link_to "#{post.title}  -  #{post.date.strftime("%m/%d/%Y")}", post, :class=>"list-group-item"%>
     6:       <!-- </li> -->
-  
+
 app/views/posts/index.html.erb:3:in `_app_views_posts_index_html_erb__3658132647299974726_70106772369480'
   Rendering /Users/scottsouthard/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
   Rendering /Users/scottsouthard/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
@@ -1299,9 +1299,9 @@ Completed 200 OK in 98ms (Views: 70.0ms | ActiveRecord: 6.5ms)
 
 
 Started GET "/images/thumb/8/veronica16-032.jpg?1469561968" for ::1 at 2016-07-26 14:43:06 -0500
-  
+
 ActionController::RoutingError (No route matches [GET] "/images/thumb/8/veronica16-032.jpg"):
-  
+
 actionpack (5.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
 web-console (3.3.1) lib/web_console/middleware.rb:131:in `call_app'
 web-console (3.3.1) lib/web_console/middleware.rb:28:in `block in call'
@@ -1341,19 +1341,19 @@ Started GET "/images/thumb/9/veronica16-039.jpg?1469561968" for ::1 at 2016-07-2
 Started GET "/images/thumb/13/veronica16-054.jpg?1469561971" for ::1 at 2016-07-26 14:43:07 -0500
 Started GET "/images/thumb/10/veronica16-045.jpg?1469561969" for ::1 at 2016-07-26 14:43:07 -0500
 Started GET "/images/thumb/12/veronica16-048.jpg?1469561970" for ::1 at 2016-07-26 14:43:07 -0500
-  
-  
-  
-  
+
+
+
+
 ActionController::RoutingError (No route matches [GET] "/images/thumb/9/veronica16-039.jpg"):
 ActionController::RoutingError (No route matches [GET] "/images/thumb/13/veronica16-054.jpg"):
 ActionController::RoutingError (No route matches [GET] "/images/thumb/10/veronica16-045.jpg"):
 ActionController::RoutingError (No route matches [GET] "/images/thumb/12/veronica16-048.jpg"):
-  
+
 actionpack (5.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
-  
-  
-  
+
+
+
 web-console (3.3.1) lib/web_console/middleware.rb:131:in `call_app'
 actionpack (5.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
 actionpack (5.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
@@ -1447,7 +1447,7 @@ Started GET "/images/thumb/14/veronica16-059.jpg?1469561972" for ::1 at 2016-07-
 actionpack (5.0.0) lib/action_dispatch/middleware/static.rb:136:in `call'
 railties (5.0.0) lib/rails/engine.rb:522:in `call'
 railties (5.0.0) lib/rails/engine.rb:522:in `call'
-  
+
 rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
 puma (3.6.0) lib/puma/configuration.rb:225:in `call'
   Rendering /Users/scottsouthard/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
@@ -1457,7 +1457,7 @@ railties (5.0.0) lib/rails/engine.rb:522:in `call'
 puma (3.6.0) lib/puma/server.rb:578:in `handle_request'
   Rendered /Users/scottsouthard/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
 puma (3.6.0) lib/puma/server.rb:578:in `handle_request'
-  
+
 puma (3.6.0) lib/puma/configuration.rb:225:in `call'
 puma (3.6.0) lib/puma/server.rb:415:in `process_client'
 puma (3.6.0) lib/puma/server.rb:578:in `handle_request'
@@ -1506,11 +1506,11 @@ puma (3.6.0) lib/puma/thread_pool.rb:116:in `block in spawn_thread'
   Rendered collection of /Users/scottsouthard/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/routes/_route.html.erb [12 times] (3.6ms)
 Started GET "/images/thumb/15/veronica16-063.jpg?1469561972" for ::1 at 2016-07-26 14:43:07 -0500
   Rendered /Users/scottsouthard/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.0ms)
-  
+
 ActionController::RoutingError (No route matches [GET] "/images/thumb/15/veronica16-063.jpg"):
   Rendering /Users/scottsouthard/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
   Rendering /Users/scottsouthard/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
-  
+
   Rendering /Users/scottsouthard/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
 actionpack (5.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
   Rendering /Users/scottsouthard/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
@@ -1564,9 +1564,9 @@ puma (3.6.0) lib/puma/thread_pool.rb:116:in `block in spawn_thread'
   Rendered /Users/scottsouthard/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.8ms)
   Rendered /Users/scottsouthard/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (419.1ms)
 Started GET "/images/thumb/20/veronica16-095.jpg?1469561976" for ::1 at 2016-07-26 14:43:09 -0500
-  
+
 ActionController::RoutingError (No route matches [GET] "/images/thumb/20/veronica16-095.jpg"):
-  
+
 actionpack (5.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
 web-console (3.3.1) lib/web_console/middleware.rb:131:in `call_app'
 web-console (3.3.1) lib/web_console/middleware.rb:28:in `block in call'
@@ -1583,20 +1583,20 @@ sprockets-rails (3.1.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
 actionpack (5.0.0) lib/action_dispatch/middleware/request_id.rb:24:in `call'
 Started GET "/images/thumb/16/veronica16-073.jpg?1469561973" for ::1 at 2016-07-26 14:43:09 -0500
 rack (2.0.1) lib/rack/method_override.rb:22:in `call'
-  
+
 rack (2.0.1) lib/rack/runtime.rb:22:in `call'
 ActionController::RoutingError (No route matches [GET] "/images/thumb/16/veronica16-073.jpg"):
 activesupport (5.0.0) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
-  
+
 Started GET "/images/thumb/19/veronica16-093.jpg?1469561975" for ::1 at 2016-07-26 14:43:09 -0500
 actionpack (5.0.0) lib/action_dispatch/middleware/executor.rb:12:in `call'
   Rendering /Users/scottsouthard/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
 actionpack (5.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
-  
+
 actionpack (5.0.0) lib/action_dispatch/middleware/static.rb:136:in `call'
 web-console (3.3.1) lib/web_console/middleware.rb:131:in `call_app'
 ActionController::RoutingError (No route matches [GET] "/images/thumb/19/veronica16-093.jpg"):
-  
+
 actionpack (5.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
 web-console (3.3.1) lib/web_console/middleware.rb:131:in `call_app'
 web-console (3.3.1) lib/web_console/middleware.rb:28:in `block in call'
@@ -1645,12 +1645,12 @@ activesupport (5.0.0) lib/active_support/tagged_logging.rb:26:in `tagged'
 Started GET "/images/thumb/18/veronica16-090.jpg?1469561975" for ::1 at 2016-07-26 14:43:09 -0500
 activesupport (5.0.0) lib/active_support/tagged_logging.rb:70:in `tagged'
   Rendered collection of /Users/scottsouthard/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/routes/_route.html.erb [12 times] (3.6ms)
-  
+
 railties (5.0.0) lib/rails/rack/logger.rb:24:in `call'
 ActionController::RoutingError (No route matches [GET] "/images/thumb/18/veronica16-090.jpg"):
   Rendered /Users/scottsouthard/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.0ms)
 sprockets-rails (3.1.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
-  
+
 actionpack (5.0.0) lib/action_dispatch/middleware/request_id.rb:24:in `call'
 actionpack (5.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
 rack (2.0.1) lib/rack/method_override.rb:22:in `call'
@@ -1718,9 +1718,9 @@ puma (3.6.0) lib/puma/server.rb:275:in `block in run'
 puma (3.6.0) lib/puma/thread_pool.rb:116:in `call'
 puma (3.6.0) lib/puma/thread_pool.rb:116:in `block in spawn_thread'
 Started GET "/images/thumb/17/veronica16-081.jpg?1469561974" for ::1 at 2016-07-26 14:43:10 -0500
-  
+
 ActionController::RoutingError (No route matches [GET] "/images/thumb/17/veronica16-081.jpg"):
-  
+
 actionpack (5.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
 web-console (3.3.1) lib/web_console/middleware.rb:131:in `call_app'
 web-console (3.3.1) lib/web_console/middleware.rb:28:in `block in call'
@@ -1743,7 +1743,7 @@ railties (5.0.0) lib/rails/rack/logger.rb:24:in `call'
 sprockets-rails (3.1.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
 Started GET "/images/thumb/11/veronica16-047.jpg?1469561970" for ::1 at 2016-07-26 14:43:10 -0500
 actionpack (5.0.0) lib/action_dispatch/middleware/request_id.rb:24:in `call'
-  
+
   Rendered collection of /Users/scottsouthard/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/routes/_route.html.erb [12 times] (6.8ms)
 rack (2.0.1) lib/rack/method_override.rb:22:in `call'
   Rendering /Users/scottsouthard/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
@@ -1760,7 +1760,7 @@ puma (3.6.0) lib/puma/server.rb:415:in `process_client'
 puma (3.6.0) lib/puma/server.rb:275:in `block in run'
 puma (3.6.0) lib/puma/thread_pool.rb:116:in `call'
 puma (3.6.0) lib/puma/thread_pool.rb:116:in `block in spawn_thread'
-  
+
   Rendered /Users/scottsouthard/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.0ms)
   Rendered /Users/scottsouthard/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.1ms)
 actionpack (5.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
@@ -1825,9 +1825,9 @@ Completed 200 OK in 28ms (Views: 23.7ms | ActiveRecord: 0.9ms)
 
 
 Started GET "/images/thumb/1/AAEAAQAAAAAAAAinAAAAJGUzMGVmMGJhLWQxOGUtNGJlOS04NWNkLTQ0YzYzODFhMzg3Ng.jpg?1469472648" for ::1 at 2016-07-26 14:43:56 -0500
-  
+
 ActionController::RoutingError (No route matches [GET] "/images/thumb/1/AAEAAQAAAAAAAAinAAAAJGUzMGVmMGJhLWQxOGUtNGJlOS04NWNkLTQ0YzYzODFhMzg3Ng.jpg"):
-  
+
 actionpack (5.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
 web-console (3.3.1) lib/web_console/middleware.rb:131:in `call_app'
 web-console (3.3.1) lib/web_console/middleware.rb:28:in `block in call'
@@ -1874,9 +1874,9 @@ Completed 200 OK in 25ms (Views: 22.6ms | ActiveRecord: 0.5ms)
 
 
 Started GET "/images/thumb/1/AAEAAQAAAAAAAAinAAAAJGUzMGVmMGJhLWQxOGUtNGJlOS04NWNkLTQ0YzYzODFhMzg3Ng.jpg?1469472648" for ::1 at 2016-07-26 14:44:20 -0500
-  
+
 ActionController::RoutingError (No route matches [GET] "/images/thumb/1/AAEAAQAAAAAAAAinAAAAJGUzMGVmMGJhLWQxOGUtNGJlOS04NWNkLTQ0YzYzODFhMzg3Ng.jpg"):
-  
+
 actionpack (5.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
 web-console (3.3.1) lib/web_console/middleware.rb:131:in `call_app'
 web-console (3.3.1) lib/web_console/middleware.rb:28:in `block in call'
@@ -1966,7 +1966,7 @@ Processing by PostsController#index as HTML
 Completed 500 Internal Server Error in 110ms (ActiveRecord: 0.6ms)
 
 
-  
+
 ActionView::Template::Error (undefined local variable or method `about_path' for #<#<Class:0x007fdf0e51cf30>:0x007fdf156316d0>):
     18:               <div class="">
     19:                 <!-- <%= link_to image_tag("samuel.png", :class =>"img-responsive nav-pic"), root_path %> -->
@@ -1975,7 +1975,7 @@ ActionView::Template::Error (undefined local variable or method `about_path' for
     22:                 </h1>
     23:               </div>
     24:             </nav>
-  
+
 app/views/layouts/application.html.erb:21:in `_app_views_layouts_application_html_erb__1726392176768435942_70298056609460'
   Rendering /Users/scottsouthard/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
   Rendering /Users/scottsouthard/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
@@ -2138,16 +2138,16 @@ Processing by PostsController#index as HTML
 Completed 500 Internal Server Error in 79ms (ActiveRecord: 0.5ms)
 
 
-  
+
 ActionView::Template::Error (undefined local variable or method `post' for #<#<Class:0x007fdf0e51cf30>:0x007fdf13007770>):
     17:       <%= t.head('S', "M", "T", "W", "T", "F", "S") %>
     18:       <%= t.day(:day_method => :date) do |day, posts| %>
-    19: 
+    19:
     20:         <%= day.day unless post%>
     21:         <% posts.each do |post| %>
     22:           <%= h(link_to "#{post.title}", post, :class=>"list-group-item") %>
     23:         <% end %>
-  
+
 app/views/posts/index.html.erb:20:in `block (2 levels) in _app_views_posts_index_html_erb__2179198297827377637_70298044375360'
 app/views/posts/index.html.erb:18:in `block in _app_views_posts_index_html_erb__2179198297827377637_70298044375360'
 app/views/posts/index.html.erb:16:in `_app_views_posts_index_html_erb__2179198297827377637_70298044375360'
@@ -2195,7 +2195,7 @@ Processing by PostsController#index as HTML
 Completed 500 Internal Server Error in 71ms (ActiveRecord: 0.7ms)
 
 
-  
+
 ActionView::Template::Error (undefined local variable or method `post' for #<#<Class:0x007fdf0e51cf30>:0x007fdf1221a180>):
     19:         <% posts.each do |post| %>
     20:           <%= h(link_to "#{post.title}", post, :class=>"list-group-item") %>
@@ -2204,7 +2204,7 @@ ActionView::Template::Error (undefined local variable or method `post' for #<#<C
     23:       <% end %>
     24:     <% end %>
     25:   </div>
-  
+
 app/views/posts/index.html.erb:22:in `block (2 levels) in _app_views_posts_index_html_erb__2179198297827377637_70298029316200'
 app/views/posts/index.html.erb:18:in `block in _app_views_posts_index_html_erb__2179198297827377637_70298029316200'
 app/views/posts/index.html.erb:16:in `_app_views_posts_index_html_erb__2179198297827377637_70298029316200'
@@ -2225,7 +2225,7 @@ Processing by PostsController#index as HTML
 Completed 500 Internal Server Error in 72ms (ActiveRecord: 0.6ms)
 
 
-  
+
 ActionView::Template::Error (undefined local variable or method `post' for #<#<Class:0x007fdf0e51cf30>:0x007fdf156c6cd0>):
     19:         <% posts.each do |post| %>
     20:           <%= h(link_to "#{post.title}", post, :class=>"list-group-item") %>
@@ -2234,7 +2234,7 @@ ActionView::Template::Error (undefined local variable or method `post' for #<#<C
     23:       <% end %>
     24:     <% end %>
     25:   </div>
-  
+
 app/views/posts/index.html.erb:22:in `block (2 levels) in _app_views_posts_index_html_erb__2179198297827377637_70298056932280'
 app/views/posts/index.html.erb:18:in `block in _app_views_posts_index_html_erb__2179198297827377637_70298056932280'
 app/views/posts/index.html.erb:16:in `_app_views_posts_index_html_erb__2179198297827377637_70298056932280'
@@ -2309,7 +2309,7 @@ Processing by PostsController#index as HTML
 Completed 500 Internal Server Error in 129ms (ActiveRecord: 0.8ms)
 
 
-  
+
 ActionView::Template::Error (undefined local variable or method `day' for #<#<Class:0x007fdf0e51cf30>:0x007fdf13bc2f88>):
     16:     <%= calendar_for @posts, :year => @date.year, :month => @date.month do |t| %>
     17:       <%= t.head('S', "M", "T", "W", "T", "F", "S") %>
@@ -2318,7 +2318,7 @@ ActionView::Template::Error (undefined local variable or method `day' for #<#<Cl
     20:         <% posts.each do |post| %>
     21:           <%= h(link_to "#{post.title}", post, :class=>"list-group-item") %>
     22:         <% end %>
-  
+
 app/views/posts/index.html.erb:19:in `block (2 levels) in _app_views_posts_index_html_erb__2179198297827377637_70298042768660'
 app/views/posts/index.html.erb:18:in `block in _app_views_posts_index_html_erb__2179198297827377637_70298042768660'
 app/views/posts/index.html.erb:16:in `_app_views_posts_index_html_erb__2179198297827377637_70298042768660'
@@ -2356,16 +2356,16 @@ Processing by PostsController#index as HTML
 Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.3ms)
 
 
-  
+
 SyntaxError (/Users/scottsouthard/Documents/Dev/samuelgallery/app/views/posts/index.html.erb:19: syntax error, unexpected ')'
 ...ffer.append=( butt.day unless );@output_buffer.safe_append='
 ...                               ^
 /Users/scottsouthard/Documents/Dev/samuelgallery/app/views/posts/index.html.erb:23: syntax error, unexpected keyword_end, expecting ')'
-         end 
+         end
             ^
 /Users/scottsouthard/Documents/Dev/samuelgallery/app/views/posts/index.html.erb:32: syntax error, unexpected keyword_ensure, expecting ')'
 /Users/scottsouthard/Documents/Dev/samuelgallery/app/views/posts/index.html.erb:34: syntax error, unexpected keyword_end, expecting ')'):
-  
+
 app/views/posts/index.html.erb:19: syntax error, unexpected ')'
 app/views/posts/index.html.erb:23: syntax error, unexpected keyword_end, expecting ')'
 app/views/posts/index.html.erb:32: syntax error, unexpected keyword_ensure, expecting ')'
@@ -2413,13 +2413,13 @@ Processing by PostsController#index as HTML
 Completed 500 Internal Server Error in 10ms (ActiveRecord: 0.2ms)
 
 
-  
+
 SyntaxError (/Users/scottsouthard/Documents/Dev/samuelgallery/app/views/posts/index.html.erb:21: syntax error, unexpected keyword_else, expecting keyword_end
-'.freeze;         else 
+'.freeze;         else
                       ^
 /Users/scottsouthard/Documents/Dev/samuelgallery/app/views/posts/index.html.erb:32: syntax error, unexpected keyword_ensure, expecting keyword_end
 /Users/scottsouthard/Documents/Dev/samuelgallery/app/views/posts/index.html.erb:34: syntax error, unexpected end-of-input, expecting keyword_end):
-  
+
 app/views/posts/index.html.erb:21: syntax error, unexpected keyword_else, expecting keyword_end
 app/views/posts/index.html.erb:32: syntax error, unexpected keyword_ensure, expecting keyword_end
 app/views/posts/index.html.erb:34: syntax error, unexpected end-of-input, expecting keyword_end
@@ -2514,9 +2514,9 @@ Completed 200 OK in 33ms (Views: 29.0ms | ActiveRecord: 1.3ms)
 
 
 Started GET "/images/thumb/6/image1.JPG?1469479811" for ::1 at 2016-07-26 17:05:08 -0500
-  
+
 ActionController::RoutingError (No route matches [GET] "/images/thumb/6/image1.JPG"):
-  
+
 actionpack (5.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
 web-console (3.3.1) lib/web_console/middleware.rb:131:in `call_app'
 web-console (3.3.1) lib/web_console/middleware.rb:28:in `block in call'
@@ -2612,9 +2612,9 @@ Completed 200 OK in 29ms (Views: 25.5ms | ActiveRecord: 0.7ms)
 
 
 Started GET "/images/thumb/1/AAEAAQAAAAAAAAinAAAAJGUzMGVmMGJhLWQxOGUtNGJlOS04NWNkLTQ0YzYzODFhMzg3Ng.jpg?1469472648" for ::1 at 2016-07-26 17:05:20 -0500
-  
+
 ActionController::RoutingError (No route matches [GET] "/images/thumb/1/AAEAAQAAAAAAAAinAAAAJGUzMGVmMGJhLWQxOGUtNGJlOS04NWNkLTQ0YzYzODFhMzg3Ng.jpg"):
-  
+
 actionpack (5.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
 web-console (3.3.1) lib/web_console/middleware.rb:131:in `call_app'
 web-console (3.3.1) lib/web_console/middleware.rb:28:in `block in call'
@@ -2667,16 +2667,16 @@ Processing by PostsController#index as HTML
 Completed 500 Internal Server Error in 11ms (ActiveRecord: 0.6ms)
 
 
-  
+
 SyntaxError (/Users/scottsouthard/Documents/Dev/samuelgallery/app/views/posts/index.html.erb:19: syntax error, unexpected ')'
 ...uffer.append=( day.day unless );@output_buffer.safe_append='
 ...                               ^
 /Users/scottsouthard/Documents/Dev/samuelgallery/app/views/posts/index.html.erb:23: syntax error, unexpected keyword_end, expecting ')'
-         end 
+         end
             ^
 /Users/scottsouthard/Documents/Dev/samuelgallery/app/views/posts/index.html.erb:32: syntax error, unexpected keyword_ensure, expecting ')'
 /Users/scottsouthard/Documents/Dev/samuelgallery/app/views/posts/index.html.erb:34: syntax error, unexpected keyword_end, expecting ')'):
-  
+
 app/views/posts/index.html.erb:19: syntax error, unexpected ')'
 app/views/posts/index.html.erb:23: syntax error, unexpected keyword_end, expecting ')'
 app/views/posts/index.html.erb:32: syntax error, unexpected keyword_ensure, expecting ')'
@@ -2734,7 +2734,7 @@ Processing by PostsController#index as HTML
 Completed 500 Internal Server Error in 11ms (ActiveRecord: 0.5ms)
 
 
-  
+
 ActionView::Template::Error (undefined method `nil' for Sun, 26 Jun 2016:Date):
     16:     <%= calendar_for @posts, :year => @date.year, :month => @date.month do |t| %>
     17:       <%= t.head('S', "M", "T", "W", "T", "F", "S") %>
@@ -2743,7 +2743,7 @@ ActionView::Template::Error (undefined method `nil' for Sun, 26 Jun 2016:Date):
     20:         <% posts.each do |post| %>
     21:           <%= h(link_to "#{post.title}", post) %>
     22:         <% end %>
-  
+
 app/views/posts/index.html.erb:19:in `block (2 levels) in _app_views_posts_index_html_erb__2179198297827377637_70298027074380'
 app/views/posts/index.html.erb:18:in `block in _app_views_posts_index_html_erb__2179198297827377637_70298027074380'
 app/views/posts/index.html.erb:16:in `_app_views_posts_index_html_erb__2179198297827377637_70298027074380'
@@ -2793,9 +2793,9 @@ Completed 200 OK in 33ms (Views: 29.7ms | ActiveRecord: 1.7ms)
 
 
 Started GET "/images/thumb/4/image1.JPG?1469473899" for ::1 at 2016-07-26 17:22:19 -0500
-  
+
 ActionController::RoutingError (No route matches [GET] "/images/thumb/4/image1.JPG"):
-  
+
 actionpack (5.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
 web-console (3.3.1) lib/web_console/middleware.rb:131:in `call_app'
 web-console (3.3.1) lib/web_console/middleware.rb:28:in `block in call'
@@ -2804,11 +2804,11 @@ web-console (3.3.1) lib/web_console/middleware.rb:18:in `call'
 actionpack (5.0.0) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
 Started GET "/images/thumb/5/image2.JPG?1469473901" for ::1 at 2016-07-26 17:22:19 -0500
 railties (5.0.0) lib/rails/rack/logger.rb:36:in `call_app'
-  
+
 railties (5.0.0) lib/rails/rack/logger.rb:24:in `block in call'
 ActionController::RoutingError (No route matches [GET] "/images/thumb/5/image2.JPG"):
 activesupport (5.0.0) lib/active_support/tagged_logging.rb:70:in `block in tagged'
-  
+
 activesupport (5.0.0) lib/active_support/tagged_logging.rb:26:in `tagged'
 actionpack (5.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
 activesupport (5.0.0) lib/active_support/tagged_logging.rb:70:in `tagged'
@@ -2908,9 +2908,9 @@ Completed 200 OK in 34ms (Views: 30.7ms | ActiveRecord: 1.2ms)
 
 
 Started GET "/images/thumb/8/veronica16-032.jpg?1469561968" for ::1 at 2016-07-26 17:25:57 -0500
-  
+
 ActionController::RoutingError (No route matches [GET] "/images/thumb/8/veronica16-032.jpg"):
-  
+
 actionpack (5.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
 web-console (3.3.1) lib/web_console/middleware.rb:131:in `call_app'
 web-console (3.3.1) lib/web_console/middleware.rb:28:in `block in call'
@@ -2941,21 +2941,21 @@ puma (3.6.0) lib/puma/thread_pool.rb:116:in `block in spawn_thread'
 Started GET "/images/thumb/9/veronica16-039.jpg?1469561968" for ::1 at 2016-07-26 17:25:57 -0500
 Started GET "/images/thumb/12/veronica16-048.jpg?1469561970" for ::1 at 2016-07-26 17:25:57 -0500
 Started GET "/images/thumb/13/veronica16-054.jpg?1469561971" for ::1 at 2016-07-26 17:25:57 -0500
-  
-  
+
+
 Started GET "/images/thumb/11/veronica16-047.jpg?1469561970" for ::1 at 2016-07-26 17:25:57 -0500
-  
+
 ActionController::RoutingError (No route matches [GET] "/images/thumb/9/veronica16-039.jpg"):
 ActionController::RoutingError (No route matches [GET] "/images/thumb/12/veronica16-048.jpg"):
-  
+
 ActionController::RoutingError (No route matches [GET] "/images/thumb/13/veronica16-054.jpg"):
-  
-  
+
+
 ActionController::RoutingError (No route matches [GET] "/images/thumb/11/veronica16-047.jpg"):
-  
+
 actionpack (5.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
 actionpack (5.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
-  
+
 actionpack (5.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
 web-console (3.3.1) lib/web_console/middleware.rb:131:in `call_app'
 web-console (3.3.1) lib/web_console/middleware.rb:131:in `call_app'
@@ -3103,9 +3103,9 @@ puma (3.6.0) lib/puma/thread_pool.rb:116:in `block in spawn_thread'
   Rendered /Users/scottsouthard/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
   Rendered /Users/scottsouthard/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (622.1ms)
 Started GET "/images/thumb/14/veronica16-059.jpg?1469561972" for ::1 at 2016-07-26 17:25:58 -0500
-  
+
 ActionController::RoutingError (No route matches [GET] "/images/thumb/14/veronica16-059.jpg"):
-  
+
 actionpack (5.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
 web-console (3.3.1) lib/web_console/middleware.rb:131:in `call_app'
 web-console (3.3.1) lib/web_console/middleware.rb:28:in `block in call'
@@ -3119,19 +3119,19 @@ activesupport (5.0.0) lib/active_support/tagged_logging.rb:26:in `tagged'
 activesupport (5.0.0) lib/active_support/tagged_logging.rb:70:in `tagged'
 Started GET "/images/thumb/15/veronica16-063.jpg?1469561972" for ::1 at 2016-07-26 17:25:58 -0500
 railties (5.0.0) lib/rails/rack/logger.rb:24:in `call'
-  
+
 sprockets-rails (3.1.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
 ActionController::RoutingError (No route matches [GET] "/images/thumb/15/veronica16-063.jpg"):
 Started GET "/images/thumb/20/veronica16-095.jpg?1469561976" for ::1 at 2016-07-26 17:25:58 -0500
 actionpack (5.0.0) lib/action_dispatch/middleware/request_id.rb:24:in `call'
-  
-  
+
+
 rack (2.0.1) lib/rack/method_override.rb:22:in `call'
 actionpack (5.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
 ActionController::RoutingError (No route matches [GET] "/images/thumb/20/veronica16-095.jpg"):
 rack (2.0.1) lib/rack/runtime.rb:22:in `call'
 web-console (3.3.1) lib/web_console/middleware.rb:131:in `call_app'
-  
+
 activesupport (5.0.0) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
 actionpack (5.0.0) lib/action_dispatch/middleware/executor.rb:12:in `call'
 actionpack (5.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
@@ -3181,7 +3181,7 @@ railties (5.0.0) lib/rails/engine.rb:522:in `call'
 puma (3.6.0) lib/puma/configuration.rb:225:in `call'
 puma (3.6.0) lib/puma/configuration.rb:225:in `call'
 puma (3.6.0) lib/puma/configuration.rb:225:in `call'
-  
+
 puma (3.6.0) lib/puma/server.rb:578:in `handle_request'
 puma (3.6.0) lib/puma/server.rb:578:in `handle_request'
 Started GET "/images/thumb/19/veronica16-093.jpg?1469561975" for ::1 at 2016-07-26 17:25:58 -0500
@@ -3189,9 +3189,9 @@ puma (3.6.0) lib/puma/server.rb:578:in `handle_request'
 ActionController::RoutingError (No route matches [GET] "/images/thumb/16/veronica16-073.jpg"):
 puma (3.6.0) lib/puma/server.rb:415:in `process_client'
 puma (3.6.0) lib/puma/server.rb:415:in `process_client'
-  
+
 puma (3.6.0) lib/puma/server.rb:415:in `process_client'
-  
+
 puma (3.6.0) lib/puma/server.rb:275:in `block in run'
 puma (3.6.0) lib/puma/server.rb:275:in `block in run'
 ActionController::RoutingError (No route matches [GET] "/images/thumb/19/veronica16-093.jpg"):
@@ -3199,7 +3199,7 @@ puma (3.6.0) lib/puma/server.rb:275:in `block in run'
 puma (3.6.0) lib/puma/thread_pool.rb:116:in `call'
 puma (3.6.0) lib/puma/thread_pool.rb:116:in `call'
 puma (3.6.0) lib/puma/thread_pool.rb:116:in `call'
-  
+
 actionpack (5.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
 puma (3.6.0) lib/puma/thread_pool.rb:116:in `block in spawn_thread'
 puma (3.6.0) lib/puma/thread_pool.rb:116:in `block in spawn_thread'
@@ -3283,11 +3283,11 @@ puma (3.6.0) lib/puma/thread_pool.rb:116:in `call'
 puma (3.6.0) lib/puma/thread_pool.rb:116:in `block in spawn_thread'
   Rendering /Users/scottsouthard/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
 Started GET "/images/thumb/18/veronica16-090.jpg?1469561975" for ::1 at 2016-07-26 17:25:59 -0500
-  
+
   Rendering /Users/scottsouthard/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
 ActionController::RoutingError (No route matches [GET] "/images/thumb/18/veronica16-090.jpg"):
   Rendered /Users/scottsouthard/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.3ms)
-  
+
   Rendered collection of /Users/scottsouthard/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/routes/_route.html.erb [12 times] (2.9ms)
 actionpack (5.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
 web-console (3.3.1) lib/web_console/middleware.rb:131:in `call_app'
@@ -3311,12 +3311,12 @@ Started GET "/images/thumb/17/veronica16-081.jpg?1469561974" for ::1 at 2016-07-
   Rendered /Users/scottsouthard/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/routes/_table.html.erb (2.8ms)
 actionpack (5.0.0) lib/action_dispatch/middleware/static.rb:136:in `call'
   Rendering /Users/scottsouthard/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
-  
+
 rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
   Rendering /Users/scottsouthard/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
 ActionController::RoutingError (No route matches [GET] "/images/thumb/17/veronica16-081.jpg"):
 railties (5.0.0) lib/rails/engine.rb:522:in `call'
-  
+
 puma (3.6.0) lib/puma/configuration.rb:225:in `call'
 actionpack (5.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
 puma (3.6.0) lib/puma/server.rb:578:in `handle_request'
@@ -3365,10 +3365,10 @@ puma (3.6.0) lib/puma/server.rb:275:in `block in run'
 puma (3.6.0) lib/puma/thread_pool.rb:116:in `call'
 Started GET "/images/thumb/10/veronica16-045.jpg?1469561969" for ::1 at 2016-07-26 17:26:01 -0500
 puma (3.6.0) lib/puma/thread_pool.rb:116:in `block in spawn_thread'
-  
+
 ActionController::RoutingError (No route matches [GET] "/images/thumb/10/veronica16-045.jpg"):
   Rendering /Users/scottsouthard/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
-  
+
   Rendered /Users/scottsouthard/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
 actionpack (5.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
   Rendered /Users/scottsouthard/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (876.7ms)
@@ -3434,9 +3434,9 @@ Completed 200 OK in 49ms (Views: 46.2ms | ActiveRecord: 1.0ms)
 
 
 Started GET "/images/thumb/8/veronica16-032.jpg?1469561968" for ::1 at 2016-07-26 17:26:48 -0500
-  
+
 ActionController::RoutingError (No route matches [GET] "/images/thumb/8/veronica16-032.jpg"):
-  
+
 actionpack (5.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
 web-console (3.3.1) lib/web_console/middleware.rb:131:in `call_app'
 web-console (3.3.1) lib/web_console/middleware.rb:28:in `block in call'
@@ -3454,28 +3454,28 @@ Started GET "/images/thumb/11/veronica16-047.jpg?1469561970" for ::1 at 2016-07-
 sprockets-rails (3.1.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
 actionpack (5.0.0) lib/action_dispatch/middleware/request_id.rb:24:in `call'
 Started GET "/images/thumb/12/veronica16-048.jpg?1469561970" for ::1 at 2016-07-26 17:26:48 -0500
-  
-  
+
+
 Started GET "/images/thumb/13/veronica16-054.jpg?1469561971" for ::1 at 2016-07-26 17:26:48 -0500
 rack (2.0.1) lib/rack/method_override.rb:22:in `call'
-  
+
 ActionController::RoutingError (No route matches [GET] "/images/thumb/10/veronica16-045.jpg"):
 ActionController::RoutingError (No route matches [GET] "/images/thumb/11/veronica16-047.jpg"):
-  
+
 rack (2.0.1) lib/rack/runtime.rb:22:in `call'
 ActionController::RoutingError (No route matches [GET] "/images/thumb/12/veronica16-048.jpg"):
-  
-  
+
+
 actionpack (5.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
 activesupport (5.0.0) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
-  
+
 actionpack (5.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
 ActionController::RoutingError (No route matches [GET] "/images/thumb/13/veronica16-054.jpg"):
 web-console (3.3.1) lib/web_console/middleware.rb:131:in `call_app'
 actionpack (5.0.0) lib/action_dispatch/middleware/executor.rb:12:in `call'
 actionpack (5.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
 web-console (3.3.1) lib/web_console/middleware.rb:131:in `call_app'
-  
+
 web-console (3.3.1) lib/web_console/middleware.rb:28:in `block in call'
 actionpack (5.0.0) lib/action_dispatch/middleware/static.rb:136:in `call'
 web-console (3.3.1) lib/web_console/middleware.rb:131:in `call_app'
@@ -3629,9 +3629,9 @@ puma (3.6.0) lib/puma/thread_pool.rb:116:in `block in spawn_thread'
   Rendered /Users/scottsouthard/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
   Rendered /Users/scottsouthard/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (551.2ms)
 Started GET "/images/thumb/16/veronica16-073.jpg?1469561973" for ::1 at 2016-07-26 17:26:50 -0500
-  
+
 ActionController::RoutingError (No route matches [GET] "/images/thumb/16/veronica16-073.jpg"):
-  
+
 actionpack (5.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
 web-console (3.3.1) lib/web_console/middleware.rb:131:in `call_app'
 web-console (3.3.1) lib/web_console/middleware.rb:28:in `block in call'
@@ -3653,10 +3653,10 @@ Started GET "/images/thumb/19/veronica16-093.jpg?1469561975" for ::1 at 2016-07-
 Started GET "/images/thumb/17/veronica16-081.jpg?1469561974" for ::1 at 2016-07-26 17:26:50 -0500
 Started GET "/images/thumb/14/veronica16-059.jpg?1469561972" for ::1 at 2016-07-26 17:26:50 -0500
 actionpack (5.0.0) lib/action_dispatch/middleware/executor.rb:12:in `call'
-  
-  
+
+
 ActionController::RoutingError (No route matches [GET] "/images/thumb/17/veronica16-081.jpg"):
-  
+
 actionpack (5.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
 web-console (3.3.1) lib/web_console/middleware.rb:131:in `call_app'
 web-console (3.3.1) lib/web_console/middleware.rb:28:in `block in call'
@@ -3673,9 +3673,9 @@ sprockets-rails (3.1.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
 actionpack (5.0.0) lib/action_dispatch/middleware/request_id.rb:24:in `call'
 rack (2.0.1) lib/rack/method_override.rb:22:in `call'
 rack (2.0.1) lib/rack/runtime.rb:22:in `call'
-  
+
 ActionController::RoutingError (No route matches [GET] "/images/thumb/14/veronica16-059.jpg"):
-  
+
 actionpack (5.0.0) lib/action_dispatch/middleware/static.rb:136:in `call'
 rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
 railties (5.0.0) lib/rails/engine.rb:522:in `call'
@@ -3699,14 +3699,14 @@ puma (3.6.0) lib/puma/server.rb:275:in `block in run'
 puma (3.6.0) lib/puma/thread_pool.rb:116:in `call'
 puma (3.6.0) lib/puma/thread_pool.rb:116:in `block in spawn_thread'
 actionpack (5.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
-  
-  
+
+
 web-console (3.3.1) lib/web_console/middleware.rb:131:in `call_app'
 ActionController::RoutingError (No route matches [GET] "/images/thumb/15/veronica16-063.jpg"):
 actionpack (5.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
   Rendering /Users/scottsouthard/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
 web-console (3.3.1) lib/web_console/middleware.rb:28:in `block in call'
-  
+
 web-console (3.3.1) lib/web_console/middleware.rb:131:in `call_app'
 web-console (3.3.1) lib/web_console/middleware.rb:18:in `catch'
 actionpack (5.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
@@ -3808,11 +3808,11 @@ Processing by PostsController#index as HTML
 Started GET "/images/thumb/20/veronica16-095.jpg?1469561976" for ::1 at 2016-07-26 17:26:51 -0500
   Rendered /Users/scottsouthard/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.1ms)
   [1m[36mPost Load (3.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE (date >= '2016-07-26')[0m
-  
+
   Rendered posts/index.html.erb within layouts/application (35.4ms)
 ActionController::RoutingError (No route matches [GET] "/images/thumb/20/veronica16-095.jpg"):
   Rendered collection of /Users/scottsouthard/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/routes/_route.html.erb [12 times] (3.7ms)
-  
+
   Rendered /Users/scottsouthard/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.5ms)
   Rendering /Users/scottsouthard/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
 actionpack (5.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
@@ -3862,11 +3862,11 @@ puma (3.6.0) lib/puma/thread_pool.rb:116:in `block in spawn_thread'
   Rendered /Users/scottsouthard/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (441.8ms)
 Started GET "/images/thumb/9/veronica16-039.jpg?1469561968" for ::1 at 2016-07-26 17:26:52 -0500
   Rendering /Users/scottsouthard/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
-  
+
   Rendered /Users/scottsouthard/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.8ms)
 ActionController::RoutingError (No route matches [GET] "/images/thumb/9/veronica16-039.jpg"):
   Rendered /Users/scottsouthard/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (730.2ms)
-  
+
 actionpack (5.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
 web-console (3.3.1) lib/web_console/middleware.rb:131:in `call_app'
 web-console (3.3.1) lib/web_console/middleware.rb:28:in `block in call'
@@ -3939,9 +3939,9 @@ Completed 200 OK in 35ms (Views: 30.4ms | ActiveRecord: 1.3ms)
 
 
 Started GET "/images/thumb/6/image1.JPG?1469479811" for ::1 at 2016-07-26 17:29:32 -0500
-  
+
 ActionController::RoutingError (No route matches [GET] "/images/thumb/6/image1.JPG"):
-  
+
 actionpack (5.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
 web-console (3.3.1) lib/web_console/middleware.rb:131:in `call_app'
 web-console (3.3.1) lib/web_console/middleware.rb:28:in `block in call'
@@ -4006,9 +4006,9 @@ Completed 200 OK in 38ms (Views: 35.6ms | ActiveRecord: 0.6ms)
 
 
 Started GET "/images/thumb/6/image1.JPG?1469479811" for ::1 at 2016-07-26 17:33:55 -0500
-  
+
 ActionController::RoutingError (No route matches [GET] "/images/thumb/6/image1.JPG"):
-  
+
 actionpack (5.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
 web-console (3.3.1) lib/web_console/middleware.rb:131:in `call_app'
 web-console (3.3.1) lib/web_console/middleware.rb:28:in `block in call'
@@ -4064,20 +4064,20 @@ Completed 200 OK in 36ms (Views: 30.7ms | ActiveRecord: 1.4ms)
 
 
 Started GET "/images/thumb/4/image1.JPG?1469473899" for ::1 at 2016-07-26 17:35:30 -0500
-  
+
 ActionController::RoutingError (No route matches [GET] "/images/thumb/4/image1.JPG"):
-  
+
 actionpack (5.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
 web-console (3.3.1) lib/web_console/middleware.rb:131:in `call_app'
 web-console (3.3.1) lib/web_console/middleware.rb:28:in `block in call'
 web-console (3.3.1) lib/web_console/middleware.rb:18:in `catch'
 Started GET "/images/thumb/5/image2.JPG?1469473901" for ::1 at 2016-07-26 17:35:30 -0500
 web-console (3.3.1) lib/web_console/middleware.rb:18:in `call'
-  
+
 actionpack (5.0.0) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
 ActionController::RoutingError (No route matches [GET] "/images/thumb/5/image2.JPG"):
 railties (5.0.0) lib/rails/rack/logger.rb:36:in `call_app'
-  
+
 railties (5.0.0) lib/rails/rack/logger.rb:24:in `block in call'
 actionpack (5.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
 activesupport (5.0.0) lib/active_support/tagged_logging.rb:70:in `block in tagged'
@@ -4168,7 +4168,7 @@ Processing by PostsController#index as HTML
 Completed 500 Internal Server Error in 12ms (ActiveRecord: 0.9ms)
 
 
-  
+
 ActionView::Template::Error (undefined method `empty?' for Sun, 26 Jun 2016:Date):
     19:         <% posts.each do |post| %>
     20:           <%= h(link_to "#{post.title}", post) %>
@@ -4177,7 +4177,7 @@ ActionView::Template::Error (undefined method `empty?' for Sun, 26 Jun 2016:Date
     23:         <% else %>
     24:           <%= day.day %>
     25:         <% end %>
-  
+
 app/views/posts/index.html.erb:22:in `block (2 levels) in _app_views_posts_index_html_erb__2179198297827377637_70298027516000'
 app/views/posts/index.html.erb:18:in `block in _app_views_posts_index_html_erb__2179198297827377637_70298027516000'
 app/views/posts/index.html.erb:16:in `_app_views_posts_index_html_erb__2179198297827377637_70298027516000'
@@ -4517,9 +4517,9 @@ Completed 200 OK in 44ms (Views: 28.3ms | ActiveRecord: 12.4ms)
 
 
 Started GET "/images/thumb/2/image1.JPG?1469472677" for ::1 at 2016-07-27 12:31:56 -0500
-  
+
 ActionController::RoutingError (No route matches [GET] "/images/thumb/2/image1.JPG"):
-  
+
 actionpack (5.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
 web-console (3.3.1) lib/web_console/middleware.rb:131:in `call_app'
 web-console (3.3.1) lib/web_console/middleware.rb:28:in `block in call'
@@ -4548,9 +4548,9 @@ puma (3.6.0) lib/puma/server.rb:275:in `block in run'
 puma (3.6.0) lib/puma/thread_pool.rb:116:in `call'
 puma (3.6.0) lib/puma/thread_pool.rb:116:in `block in spawn_thread'
 Started GET "/images/thumb/3/image2.JPG?1469472679" for ::1 at 2016-07-27 12:31:56 -0500
-  
+
 ActionController::RoutingError (No route matches [GET] "/images/thumb/3/image2.JPG"):
-  
+
 actionpack (5.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
 web-console (3.3.1) lib/web_console/middleware.rb:131:in `call_app'
 web-console (3.3.1) lib/web_console/middleware.rb:28:in `block in call'
@@ -4632,9 +4632,9 @@ Completed 200 OK in 32ms (Views: 29.3ms | ActiveRecord: 1.3ms)
 
 
 Started GET "/images/thumb/6/image1.JPG?1469479811" for ::1 at 2016-07-27 12:39:43 -0500
-  
+
 ActionController::RoutingError (No route matches [GET] "/images/thumb/6/image1.JPG"):
-  
+
 actionpack (5.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
 web-console (3.3.1) lib/web_console/middleware.rb:131:in `call_app'
 web-console (3.3.1) lib/web_console/middleware.rb:28:in `block in call'
@@ -4690,9 +4690,9 @@ Completed 200 OK in 106ms (Views: 102.5ms | ActiveRecord: 1.3ms)
 
 
 Started GET "/images/thumb/8/veronica16-032.jpg?1469561968" for ::1 at 2016-07-27 12:46:59 -0500
-  
+
 ActionController::RoutingError (No route matches [GET] "/images/thumb/8/veronica16-032.jpg"):
-  
+
 actionpack (5.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
 web-console (3.3.1) lib/web_console/middleware.rb:131:in `call_app'
 web-console (3.3.1) lib/web_console/middleware.rb:28:in `block in call'
@@ -4711,9 +4711,9 @@ actionpack (5.0.0) lib/action_dispatch/middleware/request_id.rb:24:in `call'
 rack (2.0.1) lib/rack/method_override.rb:22:in `call'
 rack (2.0.1) lib/rack/runtime.rb:22:in `call'
 activesupport (5.0.0) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
-  
+
 ActionController::RoutingError (No route matches [GET] "/images/thumb/9/veronica16-039.jpg"):
-  
+
 actionpack (5.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
 web-console (3.3.1) lib/web_console/middleware.rb:131:in `call_app'
 web-console (3.3.1) lib/web_console/middleware.rb:28:in `block in call'
@@ -4728,23 +4728,23 @@ Started GET "/images/thumb/11/veronica16-047.jpg?1469561970" for ::1 at 2016-07-
 Started GET "/images/thumb/10/veronica16-045.jpg?1469561969" for ::1 at 2016-07-27 12:46:59 -0500
 activesupport (5.0.0) lib/active_support/tagged_logging.rb:26:in `tagged'
 actionpack (5.0.0) lib/action_dispatch/middleware/static.rb:136:in `call'
-  
+
 Started GET "/images/thumb/12/veronica16-048.jpg?1469561970" for ::1 at 2016-07-27 12:46:59 -0500
-  
+
 activesupport (5.0.0) lib/active_support/tagged_logging.rb:70:in `tagged'
 rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
 ActionController::RoutingError (No route matches [GET] "/images/thumb/11/veronica16-047.jpg"):
-  
+
 ActionController::RoutingError (No route matches [GET] "/images/thumb/10/veronica16-045.jpg"):
 railties (5.0.0) lib/rails/rack/logger.rb:24:in `call'
 railties (5.0.0) lib/rails/engine.rb:522:in `call'
-  
+
 ActionController::RoutingError (No route matches [GET] "/images/thumb/12/veronica16-048.jpg"):
-  
+
 sprockets-rails (3.1.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
 puma (3.6.0) lib/puma/configuration.rb:225:in `call'
 actionpack (5.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
-  
+
 actionpack (5.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
 actionpack (5.0.0) lib/action_dispatch/middleware/request_id.rb:24:in `call'
 puma (3.6.0) lib/puma/server.rb:578:in `handle_request'
@@ -4874,9 +4874,9 @@ puma (3.6.0) lib/puma/thread_pool.rb:116:in `block in spawn_thread'
   Rendered collection of /Users/scottsouthard/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/routes/_route.html.erb [12 times] (3.7ms)
   Rendered /Users/scottsouthard/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.3ms)
 Started GET "/images/thumb/14/veronica16-059.jpg?1469561972" for ::1 at 2016-07-27 12:47:00 -0500
-  
+
 ActionController::RoutingError (No route matches [GET] "/images/thumb/14/veronica16-059.jpg"):
-  
+
 actionpack (5.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
   Rendering /Users/scottsouthard/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
 web-console (3.3.1) lib/web_console/middleware.rb:131:in `call_app'
@@ -4913,13 +4913,13 @@ puma (3.6.0) lib/puma/thread_pool.rb:116:in `block in spawn_thread'
 Started GET "/images/thumb/15/veronica16-063.jpg?1469561972" for ::1 at 2016-07-27 12:47:00 -0500
 Started GET "/images/thumb/20/veronica16-095.jpg?1469561976" for ::1 at 2016-07-27 12:47:00 -0500
   Rendered collection of /Users/scottsouthard/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/routes/_route.html.erb [12 times] (4.1ms)
-  
-  
+
+
 ActionController::RoutingError (No route matches [GET] "/images/thumb/15/veronica16-063.jpg"):
   Rendered /Users/scottsouthard/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.7ms)
 ActionController::RoutingError (No route matches [GET] "/images/thumb/20/veronica16-095.jpg"):
-  
-  
+
+
   Rendering /Users/scottsouthard/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
 actionpack (5.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
 actionpack (5.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
@@ -4931,14 +4931,14 @@ Started GET "/images/thumb/16/veronica16-073.jpg?1469561973" for ::1 at 2016-07-
 web-console (3.3.1) lib/web_console/middleware.rb:28:in `block in call'
 web-console (3.3.1) lib/web_console/middleware.rb:28:in `block in call'
   Rendering /Users/scottsouthard/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
-  
+
 web-console (3.3.1) lib/web_console/middleware.rb:18:in `catch'
 web-console (3.3.1) lib/web_console/middleware.rb:18:in `catch'
 ActionController::RoutingError (No route matches [GET] "/images/thumb/16/veronica16-073.jpg"):
 web-console (3.3.1) lib/web_console/middleware.rb:18:in `call'
 web-console (3.3.1) lib/web_console/middleware.rb:18:in `call'
   Rendering /Users/scottsouthard/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
-  
+
 actionpack (5.0.0) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
 actionpack (5.0.0) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
   Rendered /Users/scottsouthard/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.7ms)
@@ -4960,7 +4960,7 @@ activesupport (5.0.0) lib/active_support/tagged_logging.rb:26:in `tagged'
   Rendering /Users/scottsouthard/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
 web-console (3.3.1) lib/web_console/middleware.rb:18:in `call'
 activesupport (5.0.0) lib/active_support/tagged_logging.rb:70:in `tagged'
-  
+
 activesupport (5.0.0) lib/active_support/tagged_logging.rb:70:in `tagged'
   Rendered /Users/scottsouthard/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
 actionpack (5.0.0) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
@@ -4970,7 +4970,7 @@ railties (5.0.0) lib/rails/rack/logger.rb:24:in `call'
   Rendered /Users/scottsouthard/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (203.8ms)
 railties (5.0.0) lib/rails/rack/logger.rb:36:in `call_app'
 sprockets-rails (3.1.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
-  
+
 sprockets-rails (3.1.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
 railties (5.0.0) lib/rails/rack/logger.rb:24:in `block in call'
 actionpack (5.0.0) lib/action_dispatch/middleware/request_id.rb:24:in `call'
@@ -5031,13 +5031,13 @@ activesupport (5.0.0) lib/active_support/tagged_logging.rb:70:in `tagged'
 Started GET "/images/thumb/18/veronica16-090.jpg?1469561975" for ::1 at 2016-07-27 12:47:01 -0500
 puma (3.6.0) lib/puma/server.rb:275:in `block in run'
 railties (5.0.0) lib/rails/rack/logger.rb:24:in `call'
-  
+
 puma (3.6.0) lib/puma/thread_pool.rb:116:in `call'
 sprockets-rails (3.1.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
 ActionController::RoutingError (No route matches [GET] "/images/thumb/18/veronica16-090.jpg"):
 puma (3.6.0) lib/puma/thread_pool.rb:116:in `block in spawn_thread'
 actionpack (5.0.0) lib/action_dispatch/middleware/request_id.rb:24:in `call'
-  
+
 rack (2.0.1) lib/rack/method_override.rb:22:in `call'
 actionpack (5.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
 rack (2.0.1) lib/rack/runtime.rb:22:in `call'
@@ -5107,10 +5107,10 @@ puma (3.6.0) lib/puma/server.rb:275:in `block in run'
 Started GET "/images/thumb/17/veronica16-081.jpg?1469561974" for ::1 at 2016-07-27 12:47:02 -0500
 puma (3.6.0) lib/puma/thread_pool.rb:116:in `call'
   Rendered /Users/scottsouthard/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.3ms)
-  
+
 puma (3.6.0) lib/puma/thread_pool.rb:116:in `block in spawn_thread'
 ActionController::RoutingError (No route matches [GET] "/images/thumb/17/veronica16-081.jpg"):
-  
+
 actionpack (5.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
 web-console (3.3.1) lib/web_console/middleware.rb:131:in `call_app'
 web-console (3.3.1) lib/web_console/middleware.rb:28:in `block in call'
@@ -5142,9 +5142,9 @@ puma (3.6.0) lib/puma/server.rb:275:in `block in run'
 puma (3.6.0) lib/puma/thread_pool.rb:116:in `call'
 puma (3.6.0) lib/puma/thread_pool.rb:116:in `block in spawn_thread'
 Started GET "/images/thumb/13/veronica16-054.jpg?1469561971" for ::1 at 2016-07-27 12:47:02 -0500
-  
+
 ActionController::RoutingError (No route matches [GET] "/images/thumb/13/veronica16-054.jpg"):
-  
+
 actionpack (5.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
 web-console (3.3.1) lib/web_console/middleware.rb:131:in `call_app'
   Rendering /Users/scottsouthard/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
@@ -5466,9 +5466,9 @@ Completed 200 OK in 33ms (Views: 30.0ms | ActiveRecord: 1.0ms)
 
 
 Started GET "/images/thumb/4/image1.JPG?1469473899" for ::1 at 2016-07-27 13:00:47 -0500
-  
+
 ActionController::RoutingError (No route matches [GET] "/images/thumb/4/image1.JPG"):
-  
+
 actionpack (5.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
 web-console (3.3.1) lib/web_console/middleware.rb:131:in `call_app'
 web-console (3.3.1) lib/web_console/middleware.rb:28:in `block in call'
@@ -5497,9 +5497,9 @@ puma (3.6.0) lib/puma/server.rb:275:in `block in run'
 puma (3.6.0) lib/puma/thread_pool.rb:116:in `call'
 puma (3.6.0) lib/puma/thread_pool.rb:116:in `block in spawn_thread'
 Started GET "/images/thumb/5/image2.JPG?1469473901" for ::1 at 2016-07-27 13:00:47 -0500
-  
+
 ActionController::RoutingError (No route matches [GET] "/images/thumb/5/image2.JPG"):
-  
+
 actionpack (5.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
 web-console (3.3.1) lib/web_console/middleware.rb:131:in `call_app'
 web-console (3.3.1) lib/web_console/middleware.rb:28:in `block in call'
@@ -5714,9 +5714,9 @@ Completed 200 OK in 38ms (Views: 35.4ms | ActiveRecord: 1.1ms)
 
 
 Started GET "/images/thumb/8/veronica16-032.jpg?1469561968" for ::1 at 2016-07-27 13:09:21 -0500
-  
+
 ActionController::RoutingError (No route matches [GET] "/images/thumb/8/veronica16-032.jpg"):
-  
+
 actionpack (5.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
 web-console (3.3.1) lib/web_console/middleware.rb:131:in `call_app'
 web-console (3.3.1) lib/web_console/middleware.rb:28:in `block in call'
@@ -5746,17 +5746,17 @@ puma (3.6.0) lib/puma/thread_pool.rb:116:in `call'
 puma (3.6.0) lib/puma/thread_pool.rb:116:in `block in spawn_thread'
 Started GET "/images/thumb/10/veronica16-045.jpg?1469561969" for ::1 at 2016-07-27 13:09:21 -0500
 Started GET "/images/thumb/12/veronica16-048.jpg?1469561970" for ::1 at 2016-07-27 13:09:21 -0500
-  
+
 Started GET "/images/thumb/9/veronica16-039.jpg?1469561968" for ::1 at 2016-07-27 13:09:21 -0500
 Started GET "/images/thumb/11/veronica16-047.jpg?1469561970" for ::1 at 2016-07-27 13:09:21 -0500
-  
+
 ActionController::RoutingError (No route matches [GET] "/images/thumb/10/veronica16-045.jpg"):
-  
-  
+
+
 ActionController::RoutingError (No route matches [GET] "/images/thumb/12/veronica16-048.jpg"):
-  
+
 ActionController::RoutingError (No route matches [GET] "/images/thumb/9/veronica16-039.jpg"):
-  
+
 actionpack (5.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
 web-console (3.3.1) lib/web_console/middleware.rb:131:in `call_app'
 web-console (3.3.1) lib/web_console/middleware.rb:28:in `block in call'
@@ -5771,10 +5771,10 @@ activesupport (5.0.0) lib/active_support/tagged_logging.rb:70:in `tagged'
 railties (5.0.0) lib/rails/rack/logger.rb:24:in `call'
 sprockets-rails (3.1.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
 ActionController::RoutingError (No route matches [GET] "/images/thumb/11/veronica16-047.jpg"):
-  
+
 actionpack (5.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
 actionpack (5.0.0) lib/action_dispatch/middleware/request_id.rb:24:in `call'
-  
+
 actionpack (5.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
 web-console (3.3.1) lib/web_console/middleware.rb:131:in `call_app'
   Rendering /Users/scottsouthard/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
@@ -5905,10 +5905,10 @@ puma (3.6.0) lib/puma/thread_pool.rb:116:in `block in spawn_thread'
 Started GET "/images/thumb/16/veronica16-073.jpg?1469561973" for ::1 at 2016-07-27 13:09:23 -0500
   Rendered /Users/scottsouthard/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (439.9ms)
   Rendered collection of /Users/scottsouthard/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/routes/_route.html.erb [12 times] (3.1ms)
-  
+
   Rendered /Users/scottsouthard/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.2ms)
 ActionController::RoutingError (No route matches [GET] "/images/thumb/16/veronica16-073.jpg"):
-  
+
 actionpack (5.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
 web-console (3.3.1) lib/web_console/middleware.rb:131:in `call_app'
 web-console (3.3.1) lib/web_console/middleware.rb:28:in `block in call'
@@ -5921,11 +5921,11 @@ actionpack (5.0.0) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call
 railties (5.0.0) lib/rails/rack/logger.rb:36:in `call_app'
 Started GET "/images/thumb/19/veronica16-093.jpg?1469561975" for ::1 at 2016-07-27 13:09:23 -0500
 railties (5.0.0) lib/rails/rack/logger.rb:24:in `block in call'
-  
+
 activesupport (5.0.0) lib/active_support/tagged_logging.rb:70:in `block in tagged'
 ActionController::RoutingError (No route matches [GET] "/images/thumb/19/veronica16-093.jpg"):
 activesupport (5.0.0) lib/active_support/tagged_logging.rb:26:in `tagged'
-  
+
 activesupport (5.0.0) lib/active_support/tagged_logging.rb:70:in `tagged'
 actionpack (5.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
 railties (5.0.0) lib/rails/rack/logger.rb:24:in `call'
@@ -5934,14 +5934,14 @@ Started GET "/images/thumb/14/veronica16-059.jpg?1469561972" for ::1 at 2016-07-
 web-console (3.3.1) lib/web_console/middleware.rb:131:in `call_app'
 sprockets-rails (3.1.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
 Processing by PostsController#index as HTML
-  
+
 web-console (3.3.1) lib/web_console/middleware.rb:28:in `block in call'
 actionpack (5.0.0) lib/action_dispatch/middleware/request_id.rb:24:in `call'
 ActionController::RoutingError (No route matches [GET] "/images/thumb/14/veronica16-059.jpg"):
   [1m[36mPost Load (2.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
 web-console (3.3.1) lib/web_console/middleware.rb:18:in `catch'
 rack (2.0.1) lib/rack/method_override.rb:22:in `call'
-  
+
 actionpack (5.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
 web-console (3.3.1) lib/web_console/middleware.rb:131:in `call_app'
 web-console (3.3.1) lib/web_console/middleware.rb:28:in `block in call'
@@ -5964,9 +5964,9 @@ Started GET "/images/thumb/17/veronica16-081.jpg?1469561974" for ::1 at 2016-07-
 rack (2.0.1) lib/rack/runtime.rb:22:in `call'
 actionpack (5.0.0) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
 activesupport (5.0.0) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
-  
+
 ActionController::RoutingError (No route matches [GET] "/images/thumb/17/veronica16-081.jpg"):
-  
+
 activesupport (5.0.0) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
 actionpack (5.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
 railties (5.0.0) lib/rails/rack/logger.rb:36:in `call_app'
@@ -6022,14 +6022,14 @@ Started GET "/images/thumb/15/veronica16-063.jpg?1469561972" for ::1 at 2016-07-
 rack (2.0.1) lib/rack/method_override.rb:22:in `call'
 rack (2.0.1) lib/rack/runtime.rb:22:in `call'
 actionpack (5.0.0) lib/action_dispatch/middleware/executor.rb:12:in `call'
-  
+
 activesupport (5.0.0) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
 ActionController::RoutingError (No route matches [GET] "/images/thumb/15/veronica16-063.jpg"):
 actionpack (5.0.0) lib/action_dispatch/middleware/static.rb:136:in `call'
   Rendering /Users/scottsouthard/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
 actionpack (5.0.0) lib/action_dispatch/middleware/executor.rb:12:in `call'
   Rendering /Users/scottsouthard/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
-  
+
 rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
 actionpack (5.0.0) lib/action_dispatch/middleware/static.rb:136:in `call'
   Rendering /Users/scottsouthard/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
@@ -6105,9 +6105,9 @@ puma (3.6.0) lib/puma/thread_pool.rb:116:in `block in spawn_thread'
   Rendered /Users/scottsouthard/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
 Started GET "/images/thumb/13/veronica16-054.jpg?1469561971" for ::1 at 2016-07-27 13:09:24 -0500
   Rendered /Users/scottsouthard/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (434.7ms)
-  
+
 ActionController::RoutingError (No route matches [GET] "/images/thumb/13/veronica16-054.jpg"):
-  
+
 actionpack (5.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
 web-console (3.3.1) lib/web_console/middleware.rb:131:in `call_app'
 web-console (3.3.1) lib/web_console/middleware.rb:28:in `block in call'
@@ -6162,9 +6162,9 @@ Completed 200 OK in 31ms (Views: 27.9ms | ActiveRecord: 0.9ms)
 
 
 Started GET "/images/thumb/1/AAEAAQAAAAAAAAinAAAAJGUzMGVmMGJhLWQxOGUtNGJlOS04NWNkLTQ0YzYzODFhMzg3Ng.jpg?1469472648" for ::1 at 2016-07-27 13:09:36 -0500
-  
+
 ActionController::RoutingError (No route matches [GET] "/images/thumb/1/AAEAAQAAAAAAAAinAAAAJGUzMGVmMGJhLWQxOGUtNGJlOS04NWNkLTQ0YzYzODFhMzg3Ng.jpg"):
-  
+
 actionpack (5.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
 web-console (3.3.1) lib/web_console/middleware.rb:131:in `call_app'
 web-console (3.3.1) lib/web_console/middleware.rb:28:in `block in call'
@@ -6707,7 +6707,7 @@ Processing by PostsController#index as HTML
 Completed 500 Internal Server Error in 82ms (ActiveRecord: 0.7ms)
 
 
-  
+
 ActionView::Template::Error (undefined local variable or method `posts_past_path' for #<#<Class:0x007fdf0e627b50>:0x007fdf0c592e08>):
     1: <div class="container">
     2:   <%= link_to "Upcoming Shows", posts_upcoming_path %>
@@ -6715,7 +6715,7 @@ ActionView::Template::Error (undefined local variable or method `posts_past_path
     4:   <div id="calendar">
     5:     <h2 id="month">
     6:       <div class="arrows">
-  
+
 app/views/posts/index.html.erb:3:in `_app_views_posts_index_html_erb__2179198297827377637_70297980804220'
   Rendering /Users/scottsouthard/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
   Rendering /Users/scottsouthard/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
@@ -6748,9 +6748,9 @@ Processing by PostsController#show as HTML
 Completed 404 Not Found in 4ms (ActiveRecord: 2.2ms)
 
 
-  
+
 ActiveRecord::RecordNotFound (Couldn't find Post with 'id'=upcoming):
-  
+
 app/controllers/posts_controller.rb:9:in `show'
   Rendering /Users/scottsouthard/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
   Rendering /Users/scottsouthard/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
@@ -6767,9 +6767,9 @@ Processing by PostsController#show as HTML
 Completed 404 Not Found in 7ms (ActiveRecord: 0.3ms)
 
 
-  
+
 ActiveRecord::RecordNotFound (Couldn't find Post with 'id'=upcoming):
-  
+
 app/controllers/posts_controller.rb:9:in `show'
   Rendering /Users/scottsouthard/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
   Rendering /Users/scottsouthard/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
@@ -6794,9 +6794,9 @@ Processing by PostsController#show as HTML
 Completed 404 Not Found in 1ms (ActiveRecord: 0.3ms)
 
 
-  
+
 ActiveRecord::RecordNotFound (Couldn't find Post with 'id'=past):
-  
+
 app/controllers/posts_controller.rb:9:in `show'
   Rendering /Users/scottsouthard/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
   Rendering /Users/scottsouthard/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
@@ -6821,9 +6821,9 @@ Processing by PostsController#show as HTML
 Completed 404 Not Found in 1ms (ActiveRecord: 0.4ms)
 
 
-  
+
 ActiveRecord::RecordNotFound (Couldn't find Post with 'id'=upcoming):
-  
+
 app/controllers/posts_controller.rb:9:in `show'
   Rendering /Users/scottsouthard/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
   Rendering /Users/scottsouthard/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
@@ -6849,9 +6849,9 @@ Processing by PostsController#show as HTML
 Completed 404 Not Found in 13ms (ActiveRecord: 0.6ms)
 
 
-  
+
 ActiveRecord::RecordNotFound (Couldn't find Post with 'id'=upcoming):
-  
+
 app/controllers/posts_controller.rb:9:in `show'
   Rendering /Users/scottsouthard/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
   Rendering /Users/scottsouthard/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
@@ -6868,9 +6868,9 @@ Processing by PostsController#show as HTML
 Completed 404 Not Found in 10ms (ActiveRecord: 2.9ms)
 
 
-  
+
 ActiveRecord::RecordNotFound (Couldn't find Post with 'id'=upcoming):
-  
+
 app/controllers/posts_controller.rb:17:in `show'
   Rendering /Users/scottsouthard/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
   Rendering /Users/scottsouthard/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
@@ -6939,9 +6939,9 @@ Completed 200 OK in 82ms (Views: 70.7ms | ActiveRecord: 8.2ms)
 
 
 Started GET "/images/thumb/6/image1.JPG?1469479811" for ::1 at 2016-07-27 14:04:15 -0500
-  
+
 ActionController::RoutingError (No route matches [GET] "/images/thumb/6/image1.JPG"):
-  
+
 actionpack (5.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
 web-console (3.3.1) lib/web_console/middleware.rb:131:in `call_app'
 web-console (3.3.1) lib/web_console/middleware.rb:28:in `block in call'
@@ -7242,7 +7242,7 @@ Processing by PostsController#index as HTML
 Completed 500 Internal Server Error in 34ms (ActiveRecord: 0.3ms)
 
 
-  
+
 ActionView::Template::Error (Invalid CSS after "  margin": expected "{", was "}"):
     2: <html>
     3: <head>
@@ -7251,7 +7251,7 @@ ActionView::Template::Error (Invalid CSS after "  margin": expected "{", was "}"
     6:     <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
     7:     <%= csrf_meta_tags %>
     8:     <meta name="viewport" content="width = device-width, initial-scale = 1">
-  
+
 app/assets/stylesheets/main.scss:233
 app/views/layouts/application.html.erb:5:in `_app_views_layouts_application_html_erb___372137091522867152_70306256605740'
   Rendering /Users/scottsouthard/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
@@ -7270,7 +7270,7 @@ Processing by PostsController#index as HTML
 Completed 500 Internal Server Error in 46ms (ActiveRecord: 0.3ms)
 
 
-  
+
 ActionView::Template::Error (Invalid CSS after "  margin": expected "{", was "}"):
     2: <html>
     3: <head>
@@ -7279,7 +7279,7 @@ ActionView::Template::Error (Invalid CSS after "  margin": expected "{", was "}"
     6:     <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
     7:     <%= csrf_meta_tags %>
     8:     <meta name="viewport" content="width = device-width, initial-scale = 1">
-  
+
 app/assets/stylesheets/main.scss:232
 app/views/layouts/application.html.erb:5:in `_app_views_layouts_application_html_erb___372137091522867152_70306230152900'
   Rendering /Users/scottsouthard/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
@@ -8181,12 +8181,12 @@ Processing by PostsController#past as HTML
 Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.0ms)
 
 
-  
+
 SyntaxError (/Users/scottsouthard/Documents/Dev/samuelgallery/app/views/posts/past.html.erb:4: syntax error, unexpected tSTRING_BEG, expecting keyword_do or '{' or '('
 ...e.strftime("%m/%d/%Y")}", post");@output_buffer.safe_append='
 ...                               ^
 /Users/scottsouthard/Documents/Dev/samuelgallery/app/views/posts/past.html.erb:4: unterminated string meets end of file):
-  
+
 app/views/posts/past.html.erb:4: syntax error, unexpected tSTRING_BEG, expecting keyword_do or '{' or '('
 app/views/posts/past.html.erb:4: unterminated string meets end of file
   Rendering /Users/scottsouthard/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
@@ -8501,11 +8501,11 @@ Processing by PostsController#index as HTML
 Completed 500 Internal Server Error in 69ms (ActiveRecord: 27.1ms)
 
 
-  
+
 SyntaxError (/Users/scottsouthard/Documents/Dev/samuelgallery/app/views/layouts/application.html.erb:22: syntax error, unexpected ',', expecting :: or '[' or '.'
 ...ffer.append=( link_to, "About", welcome_about_path );@output...
 ...                               ^):
-  
+
 app/views/layouts/application.html.erb:22: syntax error, unexpected ',', expecting :: or '[' or '.'
   Rendering /Users/scottsouthard/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
   Rendering /Users/scottsouthard/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
@@ -9158,9 +9158,9 @@ Completed 200 OK in 39ms (Views: 35.7ms | ActiveRecord: 0.4ms)
 
 
 Started GET "/images/small/34/veronica16-032.jpg?1469647578" for ::1 at 2016-07-28 15:07:52 -0500
-  
+
 ActionController::RoutingError (No route matches [GET] "/images/small/34/veronica16-032.jpg"):
-  
+
 actionpack (5.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
 web-console (3.3.1) lib/web_console/middleware.rb:131:in `call_app'
 web-console (3.3.1) lib/web_console/middleware.rb:28:in `block in call'
@@ -9199,15 +9199,15 @@ puma (3.6.0) lib/puma/thread_pool.rb:116:in `block in spawn_thread'
 Started GET "/images/small/35/veronica16-039.jpg?1469647579" for ::1 at 2016-07-28 15:07:52 -0500
 Started GET "/images/small/36/veronica16-045.jpg?1469647580" for ::1 at 2016-07-28 15:07:52 -0500
 Started GET "/images/small/37/veronica16-047.jpg?1469647581" for ::1 at 2016-07-28 15:07:52 -0500
-  
-  
-  
+
+
+
 ActionController::RoutingError (No route matches [GET] "/images/small/35/veronica16-039.jpg"):
 ActionController::RoutingError (No route matches [GET] "/images/small/36/veronica16-045.jpg"):
 ActionController::RoutingError (No route matches [GET] "/images/small/37/veronica16-047.jpg"):
-  
-  
-  
+
+
+
 actionpack (5.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
 actionpack (5.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
 actionpack (5.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
@@ -10645,9 +10645,9 @@ Completed 200 OK in 24ms (Views: 21.5ms | ActiveRecord: 0.0ms)
 
 
 Started GET "/welcome/samuel.png" for ::1 at 2016-07-29 12:50:49 -0500
-  
+
 ActionController::RoutingError (No route matches [GET] "/welcome/samuel.png"):
-  
+
 actionpack (5.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
 web-console (3.3.1) lib/web_console/middleware.rb:131:in `call_app'
 web-console (3.3.1) lib/web_console/middleware.rb:28:in `block in call'
@@ -10998,7 +10998,7 @@ Processing by PostsController#show as HTML
 Completed 500 Internal Server Error in 106ms (ActiveRecord: 0.8ms)
 
 
-  
+
 ActionView::Template::Error (undefined method `delete_post_path' for #<#<Class:0x007fe2ec120a80>:0x007fe2e3cfd960>):
     28:           <% end %>
     29:         </div>
@@ -11006,8 +11006,8 @@ ActionView::Template::Error (undefined method `delete_post_path' for #<#<Class:0
     31:         <%=link_to "Delete Show", [:delete, @post] %>
     32:       </div>
     33:     </div>
-    34: 
-  
+    34:
+
 app/views/posts/show.html.erb:31:in `_app_views_posts_show_html_erb__1606817535349283209_70306218591040'
   Rendering /Users/scottsouthard/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
   Rendering /Users/scottsouthard/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
@@ -11027,7 +11027,7 @@ Processing by PostsController#show as HTML
 Completed 500 Internal Server Error in 108ms (ActiveRecord: 0.4ms)
 
 
-  
+
 ActionView::Template::Error (undefined method `delete_post_path' for #<#<Class:0x007fe2e9d0cf90>:0x007fe2e9637cd8>):
     28:           <% end %>
     29:         </div>
@@ -11035,8 +11035,8 @@ ActionView::Template::Error (undefined method `delete_post_path' for #<#<Class:0
     31:         <%=link_to "Delete Show", [:delete, @post] %>
     32:       </div>
     33:     </div>
-    34: 
-  
+    34:
+
 app/views/posts/show.html.erb:31:in `_app_views_posts_show_html_erb__1606817535349283209_70306281058160'
   Rendering /Users/scottsouthard/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
   Rendering /Users/scottsouthard/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
@@ -11056,7 +11056,7 @@ Processing by PostsController#show as HTML
 Completed 500 Internal Server Error in 68ms (ActiveRecord: 0.4ms)
 
 
-  
+
 ActionView::Template::Error (undefined method `destroy_post_path' for #<#<Class:0x007fe2e9d0cf90>:0x007fe2eae7e350>):
     28:           <% end %>
     29:         </div>
@@ -11064,8 +11064,8 @@ ActionView::Template::Error (undefined method `destroy_post_path' for #<#<Class:
     31:         <%=link_to "Delete Show", [:destroy, @post] %>
     32:       </div>
     33:     </div>
-    34: 
-  
+    34:
+
 app/views/posts/show.html.erb:31:in `_app_views_posts_show_html_erb__1606817535349283209_70306290202280'
   Rendering /Users/scottsouthard/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
   Rendering /Users/scottsouthard/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
@@ -11085,7 +11085,7 @@ Processing by PostsController#show as HTML
 Completed 500 Internal Server Error in 65ms (ActiveRecord: 1.0ms)
 
 
-  
+
 ActionView::Template::Error (undefined method `destroy_post_id_path' for #<#<Class:0x007fe2e9d0cf90>:0x007fe2e679e660>):
     28:           <% end %>
     29:         </div>
@@ -11093,8 +11093,8 @@ ActionView::Template::Error (undefined method `destroy_post_id_path' for #<#<Cla
     31:         <%=link_to "Delete Show", [:destroy, @post, :id] %>
     32:       </div>
     33:     </div>
-    34: 
-  
+    34:
+
 app/views/posts/show.html.erb:31:in `_app_views_posts_show_html_erb__1606817535349283209_70306253044240'
   Rendering /Users/scottsouthard/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
   Rendering /Users/scottsouthard/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
@@ -11191,7 +11191,7 @@ Processing by PostsController#show as HTML
 Completed 500 Internal Server Error in 67ms (ActiveRecord: 0.4ms)
 
 
-  
+
 ActionView::Template::Error (undefined local variable or method `confirm' for #<#<Class:0x007fe2e2ddb888>:0x007fe2e9117dc0>):
     28:           <% end %>
     29:         </div>
@@ -11199,8 +11199,8 @@ ActionView::Template::Error (undefined local variable or method `confirm' for #<
     31:         <%=link_to "Delete Show", @post, :method => :delete, confirm => "Yo, you sure?" %>
     32:       </div>
     33:     </div>
-    34: 
-  
+    34:
+
 app/views/posts/show.html.erb:31:in `_app_views_posts_show_html_erb__1606817535349283209_70306274797040'
   Rendering /Users/scottsouthard/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
   Rendering /Users/scottsouthard/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
@@ -11221,9 +11221,9 @@ Completed 200 OK in 42ms (Views: 38.0ms | ActiveRecord: 0.5ms)
 
 
 Started GET "/posts/11/edit" for ::1 at 2016-07-29 13:18:19 -0500
-  
+
 AbstractController::ActionNotFound (The action 'edit' could not be found for PostsController):
-  
+
 actionpack (5.0.0) lib/abstract_controller/base.rb:121:in `process'
 actionview (5.0.0) lib/action_view/rendering.rb:30:in `process'
 actionpack (5.0.0) lib/action_controller/metal.rb:190:in `dispatch'
@@ -11287,9 +11287,9 @@ Completed 200 OK in 41ms (Views: 26.6ms | ActiveRecord: 0.2ms)
 
 
 Started GET "/posts/11/samuel.png" for ::1 at 2016-07-29 13:22:29 -0500
-  
+
 ActionController::RoutingError (No route matches [GET] "/posts/11/samuel.png"):
-  
+
 actionpack (5.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
 web-console (3.3.1) lib/web_console/middleware.rb:131:in `call_app'
 web-console (3.3.1) lib/web_console/middleware.rb:28:in `block in call'
@@ -11326,9 +11326,9 @@ puma (3.6.0) lib/puma/thread_pool.rb:116:in `block in spawn_thread'
   Rendered /Users/scottsouthard/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
   Rendered /Users/scottsouthard/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (107.0ms)
 Started PATCH "/posts/11" for ::1 at 2016-07-29 13:22:43 -0500
-  
+
 AbstractController::ActionNotFound (The action 'update' could not be found for PostsController):
-  
+
 actionpack (5.0.0) lib/abstract_controller/base.rb:121:in `process'
 actionview (5.0.0) lib/action_view/rendering.rb:30:in `process'
 actionpack (5.0.0) lib/action_controller/metal.rb:190:in `dispatch'
@@ -11447,9 +11447,9 @@ Unpermitted parameter: document
 Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms)
 
 
-  
+
 NoMethodError (undefined method `update' for nil:NilClass):
-  
+
 app/controllers/posts_controller.rb:46:in `update'
   Rendering /Users/scottsouthard/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
   Rendering /Users/scottsouthard/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
@@ -12147,7 +12147,7 @@ Processing by PostsController#index as HTML
 Completed 500 Internal Server Error in 474ms (ActiveRecord: 2.3ms)
 
 
-  
+
 ActionView::Template::Error (undefined local variable or method `session_new_path' for #<#<Class:0x007fe1e2ef9d60>:0x007fe1e2eb2500>):
     33:   <footer>
     34:     <br>
@@ -12156,7 +12156,7 @@ ActionView::Template::Error (undefined local variable or method `session_new_pat
     37:     </div>
     38:   </footer>
     39:   </body>
-  
+
 app/views/layouts/application.html.erb:36:in `_app_views_layouts_application_html_erb__3104288389648988568_70304066060660'
   Rendering /Users/scottsouthard/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
   Rendering /Users/scottsouthard/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
@@ -12182,9 +12182,9 @@ Completed 200 OK in 37ms (Views: 36.3ms | ActiveRecord: 0.0ms)
 
 
 Started GET "/sessions/samuel.png" for ::1 at 2016-07-29 13:47:52 -0500
-  
+
 ActionController::RoutingError (No route matches [GET] "/sessions/samuel.png"):
-  
+
 actionpack (5.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
 web-console (3.3.1) lib/web_console/middleware.rb:131:in `call_app'
 web-console (3.3.1) lib/web_console/middleware.rb:28:in `block in call'
@@ -12331,7 +12331,7 @@ Processing by SessionsController#new as HTML
 Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.0ms)
 
 
-  
+
 ActionView::Template::Error (undefined method `label' for nil:NilClass):
     2: <form role="form">
     3:   <%= form_tag(controller: "sessions", action: "create", method: "post") do |f| %>
@@ -12340,7 +12340,7 @@ ActionView::Template::Error (undefined method `label' for nil:NilClass):
     6:       <%= f.text_field :name, autofocus: true, id: "name", placeholder: "Enter Name" %>
     7:     </div>
     8:     <div class="form-group">
-  
+
 app/views/sessions/login.html.erb:5:in `block in _app_views_sessions_login_html_erb__3595675831376225021_70304080902360'
 app/views/sessions/login.html.erb:3:in `_app_views_sessions_login_html_erb__3595675831376225021_70304080902360'
 app/controllers/sessions_controller.rb:4:in `new'
@@ -12408,9 +12408,9 @@ Completed 200 OK in 28ms (Views: 27.4ms | ActiveRecord: 0.0ms)
 
 
 Started GET "/sessions/new?utf8=%E2%9C%93&authenticity_token=l6hXQBQyjs102VsAsAeWlzc3wMiDjjGVsZ1a%2Fu8ajgMXGeflsY3yM6UUL0nOyAgjPPf5W553mgB2yRUFylsOSg%3D%3D&session%5Bname%5D=Steven&session%5Bpassword%5D=[FILTERED]&commit=Login" for ::1 at 2016-07-29 14:01:56 -0500
-  
+
 ActionController::RoutingError (No route matches [GET] "/sessions/new"):
-  
+
 actionpack (5.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
 web-console (3.3.1) lib/web_console/middleware.rb:131:in `call_app'
 web-console (3.3.1) lib/web_console/middleware.rb:28:in `block in call'
@@ -12455,7 +12455,7 @@ Processing by PostsController#index as HTML
 Completed 500 Internal Server Error in 95ms (ActiveRecord: 4.2ms)
 
 
-  
+
 ActionView::Template::Error (undefined local variable or method `sessions_new_path' for #<#<Class:0x007fe1e8b71188>:0x007fe1e8b70080>):
     33:   <footer>
     34:     <br>
@@ -12464,7 +12464,7 @@ ActionView::Template::Error (undefined local variable or method `sessions_new_pa
     37:     </div>
     38:   </footer>
     39:   </body>
-  
+
 app/views/layouts/application.html.erb:36:in `_app_views_layouts_application_html_erb__3104288389648988568_70304131499100'
   Rendering /Users/scottsouthard/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
   Rendering /Users/scottsouthard/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
@@ -12529,7 +12529,7 @@ Processing by SessionsController#new as HTML
 Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.0ms)
 
 
-  
+
 ActionView::Template::Error (wrong number of arguments (3 for 1..2)):
     2:   <div class="jumbotron form-jumbo">
     3:     <h2>Login</h2>
@@ -12538,7 +12538,7 @@ ActionView::Template::Error (wrong number of arguments (3 for 1..2)):
     6:         <div class="form-group">
     7:           <%= f.label :name %>
     8:           <%= f.text_field :name, autofocus: true, id: "name", placeholder: "Enter Name" %>
-  
+
 app/views/sessions/login.html.erb:5:in `_app_views_sessions_login_html_erb__3595675831376225021_70304124468880'
 app/controllers/sessions_controller.rb:4:in `new'
   Rendering /Users/scottsouthard/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
@@ -12566,9 +12566,9 @@ Completed 200 OK in 30ms (Views: 30.1ms | ActiveRecord: 0.0ms)
 
 
 Started GET "/login?utf8=%E2%9C%93&authenticity_token=hfdaq9TklbDwaxRXf4YqkspAnVTqff1Qcx%2B281GjHLwFRuoOcVvpTiGmYB4BSbQmwYCkx%2FeEVsW0S%2FkIdOKc9Q%3D%3D&session%5Bname%5D=Steven&session%5Bpassword%5D=[FILTERED]&commit=Login" for ::1 at 2016-07-29 14:18:27 -0500
-  
+
 ActionController::RoutingError (No route matches [GET] "/login"):
-  
+
 actionpack (5.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
 web-console (3.3.1) lib/web_console/middleware.rb:131:in `call_app'
 web-console (3.3.1) lib/web_console/middleware.rb:28:in `block in call'
@@ -12605,9 +12605,9 @@ puma (3.6.0) lib/puma/thread_pool.rb:116:in `block in spawn_thread'
   Rendered /Users/scottsouthard/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.9ms)
   Rendered /Users/scottsouthard/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (100.3ms)
 Started GET "/login?utf8=%E2%9C%93&authenticity_token=hfdaq9TklbDwaxRXf4YqkspAnVTqff1Qcx%2B281GjHLwFRuoOcVvpTiGmYB4BSbQmwYCkx%2FeEVsW0S%2FkIdOKc9Q%3D%3D&session%5Bname%5D=Steven&session%5Bpassword%5D=[FILTERED]&commit=Login" for ::1 at 2016-07-29 14:18:38 -0500
-  
+
 ActionController::RoutingError (No route matches [GET] "/login"):
-  
+
 actionpack (5.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
 web-console (3.3.1) lib/web_console/middleware.rb:131:in `call_app'
 web-console (3.3.1) lib/web_console/middleware.rb:28:in `block in call'
@@ -12644,9 +12644,9 @@ puma (3.6.0) lib/puma/thread_pool.rb:116:in `block in spawn_thread'
   Rendered /Users/scottsouthard/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.4ms)
   Rendered /Users/scottsouthard/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (101.4ms)
 Started GET "/login?utf8=%E2%9C%93&authenticity_token=hfdaq9TklbDwaxRXf4YqkspAnVTqff1Qcx%2B281GjHLwFRuoOcVvpTiGmYB4BSbQmwYCkx%2FeEVsW0S%2FkIdOKc9Q%3D%3D&session%5Bname%5D=Steven&session%5Bpassword%5D=[FILTERED]&commit=Login" for ::1 at 2016-07-29 14:18:39 -0500
-  
+
 ActionController::RoutingError (No route matches [GET] "/login"):
-  
+
 actionpack (5.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
 web-console (3.3.1) lib/web_console/middleware.rb:131:in `call_app'
 web-console (3.3.1) lib/web_console/middleware.rb:28:in `block in call'
@@ -12691,7 +12691,7 @@ Processing by PostsController#index as HTML
 Completed 500 Internal Server Error in 116ms (ActiveRecord: 3.3ms)
 
 
-  
+
 ActionView::Template::Error (undefined local variable or method `login_path' for #<#<Class:0x007fe1e99ca3d8>:0x007fe1e99c92f8>):
     33:   <footer>
     34:     <br>
@@ -12700,7 +12700,7 @@ ActionView::Template::Error (undefined local variable or method `login_path' for
     37:     </div>
     38:   </footer>
     39:   </body>
-  
+
 app/views/layouts/application.html.erb:36:in `_app_views_layouts_application_html_erb__3104288389648988568_70304131845440'
   Rendering /Users/scottsouthard/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
   Rendering /Users/scottsouthard/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
@@ -12731,9 +12731,9 @@ Processing by SessionsController#create as HTML
 Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.0ms)
 
 
-  
+
 NoMethodError (undefined method `[]' for nil:NilClass):
-  
+
 app/controllers/sessions_controller.rb:8:in `create'
   Rendering /Users/scottsouthard/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
   Rendering /Users/scottsouthard/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
@@ -13032,9 +13032,9 @@ Completed 200 OK in 52ms (Views: 48.6ms | ActiveRecord: 0.7ms)
 
 Started GET "/login" for ::1 at 2016-08-01 14:26:55 -0500
   [1m[36mActiveRecord::SchemaMigration Load (6.6ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
-  
+
 ActionController::RoutingError (No route matches [GET] "/login"):
-  
+
 actionpack (5.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
 web-console (3.3.1) lib/web_console/middleware.rb:131:in `call_app'
 web-console (3.3.1) lib/web_console/middleware.rb:28:in `block in call'
@@ -13071,9 +13071,9 @@ puma (3.6.0) lib/puma/thread_pool.rb:116:in `block in spawn_thread'
   Rendered /Users/scottsouthard/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (10.3ms)
   Rendered /Users/scottsouthard/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (131.3ms)
 Started GET "/sessions/login" for ::1 at 2016-08-01 14:27:02 -0500
-  
+
 ActionController::RoutingError (No route matches [GET] "/sessions/login"):
-  
+
 actionpack (5.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
 web-console (3.3.1) lib/web_console/middleware.rb:131:in `call_app'
 web-console (3.3.1) lib/web_console/middleware.rb:28:in `block in call'
@@ -13287,9 +13287,9 @@ Completed 200 OK in 34ms (Views: 31.6ms | ActiveRecord: 0.3ms)
 
 
 Started GET "/" for ::1 at 2016-08-01 15:45:31 -0500
-  
+
 ArgumentError (Before process_action callback :authenticate_user! has not been defined):
-  
+
 app/controllers/posts_controller.rb:3:in `<class:PostsController>'
 app/controllers/posts_controller.rb:1:in `<top (required)>'
   Rendering /Users/scottsouthard/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
@@ -13302,9 +13302,9 @@ app/controllers/posts_controller.rb:1:in `<top (required)>'
   Rendered /Users/scottsouthard/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (71.8ms)
 Started GET "/" for ::1 at 2016-08-01 15:46:04 -0500
   [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
-  
+
 ArgumentError (Before process_action callback :authenticate_user! has not been defined):
-  
+
 app/controllers/posts_controller.rb:3:in `<class:PostsController>'
 app/controllers/posts_controller.rb:1:in `<top (required)>'
   Rendering /Users/scottsouthard/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
@@ -13316,9 +13316,9 @@ app/controllers/posts_controller.rb:1:in `<top (required)>'
   Rendered /Users/scottsouthard/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (15.7ms)
   Rendered /Users/scottsouthard/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (102.6ms)
 Started GET "/" for ::1 at 2016-08-01 15:49:25 -0500
-  
+
 ArgumentError (Before process_action callback :authenticate_user! has not been defined):
-  
+
 app/controllers/posts_controller.rb:3:in `<class:PostsController>'
 app/controllers/posts_controller.rb:1:in `<top (required)>'
   Rendering /Users/scottsouthard/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
@@ -13330,9 +13330,9 @@ app/controllers/posts_controller.rb:1:in `<top (required)>'
   Rendered /Users/scottsouthard/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
   Rendered /Users/scottsouthard/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (70.1ms)
 Started GET "/" for ::1 at 2016-08-01 15:51:24 -0500
-  
+
 ArgumentError (Before process_action callback :authenticate_user! has not been defined):
-  
+
 app/controllers/posts_controller.rb:2:in `<class:PostsController>'
 app/controllers/posts_controller.rb:1:in `<top (required)>'
   Rendering /Users/scottsouthard/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
@@ -13344,9 +13344,9 @@ app/controllers/posts_controller.rb:1:in `<top (required)>'
   Rendered /Users/scottsouthard/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
   Rendered /Users/scottsouthard/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (69.1ms)
 Started GET "/" for ::1 at 2016-08-01 15:52:33 -0500
-  
+
 ArgumentError (Before process_action callback :authenticate_user! has not been defined):
-  
+
 app/controllers/posts_controller.rb:4:in `<class:PostsController>'
 app/controllers/posts_controller.rb:1:in `<top (required)>'
   Rendering /Users/scottsouthard/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
@@ -13358,9 +13358,9 @@ app/controllers/posts_controller.rb:1:in `<top (required)>'
   Rendered /Users/scottsouthard/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
   Rendered /Users/scottsouthard/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (66.5ms)
 Started GET "/" for ::1 at 2016-08-01 15:53:06 -0500
-  
+
 ArgumentError (Before process_action callback :authenticate_user! has not been defined):
-  
+
 app/controllers/posts_controller.rb:3:in `<class:PostsController>'
 app/controllers/posts_controller.rb:1:in `<top (required)>'
   Rendering /Users/scottsouthard/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
@@ -13372,9 +13372,9 @@ app/controllers/posts_controller.rb:1:in `<top (required)>'
   Rendered /Users/scottsouthard/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
   Rendered /Users/scottsouthard/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (71.7ms)
 Started GET "/" for ::1 at 2016-08-01 15:53:07 -0500
-  
+
 ArgumentError (Before process_action callback :authenticate_user! has not been defined):
-  
+
 app/controllers/posts_controller.rb:3:in `<class:PostsController>'
 app/controllers/posts_controller.rb:1:in `<top (required)>'
   Rendering /Users/scottsouthard/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
@@ -13386,9 +13386,9 @@ app/controllers/posts_controller.rb:1:in `<top (required)>'
   Rendered /Users/scottsouthard/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
   Rendered /Users/scottsouthard/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (66.2ms)
 Started GET "/" for ::1 at 2016-08-01 15:54:15 -0500
-  
+
 ArgumentError (Before process_action callback :authenticate_user! has not been defined):
-  
+
 app/controllers/posts_controller.rb:3:in `<class:PostsController>'
 app/controllers/posts_controller.rb:1:in `<top (required)>'
   Rendering /Users/scottsouthard/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
@@ -13401,9 +13401,9 @@ app/controllers/posts_controller.rb:1:in `<top (required)>'
   Rendered /Users/scottsouthard/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (64.6ms)
 Started GET "/" for ::1 at 2016-08-01 15:57:09 -0500
   [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
-  
+
 ArgumentError (Before process_action callback :authenticate_user! has not been defined):
-  
+
 app/controllers/posts_controller.rb:3:in `<class:PostsController>'
 app/controllers/posts_controller.rb:1:in `<top (required)>'
   Rendering /Users/scottsouthard/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
@@ -13415,9 +13415,9 @@ app/controllers/posts_controller.rb:1:in `<top (required)>'
   Rendered /Users/scottsouthard/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (8.0ms)
   Rendered /Users/scottsouthard/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (83.3ms)
 Started GET "/" for ::1 at 2016-08-01 16:00:48 -0500
-  
+
 ArgumentError (Before process_action callback :authenticate_user! has not been defined):
-  
+
 app/controllers/posts_controller.rb:3:in `<class:PostsController>'
 app/controllers/posts_controller.rb:1:in `<top (required)>'
   Rendering /Users/scottsouthard/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
@@ -13429,9 +13429,9 @@ app/controllers/posts_controller.rb:1:in `<top (required)>'
   Rendered /Users/scottsouthard/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
   Rendered /Users/scottsouthard/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (68.5ms)
 Started GET "/" for ::1 at 2016-08-01 16:00:49 -0500
-  
+
 ArgumentError (Before process_action callback :authenticate_user! has not been defined):
-  
+
 app/controllers/posts_controller.rb:3:in `<class:PostsController>'
 app/controllers/posts_controller.rb:1:in `<top (required)>'
   Rendering /Users/scottsouthard/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
@@ -13443,9 +13443,9 @@ app/controllers/posts_controller.rb:1:in `<top (required)>'
   Rendered /Users/scottsouthard/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
   Rendered /Users/scottsouthard/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (67.2ms)
 Started GET "/" for ::1 at 2016-08-01 16:01:50 -0500
-  
+
 ArgumentError (Before process_action callback :authenticate_user! has not been defined):
-  
+
 app/controllers/posts_controller.rb:2:in `<class:PostsController>'
 app/controllers/posts_controller.rb:1:in `<top (required)>'
   Rendering /Users/scottsouthard/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
@@ -13457,9 +13457,9 @@ app/controllers/posts_controller.rb:1:in `<top (required)>'
   Rendered /Users/scottsouthard/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
   Rendered /Users/scottsouthard/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (69.7ms)
 Started GET "/" for ::1 at 2016-08-01 16:01:52 -0500
-  
+
 ArgumentError (Before process_action callback :authenticate_user! has not been defined):
-  
+
 app/controllers/posts_controller.rb:2:in `<class:PostsController>'
 app/controllers/posts_controller.rb:1:in `<top (required)>'
   Rendering /Users/scottsouthard/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
@@ -13471,9 +13471,9 @@ app/controllers/posts_controller.rb:1:in `<top (required)>'
   Rendered /Users/scottsouthard/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
   Rendered /Users/scottsouthard/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (65.8ms)
 Started GET "/" for ::1 at 2016-08-01 16:02:18 -0500
-  
+
 ArgumentError (Before process_action callback :authenticate_user! has not been defined):
-  
+
 app/controllers/posts_controller.rb:2:in `<class:PostsController>'
 app/controllers/posts_controller.rb:1:in `<top (required)>'
   Rendering /Users/scottsouthard/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
@@ -13485,9 +13485,9 @@ app/controllers/posts_controller.rb:1:in `<top (required)>'
   Rendered /Users/scottsouthard/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
   Rendered /Users/scottsouthard/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (64.6ms)
 Started GET "/" for ::1 at 2016-08-01 16:02:25 -0500
-  
+
 ArgumentError (Before process_action callback :authenticate_user! has not been defined):
-  
+
 app/controllers/posts_controller.rb:2:in `<class:PostsController>'
 app/controllers/posts_controller.rb:1:in `<top (required)>'
   Rendering /Users/scottsouthard/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
@@ -13499,9 +13499,9 @@ app/controllers/posts_controller.rb:1:in `<top (required)>'
   Rendered /Users/scottsouthard/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
   Rendered /Users/scottsouthard/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (66.1ms)
 Started GET "/" for ::1 at 2016-08-01 16:03:07 -0500
-  
+
 ArgumentError (Before process_action callback :authenticate_user! has not been defined):
-  
+
 app/controllers/posts_controller.rb:2:in `<class:PostsController>'
 app/controllers/posts_controller.rb:1:in `<top (required)>'
   Rendering /Users/scottsouthard/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
@@ -14006,9 +14006,9 @@ Processing by PostsController#new as HTML
 Completed 500 Internal Server Error in 37ms (ActiveRecord: 0.0ms)
 
 
-  
+
 NoMethodError (undefined method `authenticate_user!' for #<PostsController:0x007fac81060560>):
-  
+
 activesupport (5.0.0) lib/active_support/callbacks.rb:382:in `block in make_lambda'
 activesupport (5.0.0) lib/active_support/callbacks.rb:150:in `call'
 activesupport (5.0.0) lib/active_support/callbacks.rb:150:in `block (2 levels) in halting_and_conditional'
@@ -14104,9 +14104,9 @@ Processing by PostsController#new as HTML
 Completed 500 Internal Server Error in 32ms (ActiveRecord: 0.0ms)
 
 
-  
+
 NoMethodError (undefined method `authenticate_user!' for #<PostsController:0x007fac8204bf10>):
-  
+
 activesupport (5.0.0) lib/active_support/callbacks.rb:382:in `block in make_lambda'
 activesupport (5.0.0) lib/active_support/callbacks.rb:150:in `call'
 activesupport (5.0.0) lib/active_support/callbacks.rb:150:in `block (2 levels) in halting_and_conditional'
@@ -14785,14 +14785,14 @@ Processing by PostsController#index as HTML
 Completed 500 Internal Server Error in 13ms (ActiveRecord: 0.4ms)
 
 
-  
+
 SyntaxError (/Users/scottsouthard/Documents/Dev/samuel/app/views/layouts/application.html.erb:22: syntax error, unexpected tSTRING_BEG, expecting ')'
 ...nk_to image_tag("samuel.png") "Saumel", root_path );@output_...
 ...                               ^
 /Users/scottsouthard/Documents/Dev/samuel/app/views/layouts/application.html.erb:22: syntax error, unexpected ',', expecting ')'
 ...age_tag("samuel.png") "Saumel", root_path );@output_buffer.s...
 ...                               ^):
-  
+
 app/views/layouts/application.html.erb:22: syntax error, unexpected tSTRING_BEG, expecting ')'
 app/views/layouts/application.html.erb:22: syntax error, unexpected ',', expecting ')'
   Rendering /Users/scottsouthard/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
@@ -14819,14 +14819,14 @@ Processing by PostsController#index as HTML
 Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.3ms)
 
 
-  
+
 SyntaxError (/Users/scottsouthard/Documents/Dev/samuel/app/views/layouts/application.html.erb:22: syntax error, unexpected tSTRING_BEG, expecting ')'
 ...nk_to image_tag("samuel.png") "Saumel", root_path );@output_...
 ...                               ^
 /Users/scottsouthard/Documents/Dev/samuel/app/views/layouts/application.html.erb:22: syntax error, unexpected ',', expecting ')'
 ...age_tag("samuel.png") "Saumel", root_path );@output_buffer.s...
 ...                               ^):
-  
+
 app/views/layouts/application.html.erb:22: syntax error, unexpected tSTRING_BEG, expecting ')'
 app/views/layouts/application.html.erb:22: syntax error, unexpected ',', expecting ')'
   Rendering /Users/scottsouthard/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
@@ -15414,7 +15414,7 @@ Processing by PostsController#index as HTML
 Completed 500 Internal Server Error in 333ms (ActiveRecord: 0.2ms)
 
 
-  
+
 ActionView::Template::Error (SyntaxError: [stdin]:1:3: reserved word 'function'):
     3: <head>
     4:   <title>Samuel</title>
@@ -15423,7 +15423,7 @@ ActionView::Template::Error (SyntaxError: [stdin]:1:3: reserved word 'function')
     7:     <%= csrf_meta_tags %>
     8:     <meta name="viewport" content="width = device-width, initial-scale = 1">
     9:     <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
-  
+
 app/views/layouts/application.html.erb:6:in `_app_views_layouts_application_html_erb___984620003805010229_70232544320620'
   Rendering /Users/scottsouthard/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
   Rendering /Users/scottsouthard/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
@@ -15810,7 +15810,7 @@ Processing by PostsController#index as HTML
 Completed 500 Internal Server Error in 36ms (ActiveRecord: 0.3ms)
 
 
-  
+
 ActionView::Template::Error (Invalid CSS after "  margin-top: ": expected expression (e.g. 1px, bold), was "%;"):
     2: <html>
     3: <head>
@@ -15819,7 +15819,7 @@ ActionView::Template::Error (Invalid CSS after "  margin-top: ": expected expres
     6:     <%= javascript_include_tag 'application' => true %>
     7:     <%= csrf_meta_tags %>
     8:     <meta name="viewport" content="width = device-width, initial-scale = 1">
-  
+
 app/assets/stylesheets/main.scss:125
 app/views/layouts/application.html.erb:5:in `_app_views_layouts_application_html_erb___984620003805010229_70232594206880'
   Rendering /Users/scottsouthard/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
@@ -15838,7 +15838,7 @@ Processing by PostsController#index as HTML
 Completed 500 Internal Server Error in 37ms (ActiveRecord: 0.4ms)
 
 
-  
+
 ActionView::Template::Error (Invalid CSS after "  margin-top:": expected expression (e.g. 1px, bold), was ";"):
     2: <html>
     3: <head>
@@ -15847,7 +15847,7 @@ ActionView::Template::Error (Invalid CSS after "  margin-top:": expected express
     6:     <%= javascript_include_tag 'application' => true %>
     7:     <%= csrf_meta_tags %>
     8:     <meta name="viewport" content="width = device-width, initial-scale = 1">
-  
+
 app/assets/stylesheets/main.scss:125
 app/views/layouts/application.html.erb:5:in `_app_views_layouts_application_html_erb___984620003805010229_70232582510080'
   Rendering /Users/scottsouthard/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
@@ -17290,5 +17290,250 @@ Processing by PostsController#index as HTML
   Rendering posts/index.html.erb within layouts/application
   Rendered posts/index.html.erb within layouts/application (2.9ms)
 Completed 200 OK in 31ms (Views: 29.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for ::1 at 2016-08-10 15:50:48 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (6.3ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (6.5ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendering posts/index.html.erb within layouts/application
+  Rendered posts/index.html.erb within layouts/application (21.6ms)
+Completed 200 OK in 593ms (Views: 540.5ms | ActiveRecord: 21.6ms)
+
+
+Started GET "/posts/3" for ::1 at 2016-08-10 15:50:59 -0500
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering posts/show.html.erb within layouts/application
+  [1m[36mPicture Load (0.4ms)[0m  [1m[34mSELECT "pictures".* FROM "pictures" WHERE "pictures"."post_id" = $1[0m  [["post_id", 3]]
+  Rendered posts/show.html.erb within layouts/application (54.5ms)
+Completed 200 OK in 105ms (Views: 94.5ms | ActiveRecord: 3.1ms)
+
+
+Started GET "/posts/3" for ::1 at 2016-08-10 15:51:09 -0500
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering posts/show.html.erb within layouts/application
+  [1m[36mPicture Load (0.2ms)[0m  [1m[34mSELECT "pictures".* FROM "pictures" WHERE "pictures"."post_id" = $1[0m  [["post_id", 3]]
+  Rendered posts/show.html.erb within layouts/application (5.3ms)
+Completed 200 OK in 55ms (Views: 52.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for ::1 at 2016-08-10 15:51:53 -0500
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendering posts/index.html.erb within layouts/application
+  Rendered posts/index.html.erb within layouts/application (6.3ms)
+Completed 200 OK in 37ms (Views: 34.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/sessions/new" for ::1 at 2016-08-10 15:51:56 -0500
+Processing by SessionsController#new as HTML
+  Rendering sessions/login.html.erb within layouts/application
+  Rendered sessions/login.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 27ms (Views: 26.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/sessions/create?method=post" for ::1 at 2016-08-10 15:52:02 -0500
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"UddaI28Oguaq0pTesLubRgJiJ15kYQVGh8eQ45jLAAHMJSefJtLSpcNPoGXkkOStfPuTM5wCEj8xTfQFDFc72Q==", "user"=>{"name"=>"Steven", "password"=>"[FILTERED]"}, "commit"=>"Login", "method"=>"post"}
+  [1m[36mUser Load (6.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."name" = $1 LIMIT $2[0m  [["name", "Steven"], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 81ms (ActiveRecord: 8.2ms)
+
+
+Started GET "/" for ::1 at 2016-08-10 15:52:02 -0500
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendering posts/index.html.erb within layouts/application
+  Rendered posts/index.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 25ms (Views: 22.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/posts/new" for ::1 at 2016-08-10 15:52:04 -0500
+Processing by PostsController#new as HTML
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/new.html.erb within layouts/application (28.0ms)
+Completed 200 OK in 51ms (Views: 50.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-08-10 15:52:36 -0500
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.6ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendering posts/index.html.erb within layouts/application
+  Rendered posts/index.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 35ms (Views: 29.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/posts/3" for ::1 at 2016-08-10 15:55:12 -0500
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering posts/show.html.erb within layouts/application
+  [1m[36mPicture Load (0.2ms)[0m  [1m[34mSELECT "pictures".* FROM "pictures" WHERE "pictures"."post_id" = $1[0m  [["post_id", 3]]
+  Rendered posts/show.html.erb within layouts/application (5.7ms)
+Completed 200 OK in 36ms (Views: 34.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/posts/3/edit" for ::1 at 2016-08-10 15:55:17 -0500
+Processing by PostsController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mPost Load (0.6ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering posts/edit.html.erb within layouts/application
+  Rendered posts/edit.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 33ms (Views: 27.9ms | ActiveRecord: 0.6ms)
+
+
+Started DELETE "/posts/3" for ::1 at 2016-08-10 15:55:23 -0500
+Processing by PostsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"nHsdEfrDcWjjq+IXIThfQQ2WU2T5XcHJEFpTva/luU0BiWCtsx8hK4o21qx1EyCqcw/nCQE+1rCm0DdbO3mClQ==", "id"=>"3"}
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[35m (5.7ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPicture Load (0.4ms)[0m  [1m[34mSELECT "pictures".* FROM "pictures" WHERE "pictures"."post_id" = $1[0m  [["post_id", 3]]
+  [1m[35mSQL (13.4ms)[0m  [1m[31mDELETE FROM "pictures" WHERE "pictures"."id" = $1[0m  [["id", 3]]
+  [1m[35mSQL (0.3ms)[0m  [1m[31mDELETE FROM "pictures" WHERE "pictures"."id" = $1[0m  [["id", 4]]
+  [1m[35mSQL (0.3ms)[0m  [1m[31mDELETE FROM "pictures" WHERE "pictures"."id" = $1[0m  [["id", 5]]
+  [1m[35mSQL (0.2ms)[0m  [1m[31mDELETE FROM "pictures" WHERE "pictures"."id" = $1[0m  [["id", 6]]
+  [1m[35mSQL (0.4ms)[0m  [1m[31mDELETE FROM "posts" WHERE "posts"."id" = $1[0m  [["id", 3]]
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+[paperclip] deleting /Users/scottsouthard/Documents/Dev/samuel/public/system/posts/documents/000/000/003/original/ScottSouthardResume.pdf
+[paperclip] deleting /Users/scottsouthard/Documents/Dev/samuel/public/images/original/3/443816.jpg
+[paperclip] deleting /Users/scottsouthard/Documents/Dev/samuel/public/images/large/3/443816.jpg
+[paperclip] deleting /Users/scottsouthard/Documents/Dev/samuel/public/images/medium/3/443816.jpg
+[paperclip] deleting /Users/scottsouthard/Documents/Dev/samuel/public/images/small/3/443816.jpg
+[paperclip] deleting /Users/scottsouthard/Documents/Dev/samuel/public/images/thumb/3/443816.jpg
+[paperclip] deleting /Users/scottsouthard/Documents/Dev/samuel/public/images/original/4/lying-cat-leg-fix.jpg
+[paperclip] deleting /Users/scottsouthard/Documents/Dev/samuel/public/images/large/4/lying-cat-leg-fix.jpg
+[paperclip] deleting /Users/scottsouthard/Documents/Dev/samuel/public/images/medium/4/lying-cat-leg-fix.jpg
+[paperclip] deleting /Users/scottsouthard/Documents/Dev/samuel/public/images/small/4/lying-cat-leg-fix.jpg
+[paperclip] deleting /Users/scottsouthard/Documents/Dev/samuel/public/images/thumb/4/lying-cat-leg-fix.jpg
+[paperclip] deleting /Users/scottsouthard/Documents/Dev/samuel/public/images/original/5/maxresdefault-3.jpg
+[paperclip] deleting /Users/scottsouthard/Documents/Dev/samuel/public/images/large/5/maxresdefault-3.jpg
+[paperclip] deleting /Users/scottsouthard/Documents/Dev/samuel/public/images/medium/5/maxresdefault-3.jpg
+[paperclip] deleting /Users/scottsouthard/Documents/Dev/samuel/public/images/small/5/maxresdefault-3.jpg
+[paperclip] deleting /Users/scottsouthard/Documents/Dev/samuel/public/images/thumb/5/maxresdefault-3.jpg
+[paperclip] deleting /Users/scottsouthard/Documents/Dev/samuel/public/images/original/6/8cCLLYx.jpg
+[paperclip] deleting /Users/scottsouthard/Documents/Dev/samuel/public/images/large/6/8cCLLYx.jpg
+[paperclip] deleting /Users/scottsouthard/Documents/Dev/samuel/public/images/medium/6/8cCLLYx.jpg
+[paperclip] deleting /Users/scottsouthard/Documents/Dev/samuel/public/images/small/6/8cCLLYx.jpg
+[paperclip] deleting /Users/scottsouthard/Documents/Dev/samuel/public/images/thumb/6/8cCLLYx.jpg
+Redirected to http://localhost:3000/
+Completed 302 Found in 50ms (ActiveRecord: 21.9ms)
+
+
+Started GET "/" for ::1 at 2016-08-10 15:55:23 -0500
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.9ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendering posts/index.html.erb within layouts/application
+  Rendered posts/index.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 41ms (Views: 37.2ms | ActiveRecord: 0.9ms)
+
+
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Started GET "/" for ::1 at 2016-08-12 12:47:11 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (1.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/application (54.2ms)
+Completed 200 OK in 856ms (Views: 830.2ms | ActiveRecord: 6.1ms)
+
+
+Started GET "/posts/4" for ::1 at 2016-08-12 12:47:16 -0500
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering posts/show.html.erb within layouts/application
+  [1m[36mPicture Load (0.6ms)[0m  [1m[34mSELECT "pictures".* FROM "pictures" WHERE "pictures"."post_id" = $1[0m  [["post_id", 4]]
+  Rendered posts/show.html.erb within layouts/application (73.2ms)
+Completed 200 OK in 151ms (Views: 129.4ms | ActiveRecord: 4.7ms)
+
+
+Started GET "/museums/2" for ::1 at 2016-08-12 13:01:59 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/museums/2"):
+  
+actionpack (5.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+web-console (3.3.1) lib/web_console/middleware.rb:131:in `call_app'
+web-console (3.3.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.3.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.3.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.0) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.0) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.0) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.0) lib/active_support/tagged_logging.rb:70:in `block in tagged'
+activesupport (5.0.0) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.0) lib/active_support/tagged_logging.rb:70:in `tagged'
+railties (5.0.0) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.1.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.0) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.1) lib/rack/method_override.rb:22:in `call'
+rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.0) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.0) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.0) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.0) lib/rails/engine.rb:522:in `call'
+puma (3.6.0) lib/puma/configuration.rb:225:in `call'
+puma (3.6.0) lib/puma/server.rb:578:in `handle_request'
+puma (3.6.0) lib/puma/server.rb:415:in `process_client'
+puma (3.6.0) lib/puma/server.rb:275:in `block in run'
+puma (3.6.0) lib/puma/thread_pool.rb:116:in `call'
+puma (3.6.0) lib/puma/thread_pool.rb:116:in `block in spawn_thread'
+Started GET "/photos/large/missing.png" for ::1 at 2016-08-12 13:02:00 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/photos/large/missing.png"):
+  
+actionpack (5.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+web-console (3.3.1) lib/web_console/middleware.rb:131:in `call_app'
+web-console (3.3.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.3.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.3.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.0) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.0) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.0) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.0) lib/active_support/tagged_logging.rb:70:in `block in tagged'
+activesupport (5.0.0) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.0) lib/active_support/tagged_logging.rb:70:in `tagged'
+railties (5.0.0) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.1.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.0) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.1) lib/rack/method_override.rb:22:in `call'
+rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.0) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.0) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.0) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.0) lib/rails/engine.rb:522:in `call'
+puma (3.6.0) lib/puma/configuration.rb:225:in `call'
+puma (3.6.0) lib/puma/server.rb:578:in `handle_request'
+puma (3.6.0) lib/puma/server.rb:415:in `process_client'
+puma (3.6.0) lib/puma/server.rb:275:in `block in run'
+puma (3.6.0) lib/puma/thread_pool.rb:116:in `call'
+puma (3.6.0) lib/puma/thread_pool.rb:116:in `block in spawn_thread'
+  Rendering /Users/scottsouthard/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendering /Users/scottsouthard/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/scottsouthard/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.7ms)
+  Rendered collection of /Users/scottsouthard/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/routes/_route.html.erb [15 times] (15.7ms)
+  Rendered /Users/scottsouthard/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/routes/_table.html.erb (23.4ms)
+  Rendering /Users/scottsouthard/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/scottsouthard/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.1ms)
+  Rendered /Users/scottsouthard/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (169.1ms)
+  Rendering /Users/scottsouthard/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendering /Users/scottsouthard/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/scottsouthard/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.4ms)
+  Rendered collection of /Users/scottsouthard/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/routes/_route.html.erb [15 times] (8.3ms)
+  Rendered /Users/scottsouthard/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/routes/_table.html.erb (2.1ms)
+  Rendering /Users/scottsouthard/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/scottsouthard/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /Users/scottsouthard/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (131.4ms)
+Started GET "/" for ::1 at 2016-08-12 13:02:08 -0500
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (3.4ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/application (12.4ms)
+Completed 200 OK in 61ms (Views: 54.5ms | ActiveRecord: 3.4ms)
 
 
