@@ -2,8 +2,8 @@ class PostsController < ApplicationController
   before_action :authenticate_user!, only: [:new, :create, :edit, :update, :destroy]
 
   def index
-    @posts = Post.all.reverse
-    @upcomingposts = Post.where("date >= ?", Date.today)
+    @posts = Post.all
+    # @upcomingposts = Post.where("date >= ?", Date.today)
     @date = params[:month] ? Date.parse(params[:month].gsub('-', '/')) : Date.today
   end
 
@@ -58,6 +58,7 @@ class PostsController < ApplicationController
       end
       redirect_to :root
     else
+      @errors = @post.errors.full_messages
       render :"post/edit"
     end
   end
