@@ -11,6 +11,7 @@
 /log/*
 /tmp/*
 tmp/
+config/environments/production.rb
 !/log/.keep
 !/tmp/.keep
 
