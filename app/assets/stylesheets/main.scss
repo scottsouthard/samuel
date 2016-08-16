@@ -75,6 +75,7 @@ a:hover{
     display: block;
     width: 80%;
     max-width: 700px;
+    margin-top: -8%;
 }
 
 #show-next-image{
@@ -88,13 +89,15 @@ a:hover{
 
 .close {
     position: absolute;
-    top: 15px;
-    right: 35px;
+    top: 5px;
+    right: 20px;
     color: #f1f1f1;
     font-size: 40px;
     font-weight: bold;
     transition: 0.3s;
 }
+
+
 
 .close:hover,
 .close:focus {
