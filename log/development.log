@@ -17090,3 +17090,120 @@ Processing by PostsController#index as HTML
 Completed 200 OK in 41ms (Views: 36.9ms | ActiveRecord: 0.3ms)
 
 
+Started GET "/" for ::1 at 2016-08-15 17:36:07 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (7.0ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.9ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendering posts/index.html.erb within layouts/application
+  Rendered posts/index.html.erb within layouts/application (24.2ms)
+Completed 200 OK in 640ms (Views: 600.6ms | ActiveRecord: 4.6ms)
+
+
+Started GET "/" for ::1 at 2016-08-15 17:37:41 -0500
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.7ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendering posts/index.html.erb within layouts/application
+  Rendered posts/index.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 144ms (Views: 139.1ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/posts/upcoming" for ::1 at 2016-08-15 17:38:58 -0500
+Processing by PostsController#upcoming as HTML
+  [1m[36mPost Load (0.6ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE (date >= '2016-08-15')[0m
+  Rendering posts/upcoming.html.erb within layouts/application
+  Rendered posts/upcoming.html.erb within layouts/application (0.8ms)
+Completed 500 Internal Server Error in 39ms (ActiveRecord: 0.6ms)
+
+
+  
+ActionView::Template::Error (Invalid CSS after "@media": expected media query (e.g. print, screen, print and screen), was ""):
+    2: <html>
+    3: <head>
+    4:   <title>Samuel</title>
+    5:   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+    6:     <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+    7:     <%= csrf_meta_tags %>
+    8:     <meta name="viewport" content="width = device-width, initial-scale = 1">
+  
+app/assets/stylesheets/main.scss:324
+app/views/layouts/application.html.erb:5:in `_app_views_layouts_application_html_erb___3164048578427446106_70366867309720'
+  Rendering /Users/scottsouthard/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/scottsouthard/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/scottsouthard/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (8.6ms)
+  Rendering /Users/scottsouthard/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/scottsouthard/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.1ms)
+  Rendering /Users/scottsouthard/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/scottsouthard/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.5ms)
+  Rendered /Users/scottsouthard/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (78.3ms)
+Started GET "/posts/upcoming" for ::1 at 2016-08-15 17:39:06 -0500
+Processing by PostsController#upcoming as HTML
+  [1m[36mPost Load (0.9ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE (date >= '2016-08-15')[0m
+  Rendering posts/upcoming.html.erb within layouts/application
+  Rendered posts/upcoming.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 106ms (Views: 102.0ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/posts/upcoming" for ::1 at 2016-08-15 17:39:40 -0500
+Processing by PostsController#upcoming as HTML
+  [1m[36mPost Load (0.6ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE (date >= '2016-08-15')[0m
+  Rendering posts/upcoming.html.erb within layouts/application
+  Rendered posts/upcoming.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 42ms (Views: 39.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/posts/upcoming" for ::1 at 2016-08-15 17:40:20 -0500
+Processing by PostsController#upcoming as HTML
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE (date >= '2016-08-15')[0m
+  Rendering posts/upcoming.html.erb within layouts/application
+  Rendered posts/upcoming.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 102ms (Views: 99.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for ::1 at 2016-08-15 17:40:22 -0500
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendering posts/index.html.erb within layouts/application
+  Rendered posts/index.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 30ms (Views: 26.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for ::1 at 2016-08-15 17:40:45 -0500
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendering posts/index.html.erb within layouts/application
+  Rendered posts/index.html.erb within layouts/application (5.7ms)
+Completed 200 OK in 116ms (Views: 111.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for ::1 at 2016-08-15 17:41:18 -0500
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendering posts/index.html.erb within layouts/application
+  Rendered posts/index.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 96ms (Views: 93.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for ::1 at 2016-08-15 17:41:25 -0500
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendering posts/index.html.erb within layouts/application
+  Rendered posts/index.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 31ms (Views: 27.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/posts/upcoming" for ::1 at 2016-08-15 17:41:26 -0500
+Processing by PostsController#upcoming as HTML
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE (date >= '2016-08-15')[0m
+  Rendering posts/upcoming.html.erb within layouts/application
+  Rendered posts/upcoming.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 33ms (Views: 29.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for ::1 at 2016-08-15 17:41:30 -0500
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendering posts/index.html.erb within layouts/application
+  Rendered posts/index.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 31ms (Views: 27.9ms | ActiveRecord: 0.4ms)
+
+

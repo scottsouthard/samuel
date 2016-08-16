@@ -89,7 +89,15 @@ Rails.application.configure do
   # Use a different logger for distributed setups.
   # require 'syslog/logger'
   # config.logger = ActiveSupport::TaggedLogging.new(Syslog::Logger.new 'app-name')
-
+  config.paperclip_defaults = {
+    storage: :s3,
+    s3_credentials: {
+      bucket: ENV.fetch('samuel.herokuapp.com'),
+      access_key_id: ENV.fetch('AKIAIQNOHPDEVXKRINBA'),
+      secret_access_key: ENV.fetch('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'),
+      s3_region: ENV.fetch('us_standard'),
+    }
+  }
   if ENV["RAILS_LOG_TO_STDOUT"].present?
     logger           = ActiveSupport::Logger.new(STDOUT)
     logger.formatter = config.log_formatter

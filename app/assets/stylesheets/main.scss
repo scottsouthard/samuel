@@ -19,7 +19,12 @@ h2 {
   color: black;
 }
 .content {
-  margin-top: 7%;
+  margin-top: 10%;
+}
+@media (max-width: 800px) {
+  .content {
+    padding-top: 3%;
+  }
 }
 .nav-pic{
   margin: 0 auto;
@@ -122,7 +127,7 @@ p .date {
 }
 // calendar
 #calendar {
-  margin-top: -5%;
+  margin-top: -8%;
 }
 #calendar table {
   border-collapse: collapse;
@@ -289,7 +294,6 @@ a img{
 }
 
 .thumb a{
-
   margin-left: auto;
   margin-right: auto;
 }
@@ -302,7 +306,6 @@ a img{
 .thumbnail {
   width: 49%;
   margin-top: 5%;
-  display: inline-block;
   border: 0 none !important;
   box-shadow: none !important;
 }
@@ -315,9 +318,19 @@ a img{
   width: 5%;
 }
  .past{
-  margin-right: 15%;
+  margin-right: 5%;
 }
-
+div .arrows {
+  margin-left: 4%;
+}
 .future{
-  margin-left: 15%;
+  margin-left: 5%;
+}
+@media (max-width: 990px) {
+  .future{
+    margin-left: 5%;
+  }
+  .past{
+   margin-right: 5%;
+ }
 }
