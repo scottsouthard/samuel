@@ -11,6 +11,9 @@
 /log/*
 /tmp/*
 tmp/
+/tmp/
+public/images/
+public/system/posts/documents/
 config/environments/production.rb
 !/log/.keep
 !/tmp/.keep
