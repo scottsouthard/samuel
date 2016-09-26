@@ -51,13 +51,14 @@
               </div>
             <% end %>
             <% else %>
+              <% @post.pictures.each do |pic| %>
               <div class="col-lg-2 col-md-2 col-xs-6 thumb">
                 <a class= "thumbnail" href="#" data-image-id="" data-toggle="modal" data-image= "<%= pic.image.url%>" data-target="#image-gallery">
                   <%= image_tag(pic.image.url(:thumb)) %>
                 </a>
               </div>
+              <% end %>
             <% end %>
-          <% end %>
         </div>
       </div>
     </div>

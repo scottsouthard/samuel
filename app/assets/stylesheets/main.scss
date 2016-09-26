@@ -154,7 +154,7 @@ p .date {
 }
 
 #calendar th {
-  font-size: 3.5em;
+  font-size: 4  em;
   text-align: center;
   width: 14.2857142857143%;
 }
@@ -178,7 +178,8 @@ p .date {
   // display: table-row;
 }
 .date-day{
-  font-size: 3.2em;
+  font-size: 3.8em;
+  font-weight: 800
 }
 #calendar .notmonth .date-day{
   visibility: hidden;
@@ -297,6 +298,7 @@ a img{
 }
 
 .thumb a{
+  width: 100%;
   margin-left: auto;
   margin-right: auto;
 }
@@ -312,6 +314,7 @@ a img{
   border: 0 none !important;
   box-shadow: none !important;
 }
+
 .post-list {
   list-style: none
 }
@@ -329,11 +332,17 @@ div .arrows {
 .future{
   margin-left: 5%;
 }
-@media (max-width: 990px) {
+@media (min-width: 992px) {
   .future{
     margin-left: 5%;
   }
   .past{
    margin-right: 5%;
  }
+}
+@media (min-width: 992px) {
+.col-md-6 {
+    left: 0% !important;
+    width: 100% !important;
+}
 }

@@ -18378,3 +18378,1010 @@ Processing by PostsController#index as HTML
 Completed 200 OK in 27ms (Views: 24.5ms | ActiveRecord: 0.4ms)
 
 
+Started GET "/" for ::1 at 2016-09-08 15:19:11 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (19.6ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (25.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/application (75.0ms)
+Completed 200 OK in 362ms (Views: 316.6ms | ActiveRecord: 33.2ms)
+
+
+Started GET "/" for ::1 at 2016-09-08 15:19:29 -0500
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/application (5.2ms)
+Completed 200 OK in 64ms (Views: 61.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/posts/6" for ::1 at 2016-09-08 15:19:32 -0500
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mPost Load (6.5ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering posts/show.html.erb within layouts/application
+  Rendered posts/show.html.erb within layouts/application (1.9ms)
+Completed 500 Internal Server Error in 26ms (ActiveRecord: 6.7ms)
+
+
+  
+SyntaxError (/Users/scottsouthard/Documents/Dev/samuel/app/views/posts/show.html.erb:106: syntax error, unexpected keyword_ensure, expecting end-of-input):
+  
+app/views/posts/show.html.erb:106: syntax error, unexpected keyword_ensure, expecting end-of-input
+  Rendering /Users/scottsouthard/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/scottsouthard/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/scottsouthard/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (6.7ms)
+  Rendering /Users/scottsouthard/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/scottsouthard/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.8ms)
+  Rendering /Users/scottsouthard/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/scottsouthard/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /Users/scottsouthard/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (84.6ms)
+Started GET "/posts/6" for ::1 at 2016-09-08 15:20:55 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering posts/show.html.erb within layouts/application
+  [1m[36mPicture Load (18.6ms)[0m  [1m[34mSELECT "pictures".* FROM "pictures" WHERE "pictures"."post_id" = $1[0m  [["post_id", 6]]
+  Rendered posts/show.html.erb within layouts/application (163.4ms)
+Completed 500 Internal Server Error in 215ms (ActiveRecord: 32.3ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `pic' for #<#<Class:0x007fe0b64c4430>:0x007fe0b64e77a0>):
+    52:             <% end %>
+    53:             <% else %>
+    54:               <div class="col-lg-2 col-md-2 col-xs-6 thumb">
+    55:                 <a class= "thumbnail" href="#" data-image-id="" data-toggle="modal" data-image= "<%= pic.image.url%>" data-target="#image-gallery">
+    56:                   <%= image_tag(pic.image.url(:thumb)) %>
+    57:                 </a>
+    58:               </div>
+  
+app/views/posts/show.html.erb:55:in `_app_views_posts_show_html_erb___1258283512108336154_70301553928960'
+  Rendering /Users/scottsouthard/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/scottsouthard/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/scottsouthard/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (5.2ms)
+  Rendering /Users/scottsouthard/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/scottsouthard/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.3ms)
+  Rendering /Users/scottsouthard/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/scottsouthard/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /Users/scottsouthard/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (77.3ms)
+Started GET "/posts/6" for ::1 at 2016-09-08 15:22:11 -0500
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering posts/show.html.erb within layouts/application
+  [1m[36mPicture Load (0.5ms)[0m  [1m[34mSELECT "pictures".* FROM "pictures" WHERE "pictures"."post_id" = $1[0m  [["post_id", 6]]
+  Rendered posts/show.html.erb within layouts/application (8.1ms)
+Completed 200 OK in 256ms (Views: 252.8ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/" for ::1 at 2016-09-08 15:22:19 -0500
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.5ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/application (5.0ms)
+Completed 200 OK in 30ms (Views: 27.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/posts/6" for ::1 at 2016-09-08 15:22:20 -0500
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mPost Load (1.6ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering posts/show.html.erb within layouts/application
+  [1m[36mPicture Load (0.7ms)[0m  [1m[34mSELECT "pictures".* FROM "pictures" WHERE "pictures"."post_id" = $1[0m  [["post_id", 6]]
+  Rendered posts/show.html.erb within layouts/application (11.7ms)
+Completed 200 OK in 69ms (Views: 63.1ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/" for ::1 at 2016-09-08 15:25:13 -0500
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.9ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/application (7.4ms)
+Completed 200 OK in 49ms (Views: 45.9ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/" for ::1 at 2016-09-25 18:26:50 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (1.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (24.5ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/application (67.8ms)
+Completed 200 OK in 938ms (Views: 885.0ms | ActiveRecord: 31.5ms)
+
+
+Started GET "/posts/upcoming" for ::1 at 2016-09-25 18:26:55 -0500
+Processing by PostsController#upcoming as HTML
+  [1m[36mPost Load (1.9ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE (date >= '2016-09-25')[0m
+  Rendering posts/upcoming.html.erb within layouts/application
+  Rendered posts/upcoming.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 47ms (Views: 36.4ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/" for ::1 at 2016-09-25 18:26:58 -0500
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.9ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/application (8.3ms)
+Completed 200 OK in 45ms (Views: 42.3ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/posts/6" for ::1 at 2016-09-25 18:27:01 -0500
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mPost Load (2.0ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering posts/show.html.erb within layouts/application
+  [1m[36mPicture Load (2.0ms)[0m  [1m[34mSELECT "pictures".* FROM "pictures" WHERE "pictures"."post_id" = $1[0m  [["post_id", 6]]
+  Rendered posts/show.html.erb within layouts/application (62.0ms)
+Completed 200 OK in 112ms (Views: 89.3ms | ActiveRecord: 12.2ms)
+
+
+Started GET "/posts/6" for ::1 at 2016-09-25 18:27:04 -0500
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mPost Load (0.8ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering posts/show.html.erb within layouts/application
+  [1m[36mPicture Load (0.6ms)[0m  [1m[34mSELECT "pictures".* FROM "pictures" WHERE "pictures"."post_id" = $1[0m  [["post_id", 6]]
+  Rendered posts/show.html.erb within layouts/application (7.4ms)
+Completed 200 OK in 52ms (Views: 47.8ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/posts/6" for ::1 at 2016-09-25 18:31:41 -0500
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering posts/show.html.erb within layouts/application
+  [1m[36mPicture Load (0.3ms)[0m  [1m[34mSELECT "pictures".* FROM "pictures" WHERE "pictures"."post_id" = $1[0m  [["post_id", 6]]
+  Rendered posts/show.html.erb within layouts/application (9.0ms)
+Completed 200 OK in 43ms (Views: 39.0ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/posts/6" for ::1 at 2016-09-25 18:32:43 -0500
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mPost Load (0.6ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering posts/show.html.erb within layouts/application
+  [1m[36mPicture Load (0.5ms)[0m  [1m[34mSELECT "pictures".* FROM "pictures" WHERE "pictures"."post_id" = $1[0m  [["post_id", 6]]
+  Rendered posts/show.html.erb within layouts/application (6.2ms)
+Completed 200 OK in 33ms (Views: 29.1ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/posts/6" for ::1 at 2016-09-25 18:32:47 -0500
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mPost Load (0.5ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering posts/show.html.erb within layouts/application
+  [1m[36mPicture Load (0.4ms)[0m  [1m[34mSELECT "pictures".* FROM "pictures" WHERE "pictures"."post_id" = $1[0m  [["post_id", 6]]
+  Rendered posts/show.html.erb within layouts/application (9.2ms)
+Completed 200 OK in 44ms (Views: 40.0ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/" for ::1 at 2016-09-25 18:32:50 -0500
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/application (5.7ms)
+Completed 200 OK in 42ms (Views: 38.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/posts/6" for ::1 at 2016-09-25 18:32:52 -0500
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mPost Load (1.0ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering posts/show.html.erb within layouts/application
+  [1m[36mPicture Load (0.5ms)[0m  [1m[34mSELECT "pictures".* FROM "pictures" WHERE "pictures"."post_id" = $1[0m  [["post_id", 6]]
+  Rendered posts/show.html.erb within layouts/application (9.9ms)
+Completed 200 OK in 46ms (Views: 41.7ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/" for ::1 at 2016-09-25 18:33:03 -0500
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/application (7.2ms)
+Completed 200 OK in 39ms (Views: 36.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/posts/6" for ::1 at 2016-09-25 18:33:05 -0500
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering posts/show.html.erb within layouts/application
+  [1m[36mPicture Load (0.2ms)[0m  [1m[34mSELECT "pictures".* FROM "pictures" WHERE "pictures"."post_id" = $1[0m  [["post_id", 6]]
+  Rendered posts/show.html.erb within layouts/application (7.2ms)
+Completed 200 OK in 43ms (Views: 39.5ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for ::1 at 2016-09-25 18:33:09 -0500
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/application (4.7ms)
+Completed 200 OK in 39ms (Views: 35.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for ::1 at 2016-09-25 18:34:50 -0500
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 105ms (Views: 102.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for ::1 at 2016-09-25 18:35:25 -0500
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/application (4.4ms)
+Completed 200 OK in 102ms (Views: 100.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for ::1 at 2016-09-25 18:35:29 -0500
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/application (5.6ms)
+Completed 200 OK in 150ms (Views: 148.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for ::1 at 2016-09-25 18:36:02 -0500
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/application (4.1ms)
+Completed 200 OK in 114ms (Views: 112.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for ::1 at 2016-09-25 18:36:04 -0500
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/application (4.6ms)
+Completed 200 OK in 37ms (Views: 33.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for ::1 at 2016-09-25 18:36:12 -0500
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.5ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/application (5.7ms)
+Completed 200 OK in 137ms (Views: 134.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for ::1 at 2016-09-25 18:37:15 -0500
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 107ms (Views: 103.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for ::1 at 2016-09-25 18:37:30 -0500
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 113ms (Views: 111.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for ::1 at 2016-09-25 18:37:34 -0500
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.9ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/application (9.6ms)
+Completed 200 OK in 51ms (Views: 48.5ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/" for ::1 at 2016-09-25 18:37:44 -0500
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.5ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/application (7.5ms)
+Completed 200 OK in 159ms (Views: 156.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for ::1 at 2016-09-25 18:38:03 -0500
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/application (5.2ms)
+Completed 200 OK in 133ms (Views: 130.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for ::1 at 2016-09-25 18:38:07 -0500
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/application (4.5ms)
+Completed 200 OK in 137ms (Views: 134.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for ::1 at 2016-09-25 18:38:12 -0500
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/application (4.5ms)
+Completed 200 OK in 126ms (Views: 121.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for ::1 at 2016-09-25 18:38:24 -0500
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/application (4.7ms)
+Completed 200 OK in 38ms (Views: 35.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/sessions/new" for ::1 at 2016-09-25 18:38:32 -0500
+Processing by SessionsController#new as HTML
+  Rendering sessions/login.html.erb within layouts/application
+  Rendered sessions/login.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 39ms (Views: 38.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/sessions/logout" for ::1 at 2016-09-25 18:38:34 -0500
+Processing by SessionsController#logout as HTML
+Redirected to http://localhost:3000/
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-09-25 18:38:34 -0500
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/application (6.7ms)
+Completed 200 OK in 43ms (Views: 39.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/posts/past" for ::1 at 2016-09-25 18:38:37 -0500
+Processing by PostsController#past as HTML
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE (date <= '2016-09-25')[0m
+  Rendering posts/past.html.erb within layouts/application
+  Rendered posts/past.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 40ms (Views: 36.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/sessions/new" for ::1 at 2016-09-25 18:38:41 -0500
+Processing by SessionsController#new as HTML
+  Rendering sessions/login.html.erb within layouts/application
+  Rendered sessions/login.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 38ms (Views: 37.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/sessions/create?method=post" for ::1 at 2016-09-25 18:38:45 -0500
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Iie8Y8Uew9AG8F7xKPK7DY2tKGMrk11dfN7pQIYvxzTucUUxafGjRMWnXLV9ZEm4/1hYr2FDHgJExuWjWFu7gw==", "user"=>{"name"=>"steven", "password"=>"[FILTERED]"}, "commit"=>"Login", "method"=>"post"}
+  [1m[36mUser Load (11.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."name" = $1 LIMIT $2[0m  [["name", "steven"], ["LIMIT", 1]]
+  Rendering sessions/login.html.erb within layouts/application
+  Rendered sessions/login.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 60ms (Views: 27.7ms | ActiveRecord: 15.6ms)
+
+
+Started POST "/sessions/create?method=post" for ::1 at 2016-09-25 18:38:51 -0500
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"tURk57uajZWdLsE2LhlJZ7EEidyofsVXIUurhLyN9cx5Ep21F3XtAV55w3J7j7vSw/H5EOKuhggZU6dnYvmJew==", "user"=>{"name"=>"Steven", "password"=>"[FILTERED]"}, "commit"=>"Login", "method"=>"post"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."name" = $1 LIMIT $2[0m  [["name", "Steven"], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 81ms (ActiveRecord: 5.3ms)
+
+
+Started GET "/" for ::1 at 2016-09-25 18:38:51 -0500
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/application (5.1ms)
+Completed 200 OK in 38ms (Views: 35.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/sessions/new" for ::1 at 2016-09-25 18:38:57 -0500
+Processing by SessionsController#new as HTML
+  Rendering sessions/login.html.erb within layouts/application
+  Rendered sessions/login.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 37ms (Views: 36.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/sessions/logout" for ::1 at 2016-09-25 18:38:59 -0500
+Processing by SessionsController#logout as HTML
+Redirected to http://localhost:3000/
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-09-25 18:38:59 -0500
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/application (6.1ms)
+Completed 200 OK in 40ms (Views: 37.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for ::1 at 2016-09-25 18:39:06 -0500
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.8ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/application (9.4ms)
+Completed 200 OK in 55ms (Views: 52.4ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/posts/6" for ::1 at 2016-09-25 18:39:21 -0500
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mPost Load (1.0ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering posts/show.html.erb within layouts/application
+  [1m[36mPicture Load (0.3ms)[0m  [1m[34mSELECT "pictures".* FROM "pictures" WHERE "pictures"."post_id" = $1[0m  [["post_id", 6]]
+  Rendered posts/show.html.erb within layouts/application (8.2ms)
+Completed 200 OK in 142ms (Views: 135.2ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/posts/6" for ::1 at 2016-09-25 18:39:30 -0500
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering posts/show.html.erb within layouts/application
+  [1m[36mPicture Load (0.3ms)[0m  [1m[34mSELECT "pictures".* FROM "pictures" WHERE "pictures"."post_id" = $1[0m  [["post_id", 6]]
+  Rendered posts/show.html.erb within layouts/application (9.3ms)
+Completed 200 OK in 56ms (Views: 51.5ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/posts/6" for ::1 at 2016-09-25 18:39:34 -0500
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering posts/show.html.erb within layouts/application
+  [1m[36mPicture Load (0.3ms)[0m  [1m[34mSELECT "pictures".* FROM "pictures" WHERE "pictures"."post_id" = $1[0m  [["post_id", 6]]
+  Rendered posts/show.html.erb within layouts/application (10.8ms)
+Completed 200 OK in 42ms (Views: 39.0ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/posts/6" for ::1 at 2016-09-25 18:40:05 -0500
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering posts/show.html.erb within layouts/application
+  [1m[36mPicture Load (0.4ms)[0m  [1m[34mSELECT "pictures".* FROM "pictures" WHERE "pictures"."post_id" = $1[0m  [["post_id", 6]]
+  Rendered posts/show.html.erb within layouts/application (5.9ms)
+Completed 200 OK in 122ms (Views: 118.3ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/posts/6" for ::1 at 2016-09-25 18:40:20 -0500
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering posts/show.html.erb within layouts/application
+  [1m[36mPicture Load (0.3ms)[0m  [1m[34mSELECT "pictures".* FROM "pictures" WHERE "pictures"."post_id" = $1[0m  [["post_id", 6]]
+  Rendered posts/show.html.erb within layouts/application (7.0ms)
+Completed 500 Internal Server Error in 66ms (ActiveRecord: 0.5ms)
+
+
+  
+ActionView::Template::Error (Invalid CSS after "  margin-left": expected ";", was ": auto;"):
+    2: <html>
+    3: <head>
+    4:   <title>Samuel</title>
+    5:   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+    6:     <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+    7:     <%= csrf_meta_tags %>
+    8:     <meta name="viewport" content="width = device-width, initial-scale = 1">
+  
+app/assets/stylesheets/main.scss:302
+app/views/layouts/application.html.erb:5:in `_app_views_layouts_application_html_erb___567253048287817628_70206556343140'
+  Rendering /Users/scottsouthard/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/scottsouthard/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/scottsouthard/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (8.8ms)
+  Rendering /Users/scottsouthard/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/scottsouthard/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.3ms)
+  Rendering /Users/scottsouthard/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/scottsouthard/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /Users/scottsouthard/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (110.1ms)
+Started GET "/posts/6" for ::1 at 2016-09-25 18:40:25 -0500
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering posts/show.html.erb within layouts/application
+  [1m[36mPicture Load (0.6ms)[0m  [1m[34mSELECT "pictures".* FROM "pictures" WHERE "pictures"."post_id" = $1[0m  [["post_id", 6]]
+  Rendered posts/show.html.erb within layouts/application (11.8ms)
+Completed 200 OK in 144ms (Views: 140.5ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/posts/6" for ::1 at 2016-09-25 18:40:40 -0500
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mPost Load (0.5ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering posts/show.html.erb within layouts/application
+  [1m[36mPicture Load (0.4ms)[0m  [1m[34mSELECT "pictures".* FROM "pictures" WHERE "pictures"."post_id" = $1[0m  [["post_id", 6]]
+  Rendered posts/show.html.erb within layouts/application (8.0ms)
+Completed 200 OK in 49ms (Views: 44.2ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/posts/6" for ::1 at 2016-09-25 18:40:46 -0500
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mPost Load (0.8ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering posts/show.html.erb within layouts/application
+  [1m[36mPicture Load (0.5ms)[0m  [1m[34mSELECT "pictures".* FROM "pictures" WHERE "pictures"."post_id" = $1[0m  [["post_id", 6]]
+  Rendered posts/show.html.erb within layouts/application (10.0ms)
+Completed 200 OK in 50ms (Views: 43.0ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/posts/6" for ::1 at 2016-09-25 18:40:50 -0500
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mPost Load (1.0ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering posts/show.html.erb within layouts/application
+  [1m[36mPicture Load (0.4ms)[0m  [1m[34mSELECT "pictures".* FROM "pictures" WHERE "pictures"."post_id" = $1[0m  [["post_id", 6]]
+  Rendered posts/show.html.erb within layouts/application (6.7ms)
+Completed 200 OK in 124ms (Views: 118.9ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/posts/6" for ::1 at 2016-09-25 18:41:36 -0500
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering posts/show.html.erb within layouts/application
+  [1m[36mPicture Load (0.3ms)[0m  [1m[34mSELECT "pictures".* FROM "pictures" WHERE "pictures"."post_id" = $1[0m  [["post_id", 6]]
+  Rendered posts/show.html.erb within layouts/application (8.6ms)
+Completed 200 OK in 162ms (Views: 158.5ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/posts/6" for ::1 at 2016-09-25 18:43:49 -0500
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering posts/show.html.erb within layouts/application
+  [1m[36mPicture Load (0.4ms)[0m  [1m[34mSELECT "pictures".* FROM "pictures" WHERE "pictures"."post_id" = $1[0m  [["post_id", 6]]
+  Rendered posts/show.html.erb within layouts/application (8.7ms)
+Completed 200 OK in 113ms (Views: 109.9ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/" for ::1 at 2016-09-25 18:44:32 -0500
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.7ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/application (6.3ms)
+Completed 200 OK in 38ms (Views: 34.7ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/posts/6" for ::1 at 2016-09-25 23:57:54 -0500
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mPost Load (49.2ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering posts/show.html.erb within layouts/application
+  [1m[36mPicture Load (0.4ms)[0m  [1m[34mSELECT "pictures".* FROM "pictures" WHERE "pictures"."post_id" = $1[0m  [["post_id", 6]]
+  Rendered posts/show.html.erb within layouts/application (31.6ms)
+Completed 200 OK in 167ms (Views: 100.7ms | ActiveRecord: 49.5ms)
+
+
+Started GET "/posts/6" for ::1 at 2016-09-26 00:00:04 -0500
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mPost Load (6.7ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering posts/show.html.erb within layouts/application
+  [1m[36mPicture Load (0.6ms)[0m  [1m[34mSELECT "pictures".* FROM "pictures" WHERE "pictures"."post_id" = $1[0m  [["post_id", 6]]
+  Rendered posts/show.html.erb within layouts/application (13.8ms)
+Completed 200 OK in 74ms (Views: 62.9ms | ActiveRecord: 7.3ms)
+
+
+Started GET "/posts/6" for ::1 at 2016-09-26 00:01:14 -0500
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mPost Load (0.7ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering posts/show.html.erb within layouts/application
+  [1m[36mPicture Load (0.4ms)[0m  [1m[34mSELECT "pictures".* FROM "pictures" WHERE "pictures"."post_id" = $1[0m  [["post_id", 6]]
+  Rendered posts/show.html.erb within layouts/application (10.5ms)
+Completed 200 OK in 56ms (Views: 52.7ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/posts/6" for ::1 at 2016-09-26 00:09:22 -0500
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mPost Load (1.0ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering posts/show.html.erb within layouts/application
+  [1m[36mPicture Load (0.3ms)[0m  [1m[34mSELECT "pictures".* FROM "pictures" WHERE "pictures"."post_id" = $1[0m  [["post_id", 6]]
+  Rendered posts/show.html.erb within layouts/application (10.6ms)
+Completed 200 OK in 154ms (Views: 150.6ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/posts/6" for ::1 at 2016-09-26 00:09:33 -0500
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mPost Load (0.5ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering posts/show.html.erb within layouts/application
+  [1m[36mPicture Load (0.5ms)[0m  [1m[34mSELECT "pictures".* FROM "pictures" WHERE "pictures"."post_id" = $1[0m  [["post_id", 6]]
+  Rendered posts/show.html.erb within layouts/application (18.3ms)
+Completed 200 OK in 62ms (Views: 57.3ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/posts/6" for ::1 at 2016-09-26 00:10:21 -0500
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mPost Load (0.8ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering posts/show.html.erb within layouts/application
+  [1m[36mPicture Load (0.4ms)[0m  [1m[34mSELECT "pictures".* FROM "pictures" WHERE "pictures"."post_id" = $1[0m  [["post_id", 6]]
+  Rendered posts/show.html.erb within layouts/application (9.1ms)
+Completed 200 OK in 169ms (Views: 163.5ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/posts/6" for ::1 at 2016-09-26 00:10:46 -0500
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering posts/show.html.erb within layouts/application
+  [1m[36mPicture Load (0.3ms)[0m  [1m[34mSELECT "pictures".* FROM "pictures" WHERE "pictures"."post_id" = $1[0m  [["post_id", 6]]
+  Rendered posts/show.html.erb within layouts/application (8.6ms)
+Completed 200 OK in 116ms (Views: 112.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/posts/6" for ::1 at 2016-09-26 00:11:21 -0500
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mPost Load (1.2ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering posts/show.html.erb within layouts/application
+  [1m[36mPicture Load (0.4ms)[0m  [1m[34mSELECT "pictures".* FROM "pictures" WHERE "pictures"."post_id" = $1[0m  [["post_id", 6]]
+  Rendered posts/show.html.erb within layouts/application (5.8ms)
+Completed 500 Internal Server Error in 47ms (ActiveRecord: 1.6ms)
+
+
+  
+ActionView::Template::Error (Invalid CSS after "...n-width: 992px)": expected "{", was ".col-md-6 {"):
+    2: <html>
+    3: <head>
+    4:   <title>Samuel</title>
+    5:   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+    6:     <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+    7:     <%= csrf_meta_tags %>
+    8:     <meta name="viewport" content="width = device-width, initial-scale = 1">
+  
+app/assets/stylesheets/main.scss:344
+app/views/layouts/application.html.erb:5:in `_app_views_layouts_application_html_erb___567253048287817628_70206564047340'
+  Rendering /Users/scottsouthard/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/scottsouthard/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/scottsouthard/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (5.7ms)
+  Rendering /Users/scottsouthard/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/scottsouthard/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.5ms)
+  Rendering /Users/scottsouthard/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/scottsouthard/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /Users/scottsouthard/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (79.7ms)
+Started GET "/posts/6" for ::1 at 2016-09-26 00:13:26 -0500
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mPost Load (0.9ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering posts/show.html.erb within layouts/application
+  [1m[36mPicture Load (0.4ms)[0m  [1m[34mSELECT "pictures".* FROM "pictures" WHERE "pictures"."post_id" = $1[0m  [["post_id", 6]]
+  Rendered posts/show.html.erb within layouts/application (9.9ms)
+Completed 200 OK in 160ms (Views: 154.2ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/posts/6" for ::1 at 2016-09-26 00:13:31 -0500
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mPost Load (0.5ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering posts/show.html.erb within layouts/application
+  [1m[36mPicture Load (0.4ms)[0m  [1m[34mSELECT "pictures".* FROM "pictures" WHERE "pictures"."post_id" = $1[0m  [["post_id", 6]]
+  Rendered posts/show.html.erb within layouts/application (7.9ms)
+Completed 200 OK in 151ms (Views: 146.7ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/posts/6" for ::1 at 2016-09-26 00:14:05 -0500
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering posts/show.html.erb within layouts/application
+  [1m[36mPicture Load (0.5ms)[0m  [1m[34mSELECT "pictures".* FROM "pictures" WHERE "pictures"."post_id" = $1[0m  [["post_id", 6]]
+  Rendered posts/show.html.erb within layouts/application (9.0ms)
+Completed 500 Internal Server Error in 70ms (ActiveRecord: 0.9ms)
+
+
+  
+ActionView::Template::Error (Invalid CSS after "}": expected selector or at-rule, was "{"):
+    2: <html>
+    3: <head>
+    4:   <title>Samuel</title>
+    5:   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+    6:     <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+    7:     <%= csrf_meta_tags %>
+    8:     <meta name="viewport" content="width = device-width, initial-scale = 1">
+  
+app/assets/stylesheets/main.scss:343
+app/views/layouts/application.html.erb:5:in `_app_views_layouts_application_html_erb___567253048287817628_70206559203880'
+  Rendering /Users/scottsouthard/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/scottsouthard/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/scottsouthard/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (5.0ms)
+  Rendering /Users/scottsouthard/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/scottsouthard/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.8ms)
+  Rendering /Users/scottsouthard/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/scottsouthard/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Users/scottsouthard/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (69.4ms)
+Started GET "/posts/6" for ::1 at 2016-09-26 00:14:10 -0500
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering posts/show.html.erb within layouts/application
+  [1m[36mPicture Load (0.2ms)[0m  [1m[34mSELECT "pictures".* FROM "pictures" WHERE "pictures"."post_id" = $1[0m  [["post_id", 6]]
+  Rendered posts/show.html.erb within layouts/application (8.8ms)
+Completed 200 OK in 154ms (Views: 149.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/posts/6" for ::1 at 2016-09-26 00:14:23 -0500
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mPost Load (0.7ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering posts/show.html.erb within layouts/application
+  [1m[36mPicture Load (0.4ms)[0m  [1m[34mSELECT "pictures".* FROM "pictures" WHERE "pictures"."post_id" = $1[0m  [["post_id", 6]]
+  Rendered posts/show.html.erb within layouts/application (10.3ms)
+Completed 200 OK in 163ms (Views: 156.9ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/posts/6" for ::1 at 2016-09-26 00:14:41 -0500
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering posts/show.html.erb within layouts/application
+  [1m[36mPicture Load (1.1ms)[0m  [1m[34mSELECT "pictures".* FROM "pictures" WHERE "pictures"."post_id" = $1[0m  [["post_id", 6]]
+  Rendered posts/show.html.erb within layouts/application (10.4ms)
+Completed 200 OK in 135ms (Views: 131.9ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/posts/6" for ::1 at 2016-09-26 00:15:18 -0500
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering posts/show.html.erb within layouts/application
+  [1m[36mPicture Load (0.3ms)[0m  [1m[34mSELECT "pictures".* FROM "pictures" WHERE "pictures"."post_id" = $1[0m  [["post_id", 6]]
+  Rendered posts/show.html.erb within layouts/application (7.2ms)
+Completed 200 OK in 106ms (Views: 101.7ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/posts/6" for ::1 at 2016-09-26 00:15:25 -0500
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering posts/show.html.erb within layouts/application
+  [1m[36mPicture Load (0.8ms)[0m  [1m[34mSELECT "pictures".* FROM "pictures" WHERE "pictures"."post_id" = $1[0m  [["post_id", 6]]
+  Rendered posts/show.html.erb within layouts/application (11.0ms)
+Completed 200 OK in 144ms (Views: 139.5ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/posts/6" for ::1 at 2016-09-26 00:15:55 -0500
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering posts/show.html.erb within layouts/application
+  [1m[36mPicture Load (0.5ms)[0m  [1m[34mSELECT "pictures".* FROM "pictures" WHERE "pictures"."post_id" = $1[0m  [["post_id", 6]]
+  Rendered posts/show.html.erb within layouts/application (8.3ms)
+Completed 200 OK in 115ms (Views: 111.8ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/posts/6" for ::1 at 2016-09-26 00:16:00 -0500
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mPost Load (1.0ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering posts/show.html.erb within layouts/application
+  [1m[36mPicture Load (0.3ms)[0m  [1m[34mSELECT "pictures".* FROM "pictures" WHERE "pictures"."post_id" = $1[0m  [["post_id", 6]]
+  Rendered posts/show.html.erb within layouts/application (8.1ms)
+Completed 200 OK in 164ms (Views: 157.5ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/posts/6" for ::1 at 2016-09-26 00:16:06 -0500
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mPost Load (0.7ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering posts/show.html.erb within layouts/application
+  [1m[36mPicture Load (0.3ms)[0m  [1m[34mSELECT "pictures".* FROM "pictures" WHERE "pictures"."post_id" = $1[0m  [["post_id", 6]]
+  Rendered posts/show.html.erb within layouts/application (9.2ms)
+Completed 200 OK in 197ms (Views: 192.6ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/posts/6" for ::1 at 2016-09-26 00:16:10 -0500
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mPost Load (0.8ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering posts/show.html.erb within layouts/application
+  [1m[36mPicture Load (0.3ms)[0m  [1m[34mSELECT "pictures".* FROM "pictures" WHERE "pictures"."post_id" = $1[0m  [["post_id", 6]]
+  Rendered posts/show.html.erb within layouts/application (8.7ms)
+Completed 200 OK in 49ms (Views: 41.7ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/posts/6" for ::1 at 2016-09-26 00:16:14 -0500
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering posts/show.html.erb within layouts/application
+  [1m[36mPicture Load (0.3ms)[0m  [1m[34mSELECT "pictures".* FROM "pictures" WHERE "pictures"."post_id" = $1[0m  [["post_id", 6]]
+  Rendered posts/show.html.erb within layouts/application (7.8ms)
+Completed 200 OK in 151ms (Views: 146.5ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/posts/6" for ::1 at 2016-09-26 00:16:38 -0500
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mPost Load (0.5ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering posts/show.html.erb within layouts/application
+  [1m[36mPicture Load (0.4ms)[0m  [1m[34mSELECT "pictures".* FROM "pictures" WHERE "pictures"."post_id" = $1[0m  [["post_id", 6]]
+  Rendered posts/show.html.erb within layouts/application (11.0ms)
+Completed 200 OK in 53ms (Views: 48.7ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/" for ::1 at 2016-09-26 00:18:11 -0500
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (18.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/application (24.3ms)
+Completed 200 OK in 53ms (Views: 31.7ms | ActiveRecord: 18.3ms)
+
+
+Started GET "/sessions/new" for ::1 at 2016-09-26 00:18:14 -0500
+Processing by SessionsController#new as HTML
+  Rendering sessions/login.html.erb within layouts/application
+  Rendered sessions/login.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 39ms (Views: 38.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/sessions/create?method=post" for ::1 at 2016-09-26 00:18:22 -0500
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"aiuMwx3+ayYnYAsw1uUMy7hk/mCiaMNnE3HreNUaqR2gJli3H9S0FUT5b5EElHSsP3nO3NnSr6usDZO4ePsbZA==", "user"=>{"name"=>"Steven", "password"=>"[FILTERED]"}, "commit"=>"Login", "method"=>"post"}
+  [1m[36mUser Load (6.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."name" = $1 LIMIT $2[0m  [["name", "Steven"], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 85ms (ActiveRecord: 6.7ms)
+
+
+Started GET "/" for ::1 at 2016-09-26 00:18:22 -0500
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/application (8.0ms)
+Completed 200 OK in 46ms (Views: 43.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/posts/new" for ::1 at 2016-09-26 00:18:25 -0500
+Processing by PostsController#new as HTML
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/new.html.erb within layouts/application (35.6ms)
+Completed 200 OK in 76ms (Views: 74.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/posts" for ::1 at 2016-09-26 11:09:34 -0500
+Processing by PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"b7FqtSSEetW/Ak/wElB5f+sSY033kpwfFJ5jalieKRmlvL7BJq6l5tybK1HAIQEYbA9T8Ywo8NOr4huq9X+bYA==", "post"=>{"title"=>"Arnold: True Heroics", "description"=>"Predator is a 1987 American science fiction action horror film [4] directed by John McTiernan. It stars Arnold Schwarzenegger as the leader of an elite special forces team who are on a mission to rescue hostages from guerrilla territory in Central America. Kevin Peter Hall co-stars as the titular antagonist, a technologically advanced form of extraterrestrial life secretly stalking and hunting the group. Predator was written by Jim and John Thomas in 1985, under the working title of Hunter. Filming began in April 1986 and creature effects were devised by Stan Winston.", "date"=>"2016-09-29", "document"=>#<ActionDispatch::Http::UploadedFile:0x007fb472663bd0 @tempfile=#<Tempfile:/var/folders/6z/kzsbjfl178v4xr56zp5_zh440000gn/T/RackMultipart20160926-4933-y38tr9.pdf>, @original_filename="Arnold_Schwarzenegger.pdf", @content_type="application/pdf", @headers="Content-Disposition: form-data; name=\"post[document]\"; filename=\"Arnold_Schwarzenegger.pdf\"\r\nContent-Type: application/pdf\r\n">}, "images"=>[#<ActionDispatch::Http::UploadedFile:0x007fb4726638d8 @tempfile=#<Tempfile:/var/folders/6z/kzsbjfl178v4xr56zp5_zh440000gn/T/RackMultipart20160926-4933-1vpkvpt.jpg>, @original_filename="arnold-schwarzenegger-the.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"images[]\"; filename=\"arnold-schwarzenegger-the.jpg\"\r\nContent-Type: image/jpeg\r\n">, #<ActionDispatch::Http::UploadedFile:0x007fb4726638b0 @tempfile=#<Tempfile:/var/folders/6z/kzsbjfl178v4xr56zp5_zh440000gn/T/RackMultipart20160926-4933-6drxa.jpg>, @original_filename="best-arnold-schwarzenegger-movie-roles.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"images[]\"; filename=\"best-arnold-schwarzenegger-movie-roles.jpg\"\r\nContent-Type: image/jpeg\r\n">, #<ActionDispatch::Http::UploadedFile:0x007fb472663810 @tempfile=#<Tempfile:/var/folders/6z/kzsbjfl178v4xr56zp5_zh440000gn/T/RackMultipart20160926-4933-4o8il0.jpg>, @original_filename="maxresdefault.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"images[]\"; filename=\"maxresdefault.jpg\"\r\nContent-Type: image/jpeg\r\n">, #<ActionDispatch::Http::UploadedFile:0x007fb4726637e8 @tempfile=#<Tempfile:/var/folders/6z/kzsbjfl178v4xr56zp5_zh440000gn/T/RackMultipart20160926-4933-1fywwiz.jpg>, @original_filename="totalrecall.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"images[]\"; filename=\"totalrecall.jpg\"\r\nContent-Type: image/jpeg\r\n">], "commit"=>"Create Post"}
+Unpermitted parameter: document
+Command :: PATH=/usr/local/bin/:$PATH; file -b --mime '/var/folders/6z/kzsbjfl178v4xr56zp5_zh440000gn/T/088fee08c2e3e4984e5244996b614e8f20160926-4933-v0ogt7.pdf'
+  [1m[35m (17.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPost Exists (84.3ms)[0m  [1m[34mSELECT  1 AS one FROM "posts" WHERE "posts"."date" = $1 LIMIT $2[0m  [["date", "2016-09-29"], ["LIMIT", 1]]
+Command :: PATH=/usr/local/bin/:$PATH; file -b --mime '/var/folders/6z/kzsbjfl178v4xr56zp5_zh440000gn/T/088fee08c2e3e4984e5244996b614e8f20160926-4933-1inizaw.pdf'
+  [1m[35mSQL (51.5ms)[0m  [1m[32mINSERT INTO "posts" ("title", "description", "date", "created_at", "updated_at", "document_file_name", "document_content_type", "document_file_size", "document_updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["title", "Arnold: True Heroics"], ["description", "Predator is a 1987 American science fiction action horror film [4] directed by John McTiernan. It stars Arnold Schwarzenegger as the leader of an elite special forces team who are on a mission to rescue hostages from guerrilla territory in Central America. Kevin Peter Hall co-stars as the titular antagonist, a technologically advanced form of extraterrestrial life secretly stalking and hunting the group. Predator was written by Jim and John Thomas in 1985, under the working title of Hunter. Filming began in April 1986 and creature effects were devised by Stan Winston."], ["date", Thu, 29 Sep 2016], ["created_at", 2016-09-26 16:09:34 UTC], ["updated_at", 2016-09-26 16:09:34 UTC], ["document_file_name", "Arnold_Schwarzenegger.pdf"], ["document_content_type", "application/pdf"], ["document_file_size", 58172], ["document_updated_at", 2016-09-26 16:09:34 UTC]]
+  [1m[35m (12.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+Command :: PATH=/usr/local/bin/:$PATH; file -b --mime '/var/folders/6z/kzsbjfl178v4xr56zp5_zh440000gn/T/1b2eb88bf353ae0f5fb82c9a1313018e20160926-4933-1uwur2o.jpg'
+Command :: PATH=/usr/local/bin/:$PATH; identify -format '%wx%h,%[exif:orientation]' '/var/folders/6z/kzsbjfl178v4xr56zp5_zh440000gn/T/1b2eb88bf353ae0f5fb82c9a1313018e20160926-4933-qlculf.jpg[0]' 2>/dev/null
+Command :: PATH=/usr/local/bin/:$PATH; identify -format %m '/var/folders/6z/kzsbjfl178v4xr56zp5_zh440000gn/T/1b2eb88bf353ae0f5fb82c9a1313018e20160926-4933-qlculf.jpg[0]'
+Command :: PATH=/usr/local/bin/:$PATH; convert '/var/folders/6z/kzsbjfl178v4xr56zp5_zh440000gn/T/1b2eb88bf353ae0f5fb82c9a1313018e20160926-4933-qlculf.jpg[0]' -auto-orient -resize "900x900>" '/var/folders/6z/kzsbjfl178v4xr56zp5_zh440000gn/T/a9336a3ec3321ecf5cf77ecc1db17c2b20160926-4933-12uo2r8'
+Command :: PATH=/usr/local/bin/:$PATH; identify -format '%wx%h,%[exif:orientation]' '/var/folders/6z/kzsbjfl178v4xr56zp5_zh440000gn/T/1b2eb88bf353ae0f5fb82c9a1313018e20160926-4933-qlculf.jpg[0]' 2>/dev/null
+Command :: PATH=/usr/local/bin/:$PATH; identify -format %m '/var/folders/6z/kzsbjfl178v4xr56zp5_zh440000gn/T/1b2eb88bf353ae0f5fb82c9a1313018e20160926-4933-qlculf.jpg[0]'
+Command :: PATH=/usr/local/bin/:$PATH; convert '/var/folders/6z/kzsbjfl178v4xr56zp5_zh440000gn/T/1b2eb88bf353ae0f5fb82c9a1313018e20160926-4933-qlculf.jpg[0]' -auto-orient -resize "300x300>" '/var/folders/6z/kzsbjfl178v4xr56zp5_zh440000gn/T/a9336a3ec3321ecf5cf77ecc1db17c2b20160926-4933-1pu90xw'
+Command :: PATH=/usr/local/bin/:$PATH; identify -format '%wx%h,%[exif:orientation]' '/var/folders/6z/kzsbjfl178v4xr56zp5_zh440000gn/T/1b2eb88bf353ae0f5fb82c9a1313018e20160926-4933-qlculf.jpg[0]' 2>/dev/null
+Command :: PATH=/usr/local/bin/:$PATH; identify -format %m '/var/folders/6z/kzsbjfl178v4xr56zp5_zh440000gn/T/1b2eb88bf353ae0f5fb82c9a1313018e20160926-4933-qlculf.jpg[0]'
+Command :: PATH=/usr/local/bin/:$PATH; convert '/var/folders/6z/kzsbjfl178v4xr56zp5_zh440000gn/T/1b2eb88bf353ae0f5fb82c9a1313018e20160926-4933-qlculf.jpg[0]' -auto-orient -resize "200x200>" '/var/folders/6z/kzsbjfl178v4xr56zp5_zh440000gn/T/a9336a3ec3321ecf5cf77ecc1db17c2b20160926-4933-psha5n'
+Command :: PATH=/usr/local/bin/:$PATH; identify -format '%wx%h,%[exif:orientation]' '/var/folders/6z/kzsbjfl178v4xr56zp5_zh440000gn/T/1b2eb88bf353ae0f5fb82c9a1313018e20160926-4933-qlculf.jpg[0]' 2>/dev/null
+Command :: PATH=/usr/local/bin/:$PATH; identify -format %m '/var/folders/6z/kzsbjfl178v4xr56zp5_zh440000gn/T/1b2eb88bf353ae0f5fb82c9a1313018e20160926-4933-qlculf.jpg[0]'
+Command :: PATH=/usr/local/bin/:$PATH; convert '/var/folders/6z/kzsbjfl178v4xr56zp5_zh440000gn/T/1b2eb88bf353ae0f5fb82c9a1313018e20160926-4933-qlculf.jpg[0]' -auto-orient -resize "100x100>" '/var/folders/6z/kzsbjfl178v4xr56zp5_zh440000gn/T/a9336a3ec3321ecf5cf77ecc1db17c2b20160926-4933-1q9vhp9'
+Command :: PATH=/usr/local/bin/:$PATH; file -b --mime '/var/folders/6z/kzsbjfl178v4xr56zp5_zh440000gn/T/1b2eb88bf353ae0f5fb82c9a1313018e20160926-4933-4e6af5.jpg'
+  [1m[35mSQL (11.9ms)[0m  [1m[32mINSERT INTO "pictures" ("post_id", "created_at", "updated_at", "image_file_name", "image_content_type", "image_file_size", "image_updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["post_id", 7], ["created_at", 2016-09-26 16:09:34 UTC], ["updated_at", 2016-09-26 16:09:34 UTC], ["image_file_name", "arnold-schwarzenegger-the.jpg"], ["image_content_type", "image/jpeg"], ["image_file_size", 49419], ["image_updated_at", 2016-09-26 16:09:34 UTC]]
+  [1m[35m (6.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+Command :: PATH=/usr/local/bin/:$PATH; file -b --mime '/var/folders/6z/kzsbjfl178v4xr56zp5_zh440000gn/T/8f8abe8c7573681ab3d43812e2d4087a20160926-4933-3yuuna.jpg'
+Command :: PATH=/usr/local/bin/:$PATH; identify -format '%wx%h,%[exif:orientation]' '/var/folders/6z/kzsbjfl178v4xr56zp5_zh440000gn/T/8f8abe8c7573681ab3d43812e2d4087a20160926-4933-1nzib15.jpg[0]' 2>/dev/null
+Command :: PATH=/usr/local/bin/:$PATH; identify -format %m '/var/folders/6z/kzsbjfl178v4xr56zp5_zh440000gn/T/8f8abe8c7573681ab3d43812e2d4087a20160926-4933-1nzib15.jpg[0]'
+Command :: PATH=/usr/local/bin/:$PATH; convert '/var/folders/6z/kzsbjfl178v4xr56zp5_zh440000gn/T/8f8abe8c7573681ab3d43812e2d4087a20160926-4933-1nzib15.jpg[0]' -auto-orient -resize "900x900>" '/var/folders/6z/kzsbjfl178v4xr56zp5_zh440000gn/T/09d2e0a227da938fa73344f52f54510b20160926-4933-166upn3'
+Command :: PATH=/usr/local/bin/:$PATH; identify -format '%wx%h,%[exif:orientation]' '/var/folders/6z/kzsbjfl178v4xr56zp5_zh440000gn/T/8f8abe8c7573681ab3d43812e2d4087a20160926-4933-1nzib15.jpg[0]' 2>/dev/null
+Command :: PATH=/usr/local/bin/:$PATH; identify -format %m '/var/folders/6z/kzsbjfl178v4xr56zp5_zh440000gn/T/8f8abe8c7573681ab3d43812e2d4087a20160926-4933-1nzib15.jpg[0]'
+Command :: PATH=/usr/local/bin/:$PATH; convert '/var/folders/6z/kzsbjfl178v4xr56zp5_zh440000gn/T/8f8abe8c7573681ab3d43812e2d4087a20160926-4933-1nzib15.jpg[0]' -auto-orient -resize "300x300>" '/var/folders/6z/kzsbjfl178v4xr56zp5_zh440000gn/T/09d2e0a227da938fa73344f52f54510b20160926-4933-1u9tdd8'
+Command :: PATH=/usr/local/bin/:$PATH; identify -format '%wx%h,%[exif:orientation]' '/var/folders/6z/kzsbjfl178v4xr56zp5_zh440000gn/T/8f8abe8c7573681ab3d43812e2d4087a20160926-4933-1nzib15.jpg[0]' 2>/dev/null
+Command :: PATH=/usr/local/bin/:$PATH; identify -format %m '/var/folders/6z/kzsbjfl178v4xr56zp5_zh440000gn/T/8f8abe8c7573681ab3d43812e2d4087a20160926-4933-1nzib15.jpg[0]'
+Command :: PATH=/usr/local/bin/:$PATH; convert '/var/folders/6z/kzsbjfl178v4xr56zp5_zh440000gn/T/8f8abe8c7573681ab3d43812e2d4087a20160926-4933-1nzib15.jpg[0]' -auto-orient -resize "200x200>" '/var/folders/6z/kzsbjfl178v4xr56zp5_zh440000gn/T/09d2e0a227da938fa73344f52f54510b20160926-4933-1cahigc'
+Command :: PATH=/usr/local/bin/:$PATH; identify -format '%wx%h,%[exif:orientation]' '/var/folders/6z/kzsbjfl178v4xr56zp5_zh440000gn/T/8f8abe8c7573681ab3d43812e2d4087a20160926-4933-1nzib15.jpg[0]' 2>/dev/null
+Command :: PATH=/usr/local/bin/:$PATH; identify -format %m '/var/folders/6z/kzsbjfl178v4xr56zp5_zh440000gn/T/8f8abe8c7573681ab3d43812e2d4087a20160926-4933-1nzib15.jpg[0]'
+Command :: PATH=/usr/local/bin/:$PATH; convert '/var/folders/6z/kzsbjfl178v4xr56zp5_zh440000gn/T/8f8abe8c7573681ab3d43812e2d4087a20160926-4933-1nzib15.jpg[0]' -auto-orient -resize "100x100>" '/var/folders/6z/kzsbjfl178v4xr56zp5_zh440000gn/T/09d2e0a227da938fa73344f52f54510b20160926-4933-1ukyj0s'
+Command :: PATH=/usr/local/bin/:$PATH; file -b --mime '/var/folders/6z/kzsbjfl178v4xr56zp5_zh440000gn/T/8f8abe8c7573681ab3d43812e2d4087a20160926-4933-wl2e01.jpg'
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "pictures" ("post_id", "created_at", "updated_at", "image_file_name", "image_content_type", "image_file_size", "image_updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["post_id", 7], ["created_at", 2016-09-26 16:09:35 UTC], ["updated_at", 2016-09-26 16:09:35 UTC], ["image_file_name", "best-arnold-schwarzenegger-movie-roles.jpg"], ["image_content_type", "image/jpeg"], ["image_file_size", 76887], ["image_updated_at", 2016-09-26 16:09:34 UTC]]
+  [1m[35m (6.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+Command :: PATH=/usr/local/bin/:$PATH; file -b --mime '/var/folders/6z/kzsbjfl178v4xr56zp5_zh440000gn/T/a43683d33b40f413228d54e3c6ed4a2f20160926-4933-1jaosb.jpg'
+Command :: PATH=/usr/local/bin/:$PATH; identify -format '%wx%h,%[exif:orientation]' '/var/folders/6z/kzsbjfl178v4xr56zp5_zh440000gn/T/a43683d33b40f413228d54e3c6ed4a2f20160926-4933-1ooizqe.jpg[0]' 2>/dev/null
+Command :: PATH=/usr/local/bin/:$PATH; identify -format %m '/var/folders/6z/kzsbjfl178v4xr56zp5_zh440000gn/T/a43683d33b40f413228d54e3c6ed4a2f20160926-4933-1ooizqe.jpg[0]'
+Command :: PATH=/usr/local/bin/:$PATH; convert '/var/folders/6z/kzsbjfl178v4xr56zp5_zh440000gn/T/a43683d33b40f413228d54e3c6ed4a2f20160926-4933-1ooizqe.jpg[0]' -auto-orient -resize "900x900>" '/var/folders/6z/kzsbjfl178v4xr56zp5_zh440000gn/T/80159743d37f3a2f54aaad88b47e82f920160926-4933-a9is1i'
+Command :: PATH=/usr/local/bin/:$PATH; identify -format '%wx%h,%[exif:orientation]' '/var/folders/6z/kzsbjfl178v4xr56zp5_zh440000gn/T/a43683d33b40f413228d54e3c6ed4a2f20160926-4933-1ooizqe.jpg[0]' 2>/dev/null
+Command :: PATH=/usr/local/bin/:$PATH; identify -format %m '/var/folders/6z/kzsbjfl178v4xr56zp5_zh440000gn/T/a43683d33b40f413228d54e3c6ed4a2f20160926-4933-1ooizqe.jpg[0]'
+Command :: PATH=/usr/local/bin/:$PATH; convert '/var/folders/6z/kzsbjfl178v4xr56zp5_zh440000gn/T/a43683d33b40f413228d54e3c6ed4a2f20160926-4933-1ooizqe.jpg[0]' -auto-orient -resize "300x300>" '/var/folders/6z/kzsbjfl178v4xr56zp5_zh440000gn/T/80159743d37f3a2f54aaad88b47e82f920160926-4933-a8c0e1'
+Command :: PATH=/usr/local/bin/:$PATH; identify -format '%wx%h,%[exif:orientation]' '/var/folders/6z/kzsbjfl178v4xr56zp5_zh440000gn/T/a43683d33b40f413228d54e3c6ed4a2f20160926-4933-1ooizqe.jpg[0]' 2>/dev/null
+Command :: PATH=/usr/local/bin/:$PATH; identify -format %m '/var/folders/6z/kzsbjfl178v4xr56zp5_zh440000gn/T/a43683d33b40f413228d54e3c6ed4a2f20160926-4933-1ooizqe.jpg[0]'
+Command :: PATH=/usr/local/bin/:$PATH; convert '/var/folders/6z/kzsbjfl178v4xr56zp5_zh440000gn/T/a43683d33b40f413228d54e3c6ed4a2f20160926-4933-1ooizqe.jpg[0]' -auto-orient -resize "200x200>" '/var/folders/6z/kzsbjfl178v4xr56zp5_zh440000gn/T/80159743d37f3a2f54aaad88b47e82f920160926-4933-1te4bxs'
+Command :: PATH=/usr/local/bin/:$PATH; identify -format '%wx%h,%[exif:orientation]' '/var/folders/6z/kzsbjfl178v4xr56zp5_zh440000gn/T/a43683d33b40f413228d54e3c6ed4a2f20160926-4933-1ooizqe.jpg[0]' 2>/dev/null
+Command :: PATH=/usr/local/bin/:$PATH; identify -format %m '/var/folders/6z/kzsbjfl178v4xr56zp5_zh440000gn/T/a43683d33b40f413228d54e3c6ed4a2f20160926-4933-1ooizqe.jpg[0]'
+Command :: PATH=/usr/local/bin/:$PATH; convert '/var/folders/6z/kzsbjfl178v4xr56zp5_zh440000gn/T/a43683d33b40f413228d54e3c6ed4a2f20160926-4933-1ooizqe.jpg[0]' -auto-orient -resize "100x100>" '/var/folders/6z/kzsbjfl178v4xr56zp5_zh440000gn/T/80159743d37f3a2f54aaad88b47e82f920160926-4933-l1rkm4'
+Command :: PATH=/usr/local/bin/:$PATH; file -b --mime '/var/folders/6z/kzsbjfl178v4xr56zp5_zh440000gn/T/a43683d33b40f413228d54e3c6ed4a2f20160926-4933-1c0zz95.jpg'
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "pictures" ("post_id", "created_at", "updated_at", "image_file_name", "image_content_type", "image_file_size", "image_updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["post_id", 7], ["created_at", 2016-09-26 16:09:36 UTC], ["updated_at", 2016-09-26 16:09:36 UTC], ["image_file_name", "maxresdefault.jpg"], ["image_content_type", "image/jpeg"], ["image_file_size", 223763], ["image_updated_at", 2016-09-26 16:09:35 UTC]]
+  [1m[35m (5.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+Command :: PATH=/usr/local/bin/:$PATH; file -b --mime '/var/folders/6z/kzsbjfl178v4xr56zp5_zh440000gn/T/6924fe9e7e328a22aac00d6c5330fe1020160926-4933-18hib1e.jpg'
+Command :: PATH=/usr/local/bin/:$PATH; identify -format '%wx%h,%[exif:orientation]' '/var/folders/6z/kzsbjfl178v4xr56zp5_zh440000gn/T/6924fe9e7e328a22aac00d6c5330fe1020160926-4933-a5tmkg.jpg[0]' 2>/dev/null
+Command :: PATH=/usr/local/bin/:$PATH; identify -format %m '/var/folders/6z/kzsbjfl178v4xr56zp5_zh440000gn/T/6924fe9e7e328a22aac00d6c5330fe1020160926-4933-a5tmkg.jpg[0]'
+Command :: PATH=/usr/local/bin/:$PATH; convert '/var/folders/6z/kzsbjfl178v4xr56zp5_zh440000gn/T/6924fe9e7e328a22aac00d6c5330fe1020160926-4933-a5tmkg.jpg[0]' -auto-orient -resize "900x900>" '/var/folders/6z/kzsbjfl178v4xr56zp5_zh440000gn/T/afc19b4289777e6b1769046dc0a4504920160926-4933-1abh9p9'
+Command :: PATH=/usr/local/bin/:$PATH; identify -format '%wx%h,%[exif:orientation]' '/var/folders/6z/kzsbjfl178v4xr56zp5_zh440000gn/T/6924fe9e7e328a22aac00d6c5330fe1020160926-4933-a5tmkg.jpg[0]' 2>/dev/null
+Command :: PATH=/usr/local/bin/:$PATH; identify -format %m '/var/folders/6z/kzsbjfl178v4xr56zp5_zh440000gn/T/6924fe9e7e328a22aac00d6c5330fe1020160926-4933-a5tmkg.jpg[0]'
+Command :: PATH=/usr/local/bin/:$PATH; convert '/var/folders/6z/kzsbjfl178v4xr56zp5_zh440000gn/T/6924fe9e7e328a22aac00d6c5330fe1020160926-4933-a5tmkg.jpg[0]' -auto-orient -resize "300x300>" '/var/folders/6z/kzsbjfl178v4xr56zp5_zh440000gn/T/afc19b4289777e6b1769046dc0a4504920160926-4933-bjw8e5'
+Command :: PATH=/usr/local/bin/:$PATH; identify -format '%wx%h,%[exif:orientation]' '/var/folders/6z/kzsbjfl178v4xr56zp5_zh440000gn/T/6924fe9e7e328a22aac00d6c5330fe1020160926-4933-a5tmkg.jpg[0]' 2>/dev/null
+Command :: PATH=/usr/local/bin/:$PATH; identify -format %m '/var/folders/6z/kzsbjfl178v4xr56zp5_zh440000gn/T/6924fe9e7e328a22aac00d6c5330fe1020160926-4933-a5tmkg.jpg[0]'
+Command :: PATH=/usr/local/bin/:$PATH; convert '/var/folders/6z/kzsbjfl178v4xr56zp5_zh440000gn/T/6924fe9e7e328a22aac00d6c5330fe1020160926-4933-a5tmkg.jpg[0]' -auto-orient -resize "200x200>" '/var/folders/6z/kzsbjfl178v4xr56zp5_zh440000gn/T/afc19b4289777e6b1769046dc0a4504920160926-4933-7afc65'
+Command :: PATH=/usr/local/bin/:$PATH; identify -format '%wx%h,%[exif:orientation]' '/var/folders/6z/kzsbjfl178v4xr56zp5_zh440000gn/T/6924fe9e7e328a22aac00d6c5330fe1020160926-4933-a5tmkg.jpg[0]' 2>/dev/null
+Command :: PATH=/usr/local/bin/:$PATH; identify -format %m '/var/folders/6z/kzsbjfl178v4xr56zp5_zh440000gn/T/6924fe9e7e328a22aac00d6c5330fe1020160926-4933-a5tmkg.jpg[0]'
+Command :: PATH=/usr/local/bin/:$PATH; convert '/var/folders/6z/kzsbjfl178v4xr56zp5_zh440000gn/T/6924fe9e7e328a22aac00d6c5330fe1020160926-4933-a5tmkg.jpg[0]' -auto-orient -resize "100x100>" '/var/folders/6z/kzsbjfl178v4xr56zp5_zh440000gn/T/afc19b4289777e6b1769046dc0a4504920160926-4933-lam680'
+Command :: PATH=/usr/local/bin/:$PATH; file -b --mime '/var/folders/6z/kzsbjfl178v4xr56zp5_zh440000gn/T/6924fe9e7e328a22aac00d6c5330fe1020160926-4933-18hnrn.jpg'
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "pictures" ("post_id", "created_at", "updated_at", "image_file_name", "image_content_type", "image_file_size", "image_updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["post_id", 7], ["created_at", 2016-09-26 16:09:36 UTC], ["updated_at", 2016-09-26 16:09:36 UTC], ["image_file_name", "totalrecall.jpg"], ["image_content_type", "image/jpeg"], ["image_file_size", 198851], ["image_updated_at", 2016-09-26 16:09:36 UTC]]
+  [1m[35m (5.8ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 2308ms (ActiveRecord: 202.8ms)
+
+
+Started GET "/" for ::1 at 2016-09-26 11:09:36 -0500
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (12.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/application (21.1ms)
+Completed 200 OK in 85ms (Views: 69.2ms | ActiveRecord: 12.2ms)
+
+
+Started GET "/posts/7" for ::1 at 2016-09-26 11:09:40 -0500
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mPost Load (0.9ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering posts/show.html.erb within layouts/application
+  [1m[36mPicture Load (0.5ms)[0m  [1m[34mSELECT "pictures".* FROM "pictures" WHERE "pictures"."post_id" = $1[0m  [["post_id", 7]]
+  Rendered posts/show.html.erb within layouts/application (10.5ms)
+Completed 200 OK in 66ms (Views: 60.1ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/posts/7" for ::1 at 2016-09-26 11:09:53 -0500
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mPost Load (2.9ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering posts/show.html.erb within layouts/application
+  [1m[36mPicture Load (0.4ms)[0m  [1m[34mSELECT "pictures".* FROM "pictures" WHERE "pictures"."post_id" = $1[0m  [["post_id", 7]]
+  Rendered posts/show.html.erb within layouts/application (11.4ms)
+Completed 200 OK in 63ms (Views: 55.3ms | ActiveRecord: 3.3ms)
+
+
+Started GET "/" for ::1 at 2016-09-26 11:10:03 -0500
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (2.4ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/application (7.9ms)
+Completed 200 OK in 83ms (Views: 78.2ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/posts/6" for ::1 at 2016-09-26 11:10:05 -0500
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mPost Load (0.7ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering posts/show.html.erb within layouts/application
+  [1m[36mPicture Load (0.6ms)[0m  [1m[34mSELECT "pictures".* FROM "pictures" WHERE "pictures"."post_id" = $1[0m  [["post_id", 6]]
+  Rendered posts/show.html.erb within layouts/application (11.2ms)
+Completed 200 OK in 55ms (Views: 50.1ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/" for ::1 at 2016-09-26 11:10:10 -0500
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (2.9ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/application (12.5ms)
+Completed 200 OK in 51ms (Views: 46.8ms | ActiveRecord: 2.9ms)
+
+
+Started GET "/posts/7" for ::1 at 2016-09-26 11:10:12 -0500
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering posts/show.html.erb within layouts/application
+  [1m[36mPicture Load (0.3ms)[0m  [1m[34mSELECT "pictures".* FROM "pictures" WHERE "pictures"."post_id" = $1[0m  [["post_id", 7]]
+  Rendered posts/show.html.erb within layouts/application (10.0ms)
+Completed 200 OK in 37ms (Views: 34.8ms | ActiveRecord: 0.6ms)
+
+
