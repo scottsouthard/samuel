@@ -49,7 +49,15 @@
                   <%= image_tag(pic.image.url(:thumb)) %>
                 </a>
               </div>
-            <% end %>
+              <% end %>
+            <% elsif @post.pictures.length == 5 %>
+              <% @post.pictures.each do |pic| %>
+              <div class="col-lg-2 col-md-2 col-xs-6 thumb col-md-push-1 col-lg-push-1">
+                <a class= "thumbnail" href="#" data-image-id="" data-toggle="modal" data-image= "<%= pic.image.url%>" data-target="#image-gallery">
+                  <%= image_tag(pic.image.url(:thumb)) %>
+                </a>
+              </div>
+              <% end %>
             <% else %>
               <% @post.pictures.each do |pic| %>
               <div class="col-lg-2 col-md-2 col-xs-6 thumb">
