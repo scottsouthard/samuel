@@ -26,6 +26,11 @@ h2 {
     padding-top: 3%;
   }
 }
+@media (max-width: 500px) {
+  .content {
+    padding-top: 5%;
+  }
+}
 .nav-pic{
   margin: 0 auto;
   max-width: 10% !important;
