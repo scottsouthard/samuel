@@ -6,7 +6,7 @@
   <% if logged_in? %>
     <div class="col-md-6">
       <%= link_to "New Post", new_post_path %>
-    </div>
+    </div><br>
   <% end %>
 
   <div id="calendar">
@@ -45,5 +45,12 @@
         <% end %>
       <% end %>
     </div>
+  </div>
+  <div class="hidden-sm hidden-md hidden-lg">
+    <ul class="mobile-list">
+      <% @month_posts.each do |post| %>
+      <li class="mobile-link"><%= link_to "#{post.title} (#{post.date.strftime('%m/%d')})", post %></li>
+      <% end %>
+    </ul>
   </div>
 </div>

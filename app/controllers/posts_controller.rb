@@ -3,7 +3,7 @@ class PostsController < ApplicationController
 
   def index
     @posts = Post.all
-    # @upcomingposts = Post.where("date >= ?", Date.today)
+    @month_posts = @posts.where("date >= ? AND date <= ?", Time.zone.now.beginning_of_month, Time.zone.now.end_of_month )
     @date = params[:month] ? Date.parse(params[:month].gsub('-', '/')) : Date.today
   end
 

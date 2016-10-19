@@ -341,8 +341,23 @@ div .arrows {
  }
 }
 @media (min-width: 992px) {
-.col-md-6 {
-    left: 0% !important;
-    width: 100% !important;
+  .col-md-6 {
+      left: 0% !important;
+      width: 100% !important;
+  }
 }
+
+.mobile-list {
+  border: 2px solid black;
+  list-style: none;
+  margin-top: 10%;
+  margin-left: 6%;
+  margin-right: 4%;
+  font-weight: bold;
+  font-size: 1.5em;
+}
+
+.mobile-link {
+  margin-top: 8%;
+  margin-bottom: 8%;
 }
