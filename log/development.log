@@ -20160,3 +20160,311 @@ Processing by PostsController#index as HTML
 Completed 200 OK in 132ms (Views: 129.2ms | ActiveRecord: 0.5ms)
 
 
+Started GET "/" for ::1 at 2016-10-20 09:47:54 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (12.7ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (7.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE (date >= '2016-10-01 00:00:00' AND date <= '2016-10-31 23:59:59.999999')[0m
+  Rendered posts/index.html.erb within layouts/application (61.2ms)
+Completed 200 OK in 904ms (Views: 860.1ms | ActiveRecord: 22.6ms)
+
+
+Started GET "/posts/8" for ::1 at 2016-10-20 09:48:15 -0500
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  Rendering posts/show.html.erb within layouts/application
+  [1m[36mPicture Load (18.4ms)[0m  [1m[34mSELECT "pictures".* FROM "pictures" WHERE "pictures"."post_id" = $1[0m  [["post_id", 8]]
+  Rendered posts/show.html.erb within layouts/application (71.7ms)
+Completed 200 OK in 123ms (Views: 90.7ms | ActiveRecord: 22.6ms)
+
+
+Started GET "/posts/8/edit" for ::1 at 2016-10-20 09:48:18 -0500
+Processing by PostsController#edit as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  Rendering posts/edit.html.erb within layouts/application
+  Rendered posts/edit.html.erb within layouts/application (31.1ms)
+Completed 200 OK in 60ms (Views: 55.7ms | ActiveRecord: 0.2ms)
+
+
+Started PATCH "/posts/8" for ::1 at 2016-10-20 09:48:28 -0500
+Processing by PostsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"F3Ijf/yBRUbcpXpCafiWQPr/6s4OFyXNQ5R/sk8mKIjdf/cL/quadb88HuO7ie4nfeLacnWtSQH86Ady4sea8Q==", "post"=>{"title"=>"Book Release: 1-6", "description"=>"okokok", "date"=>"2016-10-20"}, "commit"=>"Edit Post", "id"=>"8"}
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[35m (6.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPost Exists (6.4ms)[0m  [1m[34mSELECT  1 AS one FROM "posts" WHERE "posts"."date" = $1 AND ("posts"."id" != $2) LIMIT $3[0m  [["date", "2016-10-20"], ["id", 8], ["LIMIT", 1]]
+  [1m[35mSQL (17.9ms)[0m  [1m[33mUPDATE "posts" SET "title" = $1, "updated_at" = $2 WHERE "posts"."id" = $3[0m  [["title", "Book Release: 1-6"], ["updated_at", 2016-10-20 14:48:28 UTC], ["id", 8]]
+  [1m[35m (6.3ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 57ms (ActiveRecord: 36.9ms)
+
+
+Started GET "/" for ::1 at 2016-10-20 09:48:28 -0500
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE (date >= '2016-10-01 00:00:00' AND date <= '2016-10-31 23:59:59.999999')[0m
+  Rendered posts/index.html.erb within layouts/application (4.5ms)
+Completed 200 OK in 29ms (Views: 26.4ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for ::1 at 2016-10-20 09:49:03 -0500
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.6ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE (date >= '2016-10-01 00:00:00' AND date <= '2016-10-31 23:59:59.999999')[0m
+  Rendered posts/index.html.erb within layouts/application (9.0ms)
+Completed 200 OK in 109ms (Views: 105.7ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/" for ::1 at 2016-10-20 09:50:15 -0500
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.5ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE (date >= '2016-10-01 00:00:00' AND date <= '2016-10-31 23:59:59.999999')[0m
+  Rendered posts/index.html.erb within layouts/application (5.5ms)
+Completed 200 OK in 109ms (Views: 104.8ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/posts/8" for ::1 at 2016-10-20 09:50:36 -0500
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mPost Load (0.6ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  Rendering posts/show.html.erb within layouts/application
+  [1m[36mPicture Load (0.4ms)[0m  [1m[34mSELECT "pictures".* FROM "pictures" WHERE "pictures"."post_id" = $1[0m  [["post_id", 8]]
+  Rendered posts/show.html.erb within layouts/application (4.8ms)
+Completed 200 OK in 37ms (Views: 34.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/sessions/new" for ::1 at 2016-10-20 09:50:52 -0500
+Processing by SessionsController#new as HTML
+  Rendering sessions/login.html.erb within layouts/application
+  Rendered sessions/login.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 29ms (Views: 28.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/sessions/logout" for ::1 at 2016-10-20 09:50:53 -0500
+Processing by SessionsController#logout as HTML
+Redirected to http://localhost:3000/
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-10-20 09:50:53 -0500
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (2.6ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE (date >= '2016-10-01 00:00:00' AND date <= '2016-10-31 23:59:59.999999')[0m
+  Rendered posts/index.html.erb within layouts/application (8.9ms)
+Completed 200 OK in 33ms (Views: 28.2ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/posts/8" for ::1 at 2016-10-20 09:50:55 -0500
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  Rendering posts/show.html.erb within layouts/application
+  [1m[36mPicture Load (0.7ms)[0m  [1m[34mSELECT "pictures".* FROM "pictures" WHERE "pictures"."post_id" = $1[0m  [["post_id", 8]]
+  Rendered posts/show.html.erb within layouts/application (4.3ms)
+Completed 200 OK in 30ms (Views: 26.9ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/sessions/new" for ::1 at 2016-10-20 09:51:11 -0500
+Processing by SessionsController#new as HTML
+  Rendering sessions/login.html.erb within layouts/application
+  Rendered sessions/login.html.erb within layouts/application (4.2ms)
+Completed 200 OK in 27ms (Views: 26.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/sessions/create?method=post" for ::1 at 2016-10-20 09:51:14 -0500
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"1Pp/dx887GsxSYl1+yH36WUjZkB2BPUhu2V/7lAWzgkhGYcCOGW9Qj4VUVwzBL2H3Mp4OhA+jFfseYxuGPfcLw==", "user"=>{"name"=>"steven", "password"=>"[FILTERED]"}, "commit"=>"Login", "method"=>"post"}
+  [1m[36mUser Load (12.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."name" = $1 LIMIT $2[0m  [["name", "steven"], ["LIMIT", 1]]
+  Rendering sessions/login.html.erb within layouts/application
+  Rendered sessions/login.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 52ms (Views: 21.2ms | ActiveRecord: 14.8ms)
+
+
+Started POST "/sessions/create?method=post" for ::1 at 2016-10-20 09:51:19 -0500
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"/6rYOimxpu6p0xvvT1Zp5FHwn6DLfp9ySJ0IM66+hWUKSSBPDuj3x6aPw8aHcyOK6BmB2q1E5gQfgfuz5l+XQw==", "user"=>{"name"=>"Steven", "password"=>"[FILTERED]"}, "commit"=>"Login", "method"=>"post"}
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."name" = $1 LIMIT $2[0m  [["name", "Steven"], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 84ms (ActiveRecord: 9.1ms)
+
+
+Started GET "/" for ::1 at 2016-10-20 09:51:19 -0500
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  [1m[36mPost Load (0.5ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE (date >= '2016-10-01 00:00:00' AND date <= '2016-10-31 23:59:59.999999')[0m
+  Rendered posts/index.html.erb within layouts/application (6.3ms)
+Completed 200 OK in 27ms (Views: 24.8ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/posts/8" for ::1 at 2016-10-20 09:51:21 -0500
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  Rendering posts/show.html.erb within layouts/application
+  [1m[36mPicture Load (0.3ms)[0m  [1m[34mSELECT "pictures".* FROM "pictures" WHERE "pictures"."post_id" = $1[0m  [["post_id", 8]]
+  Rendered posts/show.html.erb within layouts/application (7.0ms)
+Completed 200 OK in 33ms (Views: 30.1ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/posts/8/edit" for ::1 at 2016-10-20 09:51:23 -0500
+Processing by PostsController#edit as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  Rendering posts/edit.html.erb within layouts/application
+  Rendered posts/edit.html.erb within layouts/application (6.8ms)
+Completed 200 OK in 35ms (Views: 30.5ms | ActiveRecord: 0.4ms)
+
+
+Started PATCH "/posts/8" for ::1 at 2016-10-20 09:51:55 -0500
+Processing by PostsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"/p0wlVkYOMfo8GFg2EN56AnLtyTvKK8yYyH1SrgXRd4LfsjgfkFp7uesuUkQZjOGsCKpXokS1kQ0PQbK8PZX+A==", "post"=>{"title"=>"Book Release: 1-6", "description"=>"okokok", "date"=>"2016-10-20", "document"=>#<ActionDispatch::Http::UploadedFile:0x007fe77caedb00 @tempfile=#<Tempfile:/var/folders/6z/kzsbjfl178v4xr56zp5_zh440000gn/T/RackMultipart20161020-7899-1frr4uu.pdf>, @original_filename="Cultural Media offer.pdf", @content_type="application/pdf", @headers="Content-Disposition: form-data; name=\"post[document]\"; filename=\"Cultural Media offer.pdf\"\r\nContent-Type: application/pdf\r\n">}, "images"=>[#<ActionDispatch::Http::UploadedFile:0x007fe77caed9e8 @tempfile=#<Tempfile:/var/folders/6z/kzsbjfl178v4xr56zp5_zh440000gn/T/RackMultipart20161020-7899-161skw5.jpg>, @original_filename="Brock-Lesnar-signs-WWE-extension.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"images[]\"; filename=\"Brock-Lesnar-signs-WWE-extension.jpg\"\r\nContent-Type: image/jpeg\r\n">], "commit"=>"Edit Post", "id"=>"8"}
+  [1m[36mPost Load (0.9ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+Command :: PATH=/usr/local/bin/:$PATH; file -b --mime '/var/folders/6z/kzsbjfl178v4xr56zp5_zh440000gn/T/957c1078978af7f9358c307f9527be8820161020-7899-hhevv6.pdf'
+Unpermitted parameter: document
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPost Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "posts" WHERE "posts"."date" = $1 AND ("posts"."id" != $2) LIMIT $3[0m  [["date", "2016-10-20"], ["id", 8], ["LIMIT", 1]]
+Command :: PATH=/usr/local/bin/:$PATH; file -b --mime '/var/folders/6z/kzsbjfl178v4xr56zp5_zh440000gn/T/957c1078978af7f9358c307f9527be8820161020-7899-w7j0iu.pdf'
+  [1m[35mSQL (0.4ms)[0m  [1m[33mUPDATE "posts" SET "document_file_name" = $1, "document_content_type" = $2, "document_file_size" = $3, "document_updated_at" = $4, "updated_at" = $5 WHERE "posts"."id" = $6[0m  [["document_file_name", "Cultural_Media_offer.pdf"], ["document_content_type", "application/pdf"], ["document_file_size", 43535], ["document_updated_at", 2016-10-20 14:51:55 UTC], ["updated_at", 2016-10-20 14:51:55 UTC], ["id", 8]]
+  [1m[35m (6.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mPicture Load (0.3ms)[0m  [1m[34mSELECT "pictures".* FROM "pictures" WHERE "pictures"."post_id" = $1[0m  [["post_id", 8]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[31mDELETE FROM "pictures" WHERE "pictures"."id" = $1[0m  [["id", 22]]
+  [1m[35m (6.3ms)[0m  [1m[35mCOMMIT[0m
+[paperclip] deleting /Users/scottsouthard/Documents/Dev/samuel/public/images/original/22/Brock-Lesnar-signs-WWE-extension.jpg
+[paperclip] deleting /Users/scottsouthard/Documents/Dev/samuel/public/images/large/22/Brock-Lesnar-signs-WWE-extension.jpg
+[paperclip] deleting /Users/scottsouthard/Documents/Dev/samuel/public/images/medium/22/Brock-Lesnar-signs-WWE-extension.jpg
+[paperclip] deleting /Users/scottsouthard/Documents/Dev/samuel/public/images/small/22/Brock-Lesnar-signs-WWE-extension.jpg
+[paperclip] deleting /Users/scottsouthard/Documents/Dev/samuel/public/images/thumb/22/Brock-Lesnar-signs-WWE-extension.jpg
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+Command :: PATH=/usr/local/bin/:$PATH; file -b --mime '/var/folders/6z/kzsbjfl178v4xr56zp5_zh440000gn/T/676722aa8e9f7f9a5317f2167d9a39e920161020-7899-1061gl7.jpg'
+Command :: PATH=/usr/local/bin/:$PATH; identify -format '%wx%h,%[exif:orientation]' '/var/folders/6z/kzsbjfl178v4xr56zp5_zh440000gn/T/676722aa8e9f7f9a5317f2167d9a39e920161020-7899-u3p4g6.jpg[0]' 2>/dev/null
+Command :: PATH=/usr/local/bin/:$PATH; identify -format %m '/var/folders/6z/kzsbjfl178v4xr56zp5_zh440000gn/T/676722aa8e9f7f9a5317f2167d9a39e920161020-7899-u3p4g6.jpg[0]'
+Command :: PATH=/usr/local/bin/:$PATH; convert '/var/folders/6z/kzsbjfl178v4xr56zp5_zh440000gn/T/676722aa8e9f7f9a5317f2167d9a39e920161020-7899-u3p4g6.jpg[0]' -auto-orient -resize "900x900>" '/var/folders/6z/kzsbjfl178v4xr56zp5_zh440000gn/T/aa2c63a94dc5248bcc247662f3efd0cd20161020-7899-11cz31l'
+Command :: PATH=/usr/local/bin/:$PATH; identify -format '%wx%h,%[exif:orientation]' '/var/folders/6z/kzsbjfl178v4xr56zp5_zh440000gn/T/676722aa8e9f7f9a5317f2167d9a39e920161020-7899-u3p4g6.jpg[0]' 2>/dev/null
+Command :: PATH=/usr/local/bin/:$PATH; identify -format %m '/var/folders/6z/kzsbjfl178v4xr56zp5_zh440000gn/T/676722aa8e9f7f9a5317f2167d9a39e920161020-7899-u3p4g6.jpg[0]'
+Command :: PATH=/usr/local/bin/:$PATH; convert '/var/folders/6z/kzsbjfl178v4xr56zp5_zh440000gn/T/676722aa8e9f7f9a5317f2167d9a39e920161020-7899-u3p4g6.jpg[0]' -auto-orient -resize "300x300>" '/var/folders/6z/kzsbjfl178v4xr56zp5_zh440000gn/T/aa2c63a94dc5248bcc247662f3efd0cd20161020-7899-v5zqfp'
+Command :: PATH=/usr/local/bin/:$PATH; identify -format '%wx%h,%[exif:orientation]' '/var/folders/6z/kzsbjfl178v4xr56zp5_zh440000gn/T/676722aa8e9f7f9a5317f2167d9a39e920161020-7899-u3p4g6.jpg[0]' 2>/dev/null
+Command :: PATH=/usr/local/bin/:$PATH; identify -format %m '/var/folders/6z/kzsbjfl178v4xr56zp5_zh440000gn/T/676722aa8e9f7f9a5317f2167d9a39e920161020-7899-u3p4g6.jpg[0]'
+Command :: PATH=/usr/local/bin/:$PATH; convert '/var/folders/6z/kzsbjfl178v4xr56zp5_zh440000gn/T/676722aa8e9f7f9a5317f2167d9a39e920161020-7899-u3p4g6.jpg[0]' -auto-orient -resize "200x200>" '/var/folders/6z/kzsbjfl178v4xr56zp5_zh440000gn/T/aa2c63a94dc5248bcc247662f3efd0cd20161020-7899-117p5s7'
+Command :: PATH=/usr/local/bin/:$PATH; identify -format '%wx%h,%[exif:orientation]' '/var/folders/6z/kzsbjfl178v4xr56zp5_zh440000gn/T/676722aa8e9f7f9a5317f2167d9a39e920161020-7899-u3p4g6.jpg[0]' 2>/dev/null
+Command :: PATH=/usr/local/bin/:$PATH; identify -format %m '/var/folders/6z/kzsbjfl178v4xr56zp5_zh440000gn/T/676722aa8e9f7f9a5317f2167d9a39e920161020-7899-u3p4g6.jpg[0]'
+Command :: PATH=/usr/local/bin/:$PATH; convert '/var/folders/6z/kzsbjfl178v4xr56zp5_zh440000gn/T/676722aa8e9f7f9a5317f2167d9a39e920161020-7899-u3p4g6.jpg[0]' -auto-orient -resize "100x100>" '/var/folders/6z/kzsbjfl178v4xr56zp5_zh440000gn/T/aa2c63a94dc5248bcc247662f3efd0cd20161020-7899-aa6arv'
+Command :: PATH=/usr/local/bin/:$PATH; file -b --mime '/var/folders/6z/kzsbjfl178v4xr56zp5_zh440000gn/T/676722aa8e9f7f9a5317f2167d9a39e920161020-7899-iai4iv.jpg'
+  [1m[35mSQL (11.1ms)[0m  [1m[32mINSERT INTO "pictures" ("post_id", "created_at", "updated_at", "image_file_name", "image_content_type", "image_file_size", "image_updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["post_id", 8], ["created_at", 2016-10-20 14:51:55 UTC], ["updated_at", 2016-10-20 14:51:55 UTC], ["image_file_name", "Brock-Lesnar-signs-WWE-extension.jpg"], ["image_content_type", "image/jpeg"], ["image_file_size", 46358], ["image_updated_at", 2016-10-20 14:51:55 UTC]]
+  [1m[35m (6.1ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 467ms (ActiveRecord: 32.4ms)
+
+
+Started GET "/" for ::1 at 2016-10-20 09:51:55 -0500
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE (date >= '2016-10-01 00:00:00' AND date <= '2016-10-31 23:59:59.999999')[0m
+  Rendered posts/index.html.erb within layouts/application (5.6ms)
+Completed 200 OK in 30ms (Views: 27.7ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/posts/8" for ::1 at 2016-10-20 09:51:57 -0500
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mPost Load (0.5ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  Rendering posts/show.html.erb within layouts/application
+  [1m[36mPicture Load (1.7ms)[0m  [1m[34mSELECT "pictures".* FROM "pictures" WHERE "pictures"."post_id" = $1[0m  [["post_id", 8]]
+  Rendered posts/show.html.erb within layouts/application (8.7ms)
+Completed 200 OK in 44ms (Views: 38.8ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/posts/8" for ::1 at 2016-10-20 09:52:35 -0500
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  Rendering posts/show.html.erb within layouts/application
+  [1m[36mPicture Load (0.3ms)[0m  [1m[34mSELECT "pictures".* FROM "pictures" WHERE "pictures"."post_id" = $1[0m  [["post_id", 8]]
+  Rendered posts/show.html.erb within layouts/application (6.6ms)
+Completed 200 OK in 145ms (Views: 142.7ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for ::1 at 2016-10-20 09:52:38 -0500
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.7ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE (date >= '2016-10-01 00:00:00' AND date <= '2016-10-31 23:59:59.999999')[0m
+  Rendered posts/index.html.erb within layouts/application (10.9ms)
+Completed 200 OK in 45ms (Views: 41.5ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/posts/8" for ::1 at 2016-10-20 09:52:41 -0500
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mPost Load (0.8ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  Rendering posts/show.html.erb within layouts/application
+  [1m[36mPicture Load (0.3ms)[0m  [1m[34mSELECT "pictures".* FROM "pictures" WHERE "pictures"."post_id" = $1[0m  [["post_id", 8]]
+  Rendered posts/show.html.erb within layouts/application (6.0ms)
+Completed 200 OK in 44ms (Views: 38.2ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/" for ::1 at 2016-10-20 09:52:57 -0500
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE (date >= '2016-10-01 00:00:00' AND date <= '2016-10-31 23:59:59.999999')[0m
+  Rendered posts/index.html.erb within layouts/application (9.3ms)
+Completed 200 OK in 40ms (Views: 38.1ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/posts/8" for ::1 at 2016-10-20 09:52:59 -0500
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  Rendering posts/show.html.erb within layouts/application
+  [1m[36mPicture Load (0.4ms)[0m  [1m[34mSELECT "pictures".* FROM "pictures" WHERE "pictures"."post_id" = $1[0m  [["post_id", 8]]
+  Rendered posts/show.html.erb within layouts/application (6.7ms)
+Completed 200 OK in 51ms (Views: 46.8ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/" for ::1 at 2016-10-20 09:53:01 -0500
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE (date >= '2016-10-01 00:00:00' AND date <= '2016-10-31 23:59:59.999999')[0m
+  Rendered posts/index.html.erb within layouts/application (6.7ms)
+Completed 200 OK in 48ms (Views: 44.2ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/posts/8" for ::1 at 2016-10-20 09:53:09 -0500
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mPost Load (1.0ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  Rendering posts/show.html.erb within layouts/application
+  [1m[36mPicture Load (0.4ms)[0m  [1m[34mSELECT "pictures".* FROM "pictures" WHERE "pictures"."post_id" = $1[0m  [["post_id", 8]]
+  Rendered posts/show.html.erb within layouts/application (5.9ms)
+Completed 200 OK in 35ms (Views: 30.2ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/" for ::1 at 2016-10-20 09:53:11 -0500
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE (date >= '2016-10-01 00:00:00' AND date <= '2016-10-31 23:59:59.999999')[0m
+  Rendered posts/index.html.erb within layouts/application (6.3ms)
+Completed 200 OK in 34ms (Views: 31.9ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/posts/7" for ::1 at 2016-10-20 09:53:12 -0500
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mPost Load (1.9ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering posts/show.html.erb within layouts/application
+  [1m[36mPicture Load (0.3ms)[0m  [1m[34mSELECT "pictures".* FROM "pictures" WHERE "pictures"."post_id" = $1[0m  [["post_id", 7]]
+  Rendered posts/show.html.erb within layouts/application (5.3ms)
+Completed 200 OK in 43ms (Views: 37.4ms | ActiveRecord: 2.2ms)
+
+
