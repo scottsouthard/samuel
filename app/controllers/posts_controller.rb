@@ -4,15 +4,19 @@ class PostsController < ApplicationController
   def index
     @posts = Post.all
     @month_posts = @posts.where("date >= ? AND date <= ?", Time.zone.now.beginning_of_month, Time.zone.now.end_of_month )
+    @posts = @posts.sort {|x, y| x.date <=> y.date}
+    @month_posts = @month_posts.sort {|x, y| x.date <=> y.date}
     @date = params[:month] ? Date.parse(params[:month].gsub('-', '/')) : Date.today
   end
 
   def upcoming
-    @posts = Post.where("date >= ?", Date.today).reverse
+    @posts = Post.where("date >= ?", Date.today)
+    @posts = @posts.sort {|x, y| x.date <=> y.date}
   end
 
   def past
-    @posts = Post.where("date <= ?", Date.today).reverse
+    @posts = Post.where("date <= ?", Date.today)
+    @posts = @posts.sort {|x, y| x.date <=> y.date}
   end
 
   def show

@@ -1,10 +1,10 @@
 <h2 class="list-head"> Upcoming Shows </h2>
-<div class="gallery-line">
-</div>
-<ul class="list-group post-index post-list">
+<div class="gallery-line"></div>
+<ul class="mobile-list">
   <% @posts.each do |post| %>
-      <li >
-        <%= link_to "#{post.title}  -  #{post.date.strftime("%m/%d/%Y")}", post%>
+      <li class="mobile-link">
+        <%= link_to "#{post.date.strftime("%m/%d/%Y")} - #{post.title}", post%>
       </li>
   <% end %>
+</ul>
 </div>
