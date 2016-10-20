@@ -87,11 +87,11 @@
             </div>
             <div class="modal-footer">
 
-                <div class="col-md-2">
+                <div class="">
                     <button type="button" class="btn btn-link" id="show-previous-image">Previous</button>
                 </div>
 
-                <div class="col-md-2">
+                <div class="">
                     <button type="button" id="show-next-image" class="btn btn-link">Next</button>
                 </div>
             </div>
@@ -109,5 +109,5 @@
 <div class="gallery-line">
 </div>
 <div class=" col-lg-8 col-lg-push-2 col-md-8 col-md-push-2 description">
-  <p> <%= @post.description %> </p>
+  <p> <%= simple_format(@post.description) %> </p>
 </div>

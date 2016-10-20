@@ -84,12 +84,15 @@ a:hover{
 }
 
 #show-next-image{
-  margin-left: 290px;
+  margin-left: 82%;
   text-align: right;
+  display: inherit;
+
   color: black;
 }
 #show-previous-image{
   color: black;
+  float: left
 }
 
 .close {
@@ -352,7 +355,7 @@ div .arrows {
 }
 
 .mobile-list {
-  border: 2px solid black;
+  // border: 2px solid black;
   list-style: none;
   margin-top: 10%;
   margin-left: 6%;
