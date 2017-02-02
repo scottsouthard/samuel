@@ -88,10 +88,10 @@ a:hover{
   text-align: right;
   display: inherit;
 
-  color: black;
+  color: grey;
 }
 #show-previous-image{
-  color: black;
+  color: grey;
   float: left
 }
 
@@ -103,6 +103,9 @@ a:hover{
     font-size: 40px;
     font-weight: bold;
     transition: 0.3s;
+    span {
+      color: whitesmoke;
+    }
 }
 
 
@@ -371,4 +374,17 @@ div .arrows {
 }
 .modal-body {
   padding: 0px !important;
+}
+.modal-header {
+  // padding: 0px !important;
+  background-color: rgba(0, 0, 0, 0.95);
+  border-bottom: 0px !important;
+}
+.modal-footer {
+  padding: 0px !important;
+  border-top: 0px !important;
+  background-color: rgba(0, 0, 0, 0.95);
+}
+.modal-inner-footer {
+  // background-color: rgba(0, 0, 0, 0.95);
 }
