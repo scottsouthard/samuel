@@ -16,7 +16,7 @@ class PostsController < ApplicationController
 
   def past
     @posts = Post.where("date <= ?", Date.today)
-    @posts = @posts.sort {|x, y| x.date <=> y.date}
+    @posts = @posts.sort {|x, y| y.date <=> x.date}
   end
 
   def show
